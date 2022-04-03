@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:int_appone/pages/navpages/bar_item_page.dart';
-import 'package:int_appone/pages/navpages/home_page.dart';
+import 'package:int_appone/pages/home_page.dart';
 import 'package:int_appone/pages/navpages/my_page.dart';
 import 'package:int_appone/pages/navpages/search_page.dart';
 

@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
           ),
           SizedBox(
-            height: 40,
+            height: 30,
           ),
           // Discover Events Text is labeled here.
           Container(
@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             child: AppLargeText(text: "Discover Events"),
           ),
           SizedBox(
-            height: 30,
+            height: 20,
           ),
 
           // Tab Bar of event date list -TABBAR
@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           ),
 
           Container(
-            height: 100,
+            height: 120,
             width: double.maxFinite,
             margin: const EdgeInsets.only(left: 20),
             child: ListView.builder(
@@ -165,6 +165,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                     "img/" + images.keys.elementAt(index)),
                                 fit: BoxFit.cover),
                           ),
+                        ),
+                        SizedBox(
+                          height: 10,
                         ),
                         Container(
                           child: AppText(
