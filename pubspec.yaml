@@ -68,16 +68,6 @@ flutter:
     - img/bg-3.png
     - img/yellow-arrow.png
     - img/logo_ata.png
-    - img/mountain_1.jpeg
-    - img/mountain_2.jpeg
-    - img/mountain_3.jpeg
-    - img/hotel.png
-    - img/compass.png
-    - img/route.png
-    - img/parking.png
-    - img/transport_1.png
-    - img/transport_2.png
-    - img/sabhinav.jpg
     - img/home_page/july1/day1e1_home.jpg
     - img/home_page/july1/day1e2_home.jpg
     - img/home_page/july1/day1e3_home.jpg
@@ -94,6 +84,41 @@ flutter:
     - img/details_page/july1/day1e4_detail.jpg
     - img/details_page/july1/day1e5_detail.jpg
     - img/details_page/july1/day1e6_detail.jpg
+    - img/home_page/july2/day2e1_home.jpg
+    - img/home_page/july2/day2e2_home.jpg
+    - img/home_page/july2/day2e3_home.jpg
+    - img/home_page/july2/day2e4_home.jpg
+    - img/home_page/july2/day2e5_home.jpg
+    - img/home_page/july2/day2e6_home.jpg
+    - img/home_page/july2/day2e7_home.jpg
+    - img/home_page/july2/day2e8_home.jpg
+    - img/home_page/july2/day2e9_home.jpg
+    - img/details_page/july2/day2e1_detail.jpg
+    - img/details_page/july2/day2e2_detail.jpg
+    - img/details_page/july2/day2e3_detail.jpg
+    - img/details_page/july2/day2e4_detail.jpg
+    - img/details_page/july2/day2e5_detail.jpg
+    - img/details_page/july2/day2e6_detail.jpg
+    - img/details_page/july2/day2e7_detail.jpg
+    - img/details_page/july2/day2e8_detail.jpg
+    - img/details_page/july2/day2e9_detail.jpg
+    - img/home_page/july3/day3e1_home.jpg
+    - img/home_page/july3/day3e2_home.jpg
+    - img/home_page/july3/day3e3_home.jpg
+    - img/home_page/july3/day3e4_home.jpg
+    - img/home_page/july3/day3e5_home.jpg
+    - img/home_page/july3/day3e6_home.jpg
+    - img/home_page/july3/day3e7_home.jpg
+    - img/home_page/july3/day3e8_home.jpg
+    - img/details_page/july3/day3e1_detail.jpg
+    - img/details_page/july3/day3e2_detail.jpg
+    - img/details_page/july3/day3e3_detail.jpg
+    - img/details_page/july3/day3e4_detail.jpg
+    - img/details_page/july3/day3e5_detail.jpg
+    - img/details_page/july3/day3e6_detail.jpg
+    - img/details_page/july3/day3e7_detail.jpg
+    - img/details_page/july3/day3e8_detail.jpg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

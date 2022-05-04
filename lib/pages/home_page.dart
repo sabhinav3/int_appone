@@ -35,6 +35,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     "day2e4_home.jpg": "Day2event4",
     "day2e5_home.jpg": "Day2event5",
     "day2e6_home.jpg": "Day2event6",
+    "day2e7_home.jpg": "Day2event7",
+    "day2e8_home.jpg": "Day2event8",
+    "day2e9_home.jpg": "Day2event9",
   };
 
   var cards3 = {
@@ -44,6 +47,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     "day3e4_home.jpg": "Day3event4",
     "day3e5_home.jpg": "Day3event5",
     "day3e6_home.jpg": "Day3event6",
+    "day3e7_home.jpg": "Day3event6",
+    "day3e8_home.jpg": "Day3event6",
   };
   @override
   Widget build(BuildContext context) {
@@ -134,7 +139,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.white,
                           image: DecorationImage(
-                            image: AssetImage("img/home_page/july2/" +
+                            image: AssetImage("img/home_page/july1/" +
                                 cards1.keys.elementAt(index)),
                             fit: BoxFit.cover,
                           ),
@@ -158,7 +163,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.white,
                           image: DecorationImage(
-                            image: AssetImage("img/home_page/july1/" +
+                            image: AssetImage("img/home_page/july2/" +
                                 cards2.keys.elementAt(index)),
                             fit: BoxFit.cover,
                           ),
