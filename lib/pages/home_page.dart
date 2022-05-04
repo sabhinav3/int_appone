@@ -27,6 +27,24 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     "day1e5_home.jpg": "Day1event5",
     "day1e6_home.jpg": "Day1event6",
   };
+
+  var cards2 = {
+    "day2e1_home.jpg": "Day2event1",
+    "day2e2_home.jpg": "Day2event2",
+    "day2e3_home.jpg": "Day2event3",
+    "day2e4_home.jpg": "Day2event4",
+    "day2e5_home.jpg": "Day2event5",
+    "day2e6_home.jpg": "Day2event6",
+  };
+
+  var cards3 = {
+    "day3e1_home.jpg": "Day3event1",
+    "day3e2_home.jpg": "Day3event2",
+    "day3e3_home.jpg": "Day3event3",
+    "day3e4_home.jpg": "Day3event4",
+    "day3e5_home.jpg": "Day3event5",
+    "day3e6_home.jpg": "Day3event6",
+  };
   @override
   Widget build(BuildContext context) {
     TabController _tabController = TabController(length: 3, vsync: this);
@@ -116,7 +134,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.white,
                           image: DecorationImage(
-                            image: AssetImage("img/home_page/july1/" +
+                            image: AssetImage("img/home_page/july2/" +
                                 cards1.keys.elementAt(index)),
                             fit: BoxFit.cover,
                           ),
@@ -140,7 +158,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.white,
                           image: DecorationImage(
-                            image: AssetImage("img/mountain_1.jpeg"),
+                            image: AssetImage("img/home_page/july1/" +
+                                cards2.keys.elementAt(index)),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -163,8 +182,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.white,
                           image: DecorationImage(
-                            image: AssetImage("img/home_page/july1/" +
-                                cards1.keys.elementAt(index)),
+                            image: AssetImage("img/home_page/july3/" +
+                                cards3.keys.elementAt(index)),
                             fit: BoxFit.cover,
                           ),
                         ),
