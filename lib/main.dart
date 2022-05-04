@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:int_appone/cubit/app_cubit_logics.dart';
+import 'package:int_appone/cubit/app_cubits.dart';
 import 'package:int_appone/pages/detail_page.dart';
+import 'package:int_appone/pages/home_page.dart';
 import 'package:int_appone/pages/navpages/main_page.dart';
 import 'package:int_appone/pages/welcome_page.dart';
 
@@ -16,17 +20,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
+      // home: BlocProvider<AppCubits>(
+      //   create: (context) => AppCubits(),
+      //   child: AppCubitLogics(),
+      // )
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       // home: const WelcomePage());
       home: DetailPage(),
