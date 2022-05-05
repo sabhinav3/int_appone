@@ -6,6 +6,7 @@ import 'package:int_appone/pages/detail_page.dart';
 import 'package:int_appone/pages/home_page.dart';
 import 'package:int_appone/pages/navpages/main_page.dart';
 import 'package:int_appone/pages/welcome_page.dart';
+import 'package:int_appone/services/data_services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,18 +19,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      // home: BlocProvider<AppCubits>(
-      //   create: (context) => AppCubits(),
-      //   child: AppCubitLogics(),
-      // )
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      // home: const WelcomePage());
-      home: HomePage(),
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: BlocProvider<AppCubits>(
+          create: (context) => AppCubits(
+            data: DataServices(),
+          ),
+          child: AppCubitLogics(),
+        )
+        // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+        // home: const WelcomePage());
+        // home: HomePage(),
+        );
   }
 }
 

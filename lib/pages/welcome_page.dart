@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:int_appone/cubit/app_cubits.dart';
 import 'package:int_appone/widgets/app_large_text.dart';
 import 'package:int_appone/widgets/app_text.dart';
 import 'package:int_appone/widgets/responsive_button.dart';
@@ -60,8 +62,19 @@ class _WelcomePageState extends State<WelcomePage> {
                         SizedBox(
                           height: 40,
                         ),
-                        ResponsiveButton(
-                          width: 75,
+
+                        // this is the button :
+
+                        GestureDetector(
+                          onTap: () {
+                            BlocProvider.of<AppCubits>(context).getData();
+                          },
+                          child: Container(
+                            width: 75,
+                            child: ResponsiveButton(
+                              width: 75,
+                            ),
+                          ),
                         )
                       ],
                     ),
