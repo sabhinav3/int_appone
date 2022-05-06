@@ -8,6 +8,8 @@ import 'package:int_appone/cubit/app_cubits.dart';
 import 'package:int_appone/pages/home_page.dart';
 import 'package:int_appone/pages/welcome_page.dart';
 
+import '../pages/navpages/main_page.dart';
+
 class AppCubitLogics extends StatefulWidget {
   const AppCubitLogics({Key? key}) : super(key: key);
 
@@ -25,7 +27,7 @@ class _AppCubitLogicsState extends State<AppCubitLogics> {
             return WelcomePage();
           }
           if (state is LoadedState) {
-            return HomePage();
+            return MainPage();
           }
           if (state is LoadingState) {
             return Center(
