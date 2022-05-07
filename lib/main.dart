@@ -10,8 +10,25 @@ import 'package:int_appone/services/data_services.dart';
 import 'package:int_appone/video/video_player.dart';
 import 'package:int_appone/video/video_player_widget.dart';
 
-void main() {
-  runApp(const MyApp());
+// void main() {
+//   runApp(const MyApp());
+// }
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  var currentPlatform;
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
+}
+
+class Firebase {
+  static initializeApp({options}) {}
+}
+
+class DefaultFirebaseOptions {
+  static var currentPlatform;
 }
 
 class MyApp extends StatelessWidget {
