@@ -29,6 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  video_player:
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -118,6 +119,7 @@ flutter:
     - img/details_page/july3/day3e6_detail.jpg
     - img/details_page/july3/day3e7_detail.jpg
     - img/details_page/july3/day3e8_detail.jpg
+    - assets/video/sozo_logo.mp4
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

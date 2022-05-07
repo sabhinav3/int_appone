@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:int_appone/misc/colors.dart';
+import 'package:int_appone/video/video_player_widget.dart';
 import 'package:int_appone/widgets/app_large_text.dart';
 import 'package:int_appone/widgets/app_text.dart';
 

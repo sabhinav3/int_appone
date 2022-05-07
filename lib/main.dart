@@ -7,6 +7,8 @@ import 'package:int_appone/pages/home_page.dart';
 import 'package:int_appone/pages/navpages/main_page.dart';
 import 'package:int_appone/pages/welcome_page.dart';
 import 'package:int_appone/services/data_services.dart';
+import 'package:int_appone/video/video_player.dart';
+import 'package:int_appone/video/video_player_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
         )
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
         // home: const WelcomePage());
-        // home: DetailPage(),
+        // home: VideoPlayerApp(),
         );
   }
 }
