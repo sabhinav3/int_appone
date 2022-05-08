@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "817140080703",
+    "project_id": "ata-events",
+    "storage_bucket": "ata-events.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817140080703:android:570ff08e82bee57a9bd88a",
+        "android_client_info": {
+          "package_name": "com.example.int_appone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "817140080703-al7674050tfucjovckuosn1c7nfcgr4n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4YHYfcClsxIL5Ah8GvwyCTmXEFDrX_GQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "817140080703-al7674050tfucjovckuosn1c7nfcgr4n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

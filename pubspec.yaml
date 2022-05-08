@@ -41,7 +41,14 @@ dependencies:
   equatable:
   http:
   cloud_firestore: ^3.1.14
+
+  # firebase_core: ^0.5.3
+  # firebase_auth: ^0.18.4+1
   # firebase_auth: ^3.3.16
+
+  # firebase_auth: ^0.18.4+1
+  # firebase_core: ^0.5.3
+
 
 dev_dependencies:
   flutter_test:
@@ -121,6 +128,12 @@ flutter:
     - img/details_page/july3/day3e7_detail.jpg
     - img/details_page/july3/day3e8_detail.jpg
     - assets/video/sozo_logo.mp4
+    - img/explore_page/ilayaraja.jpg
+    - img/explore_page/balakrishna.jpg
+    - img/explore_page/naresh.jpg
+    - img/explore_page/ram-miriyala.jpg
+    - img/explore_page/saikumar.jpg
+    - img/explore_page/shiva_balaji.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
