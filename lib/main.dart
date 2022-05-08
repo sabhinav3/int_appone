@@ -10,9 +10,16 @@ import 'package:int_appone/services/data_services.dart';
 import 'package:int_appone/video/video_player.dart';
 import 'package:int_appone/video/video_player_widget.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
 // void main() {
 //   runApp(const MyApp());
 // }
+
+// await Firebase.initializeApp(
+//   options = DefaultFirebaseOptions.currentPlatform,
+// );
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
