@@ -70,7 +70,7 @@ class _BarItemPageState extends State<BarItemPage>
           Text('Invitees',
               style: TextStyle(
                   fontFamily: 'Varela',
-                  fontSize: 42.0,
+                  fontSize: 32.0,
                   fontWeight: FontWeight.bold)),
           SizedBox(height: 15.0),
           // TabBar(
