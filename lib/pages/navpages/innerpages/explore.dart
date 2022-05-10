@@ -48,10 +48,8 @@ class ExplorePage extends StatelessWidget {
         onTap: () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => ExploreDetail(
-                  assetPath: imgPath,
-                  // cookieprice: price,
-                  cookiename: name),
+              builder: (context) =>
+                  ExploreDetail(assetPath: imgPath, cookiename: name),
             ),
           );
         },
