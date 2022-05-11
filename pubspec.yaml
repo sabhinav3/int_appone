@@ -77,6 +77,7 @@ flutter:
     - img/bg-3.png
     - img/yellow-arrow.png
     - img/logo_ata.png
+    - img/logo_ata_nobg.png
     - img/home_page/july1/day1e1_home.jpg
     - img/home_page/july1/day1e2_home.jpg
     - img/home_page/july1/day1e3_home.jpg
@@ -87,6 +88,9 @@ flutter:
     - img/icons/hotel_icon.png
     - img/icons/parking_icon.png
     - img/icons/transport_icon.png
+    - img/icons/facebook.jpeg
+    - img/icons/google.png
+    - img/icons/twitter.png
     - img/details_page/july1/day1e1_detail.jpg
     - img/details_page/july1/day1e2_detail.jpg
     - img/details_page/july1/day1e3_detail.jpg

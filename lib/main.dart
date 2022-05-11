@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:int_appone/cubit/app_cubit_logics.dart';
 import 'package:int_appone/cubit/app_cubits.dart';
-import 'package:int_appone/login/login_page.dart';
+import 'package:int_appone/pages/login/login_page.dart';
+import 'package:int_appone/pages/login/signup_page.dart';
 import 'package:int_appone/pages/detail_page.dart';
 import 'package:int_appone/pages/home_page.dart';
 import 'package:int_appone/pages/navpages/main_page.dart';
@@ -58,7 +59,7 @@ class MyApp extends StatelessWidget {
       // )
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       // home: const WelcomePage());
-      home: LoginPage(),
+      home: SignUpPage(),
     );
   }
 }
