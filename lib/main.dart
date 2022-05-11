@@ -6,11 +6,13 @@ import 'package:int_appone/pages/login/login_page.dart';
 import 'package:int_appone/pages/login/signup_page.dart';
 import 'package:int_appone/pages/detail_page.dart';
 import 'package:int_appone/pages/home_page.dart';
+import 'package:int_appone/pages/login/user_welcome.dart';
 import 'package:int_appone/pages/navpages/main_page.dart';
 import 'package:int_appone/pages/welcome_page.dart';
 import 'package:int_appone/services/data_services.dart';
 import 'package:int_appone/video/video_player.dart';
 import 'package:int_appone/video/video_player_widget.dart';
+import 'package:get/get.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -46,7 +48,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -57,11 +59,27 @@ class MyApp extends StatelessWidget {
       //   ),
       //   child: AppCubitLogics(),
       // )
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      // home: const WelcomePage());
-      home: SignUpPage(),
+      home: LoginPage(),
     );
   }
+
+  // ==================== below one is the replica of the above code ====================
+
+  // Widget build(BuildContext context) {
+  //   return MaterialApp(
+  //     title: 'Flutter Demo',
+  //     theme: ThemeData(
+  //       primarySwatch: Colors.blue,
+  //     ),
+  //     // home: BlocProvider<AppCubits>(
+  //     //   create: (context) => AppCubits(
+  //     //     data: DataServices(),
+  //     //   ),
+  //     //   child: AppCubitLogics(),
+  //     // )
+  //     home: LoginPage(),
+  //   );
+  // }
 }
 
 class MyHomePage extends StatefulWidget {
