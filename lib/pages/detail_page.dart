@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:int_appone/misc/colors.dart';
 import 'package:int_appone/widgets/app_buttons.dart';
 import 'package:int_appone/widgets/app_large_text.dart';
+import 'package:int_appone/widgets/app_med_text.dart';
 import 'package:int_appone/widgets/app_text.dart';
 import 'package:int_appone/widgets/responsive_button.dart';
 
@@ -68,7 +69,7 @@ class _DetailPageState extends State<DetailPage> {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image:
-                        AssetImage("img/details_page/july1/day1e1_detail.jpg"),
+                        AssetImage("img/details_page/july1/day1e5_detail.jpg"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -110,8 +111,8 @@ class _DetailPageState extends State<DetailPage> {
                           text: "Music Concert",
                           color: Colors.black87,
                         ),
-                        AppLargeText(
-                          text: "\$ 250",
+                        AppMedText(
+                          text: "6:30 - 7:30 p.m",
                           color: AppColors.mainColor,
                         ),
                       ],

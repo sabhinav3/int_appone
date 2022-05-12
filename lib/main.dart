@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
       //   ),
       //   child: AppCubitLogics(),
       // )
-      home: LoginPage(),
+      home: DetailPage(),
     );
   }
 
