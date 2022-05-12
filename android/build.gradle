@@ -11,6 +11,7 @@ buildscript {
     }
 
     dependencies {
+        // classpath 'com.google.gms:google-services:4.3.3'
         classpath 'com.android.tools.build:gradle:4.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // added one is below
@@ -47,7 +48,8 @@ task clean(type: Delete) {
 
 defaultConfig {
     // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-    applicationId "com.example.int_appone"
+    // applicationId "com.example.int_appone"
+    applicationId "com.ataevents.intAppone"
     minSdkVersion 16
     targetSdkVersion 29
     versionCode flutterVersionCode.toInteger()
