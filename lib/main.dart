@@ -18,9 +18,9 @@ import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
-// void main() {
-//   runApp(const MyApp());
-// }
+void main() {
+  runApp(const MyApp());
+}
 
 // await Firebase.initializeApp(
 //   options = DefaultFirebaseOptions.currentPlatform,
@@ -35,11 +35,11 @@ import 'firebase_options.dart';
 //   runApp(MyApp());
 // }
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp().then((value) => Get.put(AuthController()));
-  runApp(MyApp());
-}
+// Future<void> main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp().then((value) => Get.put(AuthController()));
+//   runApp(MyApp());
+// }
 
 class Firebase {
   static initializeApp({options}) {}
@@ -56,18 +56,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      // home: BlocProvider<AppCubits>(
-      //   create: (context) => AppCubits(
-      //     data: DataServices(),
-      //   ),
-      //   child: AppCubitLogics(),
-      // )
-      home: LoginPage(),
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: BlocProvider<AppCubits>(
+          create: (context) => AppCubits(
+            data: DataServices(),
+          ),
+          child: AppCubitLogics(),
+        )
+        // home: LoginPage(),
+        );
   }
 
   // ==================== below one is the replica of the above code ====================

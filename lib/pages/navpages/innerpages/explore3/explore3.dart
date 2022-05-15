@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:int_appone/pages/navpages/innerpages/explore_detail.dart';
+import 'package:int_appone/pages/navpages/innerpages/explore1/explore1.dart';
+import 'package:int_appone/pages/navpages/innerpages/explore1/explore1_detail.dart';
 
-class ExplorePage extends StatelessWidget {
+class ExplorePage3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +50,7 @@ class ExplorePage extends StatelessWidget {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) =>
-                  ExploreDetail(assetPath: imgPath, cookiename: name),
+                  ExploreDetail1(assetPath: imgPath, cookiename: name),
             ),
           );
         },

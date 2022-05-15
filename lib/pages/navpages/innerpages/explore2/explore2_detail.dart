@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:int_appone/pages/navpages/innerpages/explore.dart';
+import 'package:int_appone/pages/navpages/innerpages/explore2/explore2.dart';
+import 'package:int_appone/pages/navpages/innerpages/explore2/explore2_detail.dart';
 
-class ExploreDetail extends StatelessWidget {
+class ExploreDetail2 extends StatelessWidget {
   final assetPath, cookiename;
 
-  ExploreDetail({this.assetPath, this.cookiename});
+  ExploreDetail2({this.assetPath, this.cookiename});
 
   @override
   Widget build(BuildContext context) {
