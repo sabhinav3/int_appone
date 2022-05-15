@@ -73,37 +73,37 @@ class _BarItemPageState extends State<BarItemPage>
                   fontSize: 32.0,
                   fontWeight: FontWeight.bold)),
           SizedBox(height: 15.0),
-          // TabBar(
-          //   controller: _tabController,
-          //   indicatorColor: Colors.transparent,
-          //   labelColor: Color(0xFFC88D67),
-          //   isScrollable: true,
-          //   labelPadding: EdgeInsets.only(right: 45.0),
-          //   unselectedLabelColor: Color(0xFFCDCDCD),
-          //   tabs: [
-          //     Tab(
-          //       child: Text('Cookies',
-          //           style: TextStyle(
-          //             fontFamily: 'Varela',
-          //             fontSize: 21.0,
-          //           )),
-          //     ),
-          //     Tab(
-          //       child: Text('Cookie cake',
-          //           style: TextStyle(
-          //             fontFamily: 'Varela',
-          //             fontSize: 21.0,
-          //           )),
-          //     ),
-          //     Tab(
-          //       child: Text('Ice cream',
-          //           style: TextStyle(
-          //             fontFamily: 'Varela',
-          //             fontSize: 21.0,
-          //           )),
-          //     )
-          //   ],
-          // ),
+          TabBar(
+            controller: _tabController,
+            indicatorColor: Colors.transparent,
+            labelColor: Color(0xFFC88D67),
+            isScrollable: true,
+            labelPadding: EdgeInsets.only(right: 45.0),
+            unselectedLabelColor: Color(0xFFCDCDCD),
+            tabs: [
+              Tab(
+                child: Text('Cookies',
+                    style: TextStyle(
+                      fontFamily: 'Varela',
+                      fontSize: 21.0,
+                    )),
+              ),
+              Tab(
+                child: Text('Cookie cake',
+                    style: TextStyle(
+                      fontFamily: 'Varela',
+                      fontSize: 21.0,
+                    )),
+              ),
+              Tab(
+                child: Text('Ice cream',
+                    style: TextStyle(
+                      fontFamily: 'Varela',
+                      fontSize: 21.0,
+                    )),
+              )
+            ],
+          ),
           Container(
             height: MediaQuery.of(context).size.height - 50.0,
             width: double.infinity,

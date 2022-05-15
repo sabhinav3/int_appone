@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:int_appone/pages/login/auth_controller.dart';
 
 class UserWelcomePage extends StatelessWidget {
-  const UserWelcomePage({Key? key}) : super(key: key);
+  String email;
+  UserWelcomePage({Key? key, required this.email}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +55,7 @@ class UserWelcomePage extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "abhi@gmail.com",
+                  email,
                   style: TextStyle(
                     fontSize: 18,
                     color: Colors.grey[500],
@@ -65,23 +67,28 @@ class UserWelcomePage extends StatelessWidget {
           SizedBox(
             height: 200,
           ),
-          Container(
-            width: w * 0.5,
-            height: h *
-                0.08, // here we're multiplying to get the dynamic height based on screen size
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
-              image: DecorationImage(
-                  image: AssetImage("img/bg-3.png"),
-                  fit: BoxFit.cover), //remove fit property for perfect image
-            ),
-            child: Center(
-              child: Text(
-                "Sign Out",
-                style: TextStyle(
-                  fontSize: 29,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+          GestureDetector(
+            onTap: () {
+              AuthController.instance.logOut();
+            },
+            child: Container(
+              width: w * 0.5,
+              height: h *
+                  0.08, // here we're multiplying to get the dynamic height based on screen size
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                image: DecorationImage(
+                    image: AssetImage("img/bg-3.png"),
+                    fit: BoxFit.cover), //remove fit property for perfect image
+              ),
+              child: Center(
+                child: Text(
+                  "Sign Out",
+                  style: TextStyle(
+                    fontSize: 29,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),

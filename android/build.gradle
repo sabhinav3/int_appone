@@ -12,17 +12,17 @@ buildscript {
 
     dependencies {
         // classpath 'com.google.gms:google-services:4.3.3'
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:3.5.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // added one is below
-        classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'com.google.gms:google-services:4.3.3'
         // added one is below
-        implementation platform('com.google.firebase:firebase-bom:29.3.1')
+        // implementation platform('com.google.firebase:firebase-bom:29.3.1')
         // added one is below
-        implementation 'com.google.firebase:firebase-analytics'
+        // implementation 'com.google.firebase:firebase-analytics'
 
         // added for extra
-        implementation 'com.android.support:multidex:1.0.3'
+        // implementation 'com.android.support:multidex:1.0.3'
     }
 }
 

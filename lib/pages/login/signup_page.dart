@@ -3,12 +3,15 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:int_appone/pages/login/auth_controller.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var emailController = TextEditingController();
+    var passwordController = TextEditingController();
     List images = [
       "facebook.jpeg",
       "google.png",
@@ -80,6 +83,7 @@ class SignUpPage extends StatelessWidget {
                     ],
                   ),
                   child: TextField(
+                    controller: emailController,
                     decoration: InputDecoration(
                       hintText: "Email",
                       prefixIcon: Icon(
@@ -122,6 +126,8 @@ class SignUpPage extends StatelessWidget {
                     ],
                   ),
                   child: TextField(
+                    controller: passwordController,
+                    obscureText: true,
                     decoration: InputDecoration(
                       hintText: "Password",
                       prefixIcon: Icon(
@@ -156,23 +162,29 @@ class SignUpPage extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Container(
-            width: w * 0.5,
-            height: h *
-                0.08, // here we're multiplying to get the dynamic height based on screen size
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
-              image: DecorationImage(
-                  image: AssetImage("img/bg-3.png"),
-                  fit: BoxFit.cover), //remove fit property for perfect image
-            ),
-            child: Center(
-              child: Text(
-                "Sign Up",
-                style: TextStyle(
-                  fontSize: 29,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+          GestureDetector(
+            onTap: () {
+              AuthController.instance.register(
+                  emailController.text.trim(), passwordController.text.trim());
+            },
+            child: Container(
+              width: w * 0.5,
+              height: h *
+                  0.08, // here we're multiplying to get the dynamic height based on screen size
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                image: DecorationImage(
+                    image: AssetImage("img/bg-3.png"),
+                    fit: BoxFit.cover), //remove fit property for perfect image
+              ),
+              child: Center(
+                child: Text(
+                  "Sign Up",
+                  style: TextStyle(
+                    fontSize: 29,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),

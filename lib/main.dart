@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:int_appone/cubit/app_cubit_logics.dart';
 import 'package:int_appone/cubit/app_cubits.dart';
+import 'package:int_appone/pages/login/auth_controller.dart';
 import 'package:int_appone/pages/login/login_page.dart';
 import 'package:int_appone/pages/login/signup_page.dart';
 import 'package:int_appone/pages/detail_page.dart';
@@ -25,12 +26,18 @@ import 'firebase_options.dart';
 //   options = DefaultFirebaseOptions.currentPlatform,
 // );
 
-void main() async {
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   var currentPlatform;
+//   await Firebase.initializeApp(
+//     options: DefaultFirebaseOptions.currentPlatform,
+//   );
+//   runApp(MyApp());
+// }
+
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  var currentPlatform;
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp().then((value) => Get.put(AuthController()));
   runApp(MyApp());
 }
 
@@ -59,7 +66,7 @@ class MyApp extends StatelessWidget {
       //   ),
       //   child: AppCubitLogics(),
       // )
-      home: DetailPage(),
+      home: LoginPage(),
     );
   }
 
