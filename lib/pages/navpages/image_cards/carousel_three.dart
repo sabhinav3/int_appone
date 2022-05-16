@@ -20,9 +20,9 @@ class _CarouselThree extends State<CarouselThree> {
     'img/sponsors/gold_sponsors/mantra.jpg',
     'img/sponsors/gold_sponsors/movers.jpg',
     'img/sponsors/gold_sponsors/padmavathi.jpg',
-    'img/sponsors/gold_sponsors/ram_associates.jpg ',
-    'img/sponsors/gold_sponsors/somireddy.jpg ',
-    'img/sponsors/gold_sponsors/tripura.jpg ',
+    'img/sponsors/gold_sponsors/ram_associates.jpg',
+    'img/sponsors/gold_sponsors/somireddy.jpg',
+    'img/sponsors/gold_sponsors/tripura.jpg',
     'img/sponsors/gold_sponsors/vbj.jpg',
   ];
 
@@ -44,7 +44,7 @@ class _CarouselThree extends State<CarouselThree> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      padding: const EdgeInsets.only(top: 50),
+      padding: const EdgeInsets.only(top: 20),
       child: Stack(
         children: [
           CarouselSlider(

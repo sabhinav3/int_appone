@@ -1,7 +1,62 @@
-apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
+// apply plugin: 'com.android.application'
+// apply plugin: 'com.google.gms.google-services'
 
-// the above plugins are added
+// // the above plugins are added
+
+// buildscript {
+//     ext.kotlin_version = '1.6.10'
+//     repositories {
+//         google()
+//         mavenCentral()
+//     }
+
+//     dependencies {
+//         // classpath 'com.google.gms:google-services:4.3.3'
+//         classpath 'com.android.tools.build:gradle:3.5.0'
+//         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+//         // added one is below
+//         classpath 'com.google.gms:google-services:4.3.3'
+//         // added one is below
+//         // implementation platform('com.google.firebase:firebase-bom:29.3.1')
+//         // added one is below
+//         // implementation 'com.google.firebase:firebase-analytics'
+
+//         // added for extra
+//         // implementation 'com.android.support:multidex:1.0.3'
+//     }
+// }
+
+// allprojects {
+//     repositories {
+//         google()
+//         mavenCentral()
+//     }
+// }
+
+// rootProject.buildDir = '../build'
+// subprojects {
+//     project.buildDir = "${rootProject.buildDir}/${project.name}"
+// }
+// subprojects {
+//     project.evaluationDependsOn(':app')
+// }
+
+// task clean(type: Delete) {
+//     delete rootProject.buildDir
+// }
+
+
+// defaultConfig {
+//     // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+//     // applicationId "com.example.int_appone"
+//     applicationId "com.ataevents.intAppone"
+//     minSdkVersion 16
+//     targetSdkVersion 29
+//     versionCode flutterVersionCode.toInteger()
+//     versionName flutterVersionName
+//     multiDexEnabled true //add this line 
+// }
+
 
 buildscript {
     ext.kotlin_version = '1.6.10'
@@ -11,18 +66,8 @@ buildscript {
     }
 
     dependencies {
-        // classpath 'com.google.gms:google-services:4.3.3'
-        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.android.tools.build:gradle:4.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        // added one is below
-        classpath 'com.google.gms:google-services:4.3.3'
-        // added one is below
-        // implementation platform('com.google.firebase:firebase-bom:29.3.1')
-        // added one is below
-        // implementation 'com.google.firebase:firebase-analytics'
-
-        // added for extra
-        // implementation 'com.android.support:multidex:1.0.3'
     }
 }
 
@@ -43,16 +88,4 @@ subprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
-}
-
-
-defaultConfig {
-    // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-    // applicationId "com.example.int_appone"
-    applicationId "com.ataevents.intAppone"
-    minSdkVersion 16
-    targetSdkVersion 29
-    versionCode flutterVersionCode.toInteger()
-    versionName flutterVersionName
-    multiDexEnabled true //add this line 
 }
