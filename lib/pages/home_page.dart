@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'dart:ui' as ui;
 import 'package:flutter/cupertino.dart';
 import 'package:int_appone/misc/colors.dart';
+import 'package:int_appone/pages/navpages/home_cards/colour_cards.dart';
 import 'package:int_appone/video/video_player_widget.dart';
 import 'package:int_appone/widgets/app_large_text.dart';
 import 'package:int_appone/widgets/app_text.dart';
@@ -51,6 +53,28 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     "day3e7_home.jpg": "Day3event6",
     "day3e8_home.jpg": "Day3event6",
   };
+
+  var items = [
+    PlaceInfo('Musical Night', Color(0xff6DC8F3), Color(0xff73A1F9), 'July 1',
+        'Washington Convention Center', 'By - SS.Thaman'),
+    PlaceInfo('Live In Concert', Color(0xffFFB157), Color(0xffFFA057), 'July 1',
+        'Washington Convention Center', 'By - Ram Miryala'),
+    PlaceInfo('Grand Musical Concert', Color(0xffFF5B95), Color(0xffF8556D),
+        'July 1', 'Washington Convention Center', 'By - Maestro Ilayaraja'),
+    PlaceInfo('Keynote Speakers', Color(0xffD76EF5), Color(0xff8F7AFE),
+        'July 1', 'Washington Convention Center', 'Sadhguru · Kamlesh D Patel'),
+    PlaceInfo('Special Guests', Color(0xff42E695), Color(0xff3BB2B8), 'July 1',
+        'Washington Convention Centers', 'KTR · Y.S.Jagan'),
+    PlaceInfo(
+        'Special Guests',
+        Color(0xffFFB157),
+        Color(0xffFFA057),
+        'July 1',
+        'Washington Convention Centers',
+        'Rakul Preet Singh · Vijay Devarakonda'),
+  ];
+
+  final double _borderRadius = 24.0;
   @override
   // ignore: dead_code
   Widget build(BuildContext context) {
@@ -141,8 +165,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.white,
                           image: DecorationImage(
-                            image: AssetImage("img/home_page/july1/" +
-                                cards1.keys.elementAt(index)),
+                            image: AssetImage(
+                              "img/home_page/july1/" +
+                                  cards1.keys.elementAt(index),
+                            ),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -277,39 +303,227 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               width: double.maxFinite,
               margin: const EdgeInsets.only(left: 20),
               child: ListView.builder(
-                  itemCount: 4,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (_, index) {
-                    return Container(
-                      margin: const EdgeInsets.only(right: 30),
-                      child: Column(
-                        children: [
+                itemCount: 4,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (_, index) {
+                  return Container(
+                    margin: const EdgeInsets.only(right: 30),
+                    child: Column(
+                      children: [
+                        Container(
+                          // margin: const EdgeInsets.only(right: 50),
+                          width: 80,
+                          height: 80,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white,
+                            image: DecorationImage(
+                                image: AssetImage("img/icons/" +
+                                    images.keys.elementAt(index)),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          child: AppText(
+                            text: images.values.elementAt(index),
+                            color: AppColors.textColor2,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ),
+
+            SizedBox(
+              height: 20,
+            ),
+
+            Container(
+              margin: const EdgeInsets.only(left: 20, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AppLargeText(
+                    text: "Special Events",
+                    size: 22,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 40),
+                    child: Icon(
+                      Icons.edit_calendar_outlined,
+                      color: AppColors.textColor1,
+                    ),
+                  ),
+                  AppText(
+                    text: "Save the Date",
+                    color: AppColors.textColor1,
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+
+            Container(
+              padding: const EdgeInsets.only(left: 5),
+              height: 400,
+              width: double.maxFinite,
+              child: ListView.builder(
+                itemCount: items.length,
+                itemBuilder: (context, index) {
+                  return Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Stack(
+                        children: <Widget>[
                           Container(
-                            // margin: const EdgeInsets.only(right: 50),
-                            width: 80,
-                            height: 80,
+                            height: 150,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: Colors.white,
-                              image: DecorationImage(
-                                  image: AssetImage("img/icons/" +
-                                      images.keys.elementAt(index)),
-                                  fit: BoxFit.cover),
+                              borderRadius:
+                                  BorderRadius.circular(_borderRadius),
+                              gradient: LinearGradient(
+                                colors: [
+                                  items[index].startColor,
+                                  items[index].endColor,
+                                ],
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: items[index].endColor,
+                                  blurRadius: 12,
+                                  offset: Offset(0, 6),
+                                ),
+                              ],
                             ),
                           ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                            child: AppText(
-                              text: images.values.elementAt(index),
-                              color: AppColors.textColor2,
+                          Positioned(
+                            right: 0,
+                            bottom: 0,
+                            top: 0,
+                            child: CustomPaint(
+                              size: Size(100, 150),
+                              painter: CustomCardShapePainter(
+                                  _borderRadius,
+                                  items[index].startColor,
+                                  items[index].endColor),
                             ),
                           ),
+                          Positioned.fill(
+                            child: Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: Image.asset(
+                                    "img/home_page/july1/" + // here change images
+                                        cards1.keys.elementAt(index),
+                                    height: 64,
+                                    width: 64,
+                                  ),
+                                  flex: 2,
+                                ),
+                                Expanded(
+                                  flex: 4,
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        items[index].name,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w900,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                      Text(
+                                        items[index].category,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 16,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.location_on,
+                                            color: Colors.white,
+                                            size: 16,
+                                          ),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Flexible(
+                                            child: Text(
+                                              items[index].location,
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.calendar_month_outlined,
+                                            color: Colors.white,
+                                            size: 19,
+                                          ),
+                                          Text(
+                                            items[index].rating.toString(),
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.w700,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+
+                                      // CardBar(
+                                      //   time: items[index].rating,
+                                      // ),
+                                      // Icon(
+                                      //   Icons.star,
+                                      //   color: Colors.white,
+                                      // ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )
                         ],
                       ),
-                    );
-                  }),
+                    ),
+                  );
+                },
+              ),
+            ),
+
+            AppLargeText(
+              text: "Abhinav Sam",
+              size: 22,
             ),
 
             // trial==========================================
@@ -318,6 +532,56 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         ),
       ),
     );
+  }
+}
+
+class PlaceInfo {
+  final String name;
+  final String category;
+  final String location;
+  final String rating;
+  final Color startColor;
+  final Color endColor;
+
+  PlaceInfo(this.name, this.startColor, this.endColor, this.rating,
+      this.location, this.category);
+}
+
+class CustomCardShapePainter extends CustomPainter {
+  final double radius;
+  final Color startColor;
+  final Color endColor;
+
+  CustomCardShapePainter(this.radius, this.startColor, this.endColor);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    var radius = 24.0;
+
+    var paint = Paint();
+    paint.shader = ui.Gradient.linear(
+        Offset(0, 0), Offset(size.width, size.height), [
+      HSLColor.fromColor(startColor).withLightness(0.8).toColor(),
+      endColor
+    ]);
+
+    var path = Path()
+      ..moveTo(0, size.height)
+      ..lineTo(size.width - radius, size.height)
+      ..quadraticBezierTo(
+          size.width, size.height, size.width, size.height - radius)
+      ..lineTo(size.width, radius)
+      ..quadraticBezierTo(size.width, 0, size.width - radius, 0)
+      ..lineTo(size.width - 1.5 * radius, 0)
+      ..quadraticBezierTo(-radius, 2 * radius, 0, size.height)
+      ..close();
+
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(CustomPainter oldDelegate) {
+    return true;
   }
 }
 
