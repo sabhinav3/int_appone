@@ -6,6 +6,8 @@ import 'package:int_appone/widgets/app_med_text.dart';
 import 'package:int_appone/widgets/app_text.dart';
 
 import 'navpages/image_cards/carousel.dart';
+import 'navpages/image_cards/carousel_two.dart';
+import 'navpages/image_cards/carousel_three.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -553,7 +555,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 children: [
                   AppLargeText(
                     text: "ATA Sponsors",
-                    size: 22,
+                    size: 25,
                   ),
                 ],
               ),
@@ -565,18 +567,74 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   AppText(
-                    text: "Platinum Sponsors",
+                    text: "Diamond Sponsors",
                     size: 22,
                   ),
-                  AppText(
-                    text: "Swipe",
-                    color: AppColors.textColor1,
+                  Row(
+                    children: [
+                      AppText(
+                        text: "Swipe",
+                        color: AppColors.textColor1,
+                      ),
+                      Icon(Icons.double_arrow_rounded,
+                          color: AppColors.textColor1),
+                    ],
                   )
                 ],
               ),
             ),
 
-            DestinationCarousel(),
+            CarouselOne(),
+
+            Container(
+              margin: const EdgeInsets.only(left: 20, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AppText(
+                    text: "Platinum Sponsors",
+                    size: 22,
+                  ),
+                  Row(
+                    children: [
+                      AppText(
+                        text: "Swipe",
+                        color: AppColors.textColor1,
+                      ),
+                      Icon(Icons.double_arrow_rounded,
+                          color: AppColors.textColor1),
+                    ],
+                  )
+                ],
+              ),
+            ),
+
+            CarouselTwo(),
+
+            Container(
+              margin: const EdgeInsets.only(left: 20, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AppText(
+                    text: "Gold Sponsors",
+                    size: 22,
+                  ),
+                  Row(
+                    children: [
+                      AppText(
+                        text: "Swipe",
+                        color: AppColors.textColor1,
+                      ),
+                      Icon(Icons.double_arrow_rounded,
+                          color: AppColors.textColor1),
+                    ],
+                  )
+                ],
+              ),
+            ),
+
+            CarouselThree(),
           ],
         ),
       ),

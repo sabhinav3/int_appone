@@ -141,6 +141,24 @@ flutter:
     - img/explore_page/ram-miriyala.jpg
     - img/explore_page/saikumar.jpg
     - img/explore_page/shiva_balaji.jpg
+    - img/sponsors/diamond_sponsors/ais.jpg
+    - img/sponsors/diamond_sponsors/dreamvalley.jpg
+    - img/sponsors/diamond_sponsors/heartfulness.jpg
+    - img/sponsors/diamond_sponsors/lalitha.jpg
+    - img/sponsors/platinum_sponsors/greenrich.jpg
+    - img/sponsors/platinum_sponsors/lawoffice.jpg
+    - img/sponsors/platinum_sponsors/lovi.jpg
+    - img/sponsors/platinum_sponsors/voip.jpg
+
+    - img/sponsors/gold_sponsors/bbi.jpg
+    - img/sponsors/gold_sponsors/codeyoung.jpg
+    - img/sponsors/gold_sponsors/mantra.jpg
+    - img/sponsors/gold_sponsors/movers.jpg
+    - img/sponsors/gold_sponsors/padmavathi.jpg
+    - img/sponsors/gold_sponsors/ram_associates.jpg
+    - img/sponsors/gold_sponsors/somireddy.jpg
+    - img/sponsors/gold_sponsors/tripura.jpg
+    - img/sponsors/gold_sponsors/vbj.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

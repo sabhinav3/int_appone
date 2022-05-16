@@ -5,20 +5,20 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:int_appone/pages/navpages/image_cards/responsive.dart';
 
-class CarouselOne extends StatefulWidget {
+class CarouselTwo extends StatefulWidget {
   // DestinationCarousel({required key}) : super(key: key);
 
   @override
-  State<CarouselOne> createState() => _CarouselOne();
+  State<CarouselTwo> createState() => _CarouselTwo();
 }
 
-class _CarouselOne extends State<CarouselOne> {
+class _CarouselTwo extends State<CarouselTwo> {
   int _current = 0;
   final List<String> images = [
-    'img/sponsors/diamond_sponsors/ais.jpg',
-    'img/sponsors/diamond_sponsors/dreamvalley.jpg',
-    'img/sponsors/diamond_sponsors/heartfulness.jpg',
-    'img/sponsors/diamond_sponsors/lalitha.jpg',
+    'img/sponsors/platinum_sponsors/greenrich.jpg',
+    'img/sponsors/platinum_sponsors/lawoffice.jpg',
+    'img/sponsors/platinum_sponsors/lovi.jpg',
+    'img/sponsors/platinum_sponsors/voip.jpg',
   ];
 
   List<Widget> generateImagesTiles() {
