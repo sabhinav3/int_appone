@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:int_appone/pages/login/auth_controller.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -27,7 +25,7 @@ class SignUpPage extends StatelessWidget {
             width: w, // put height & width as 400 ., then it's perfect
             height: h *
                 0.3, // here we're multiplying by 3 to get the 1/3rd height of the screen
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage("img/bg-3.png"), fit: BoxFit.cover),
               //remove fit property for perfect image
@@ -41,7 +39,7 @@ class SignUpPage extends StatelessWidget {
                   backgroundColor: Colors.yellowAccent
                       .withOpacity(0), // creating a transperant background
                   radius: 75,
-                  backgroundImage: AssetImage("img/logo_ata_nobg.png"),
+                  backgroundImage: const AssetImage("img/logo_ata_nobg.png"),
                 )
               ],
             ),
@@ -52,7 +50,7 @@ class SignUpPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Sign Up",
                   style: TextStyle(
                     fontSize: 45,
@@ -66,7 +64,7 @@ class SignUpPage extends StatelessWidget {
                     color: Colors.grey[500],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 Container(
@@ -77,7 +75,7 @@ class SignUpPage extends StatelessWidget {
                       BoxShadow(
                         blurRadius: 10,
                         spreadRadius: 7,
-                        offset: Offset(1, 1),
+                        offset: const Offset(1, 1),
                         color: Colors.grey.withOpacity(0.2),
                       ),
                     ],
@@ -86,19 +84,19 @@ class SignUpPage extends StatelessWidget {
                     controller: emailController,
                     decoration: InputDecoration(
                       hintText: "Email",
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.email_rounded,
                         color: Colors.amber,
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.white,
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.white,
                           width: 1.0,
                         ),
@@ -109,7 +107,7 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -120,7 +118,7 @@ class SignUpPage extends StatelessWidget {
                       BoxShadow(
                         blurRadius: 10,
                         spreadRadius: 7,
-                        offset: Offset(1, 1),
+                        offset: const Offset(1, 1),
                         color: Colors.grey.withOpacity(0.2),
                       ),
                     ],
@@ -130,19 +128,19 @@ class SignUpPage extends StatelessWidget {
                     obscureText: true,
                     decoration: InputDecoration(
                       hintText: "Password",
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.password_rounded,
                         color: Colors.amber,
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.white,
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.white,
                           width: 1.0,
                         ),
@@ -153,13 +151,13 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           GestureDetector(
@@ -173,11 +171,11 @@ class SignUpPage extends StatelessWidget {
                   0.08, // here we're multiplying to get the dynamic height based on screen size
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
-                image: DecorationImage(
+                image: const DecorationImage(
                     image: AssetImage("img/bg-3.png"),
                     fit: BoxFit.cover), //remove fit property for perfect image
               ),
-              child: Center(
+              child: const Center(
                 child: Text(
                   "Sign Up",
                   style: TextStyle(
@@ -189,7 +187,7 @@ class SignUpPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           RichText(

@@ -1,13 +1,11 @@
-import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:int_appone/pages/login/signup_page.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({Key? key}) : super(key: key);
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -26,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
             width: w, // put height & width as 400 ., then it's perfect
             height: h *
                 0.3, // here we're multiplying by 3 to get the 1/3rd height of the screen
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage("img/bg-3.png"),
                   fit: BoxFit.cover), //remove fit property for perfect image
@@ -38,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Hello",
                   style: TextStyle(
                     fontSize: 50,
@@ -52,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
                     color: Colors.grey[500],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 Container(
@@ -63,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                       BoxShadow(
                         blurRadius: 10,
                         spreadRadius: 7,
-                        offset: Offset(1, 1),
+                        offset: const Offset(1, 1),
                         color: Colors.grey.withOpacity(0.2),
                       ),
                     ],
@@ -71,19 +69,19 @@ class _LoginPageState extends State<LoginPage> {
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: "Email",
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.email_rounded,
                         color: Colors.amber,
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.white,
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.white,
                           width: 1.0,
                         ),
@@ -94,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -105,7 +103,7 @@ class _LoginPageState extends State<LoginPage> {
                       BoxShadow(
                         blurRadius: 10,
                         spreadRadius: 7,
-                        offset: Offset(1, 1),
+                        offset: const Offset(1, 1),
                         color: Colors.grey.withOpacity(0.2),
                       ),
                     ],
@@ -113,19 +111,19 @@ class _LoginPageState extends State<LoginPage> {
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: "Password",
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.password_rounded,
                         color: Colors.amber,
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.white,
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.white,
                           width: 1.0,
                         ),
@@ -136,7 +134,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -144,7 +142,7 @@ class _LoginPageState extends State<LoginPage> {
                     Expanded(
                       child: Container(), // empty container
                     ),
-                    Text(
+                    const Text(
                       "Forgot your password ?",
                       style: TextStyle(
                         fontSize: 15,
@@ -156,7 +154,7 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 70,
           ),
           Container(
@@ -165,11 +163,11 @@ class _LoginPageState extends State<LoginPage> {
                 0.08, // here we're multiplying to get the dynamic height based on screen size
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
-              image: DecorationImage(
+              image: const DecorationImage(
                   image: AssetImage("img/bg-3.png"),
                   fit: BoxFit.cover), //remove fit property for perfect image
             ),
-            child: Center(
+            child: const Center(
               child: Text(
                 "Sign In",
                 style: TextStyle(
@@ -185,7 +183,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
           RichText(
             text: TextSpan(
-                text: "Don\'t have an account ?",
+                text: "Don't have an account ?",
                 style: TextStyle(
                   color: Colors.grey[500],
                   fontSize: 20,
@@ -193,13 +191,13 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   TextSpan(
                     text: " Create",
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.black,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                     recognizer: TapGestureRecognizer()
-                      ..onTap = () => Get.to(() => SignUpPage()),
+                      ..onTap = () => Get.to(() => const SignUpPage()),
                   ),
                 ]),
           )

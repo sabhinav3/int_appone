@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:int_appone/pages/navpages/bar_item_page.dart';
 import 'package:int_appone/pages/home_page.dart';
 import 'package:int_appone/pages/navpages/my_page.dart';
@@ -13,7 +12,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  List pages = [HomePage(), BarItemPage(), SearchPage(), MyPage()];
+  List pages = [const HomePage(), const BarItemPage(), const SearchPage(), const MyPage()];
 
   int currentIndex = 0;
   void onTap(int index) {
@@ -40,7 +39,7 @@ class _MainPageState extends State<MainPage> {
         showSelectedLabels: false,
         showUnselectedLabels: false,
         elevation: 0,
-        items: [
+        items: const [
           BottomNavigationBarItem(
               label: "Home",
               icon: Icon(Icons

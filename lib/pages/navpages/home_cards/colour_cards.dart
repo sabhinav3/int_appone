@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CardBar extends StatelessWidget {
@@ -10,7 +9,7 @@ class CardBar extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: List.generate(time.floor(), (index) {
-        return Icon(
+        return const Icon(
           // Icons.star,
           Icons.watch_later_rounded,
           color: Colors.white,

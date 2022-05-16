@@ -1,19 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:async';
-import 'package:int_appone/pages/navpages/innerpages/explore1/explore1.dart';
 import 'package:int_appone/pages/navpages/innerpages/explore1/explore1_detail.dart';
 
 class ExplorePage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFCFAF8),
+      backgroundColor: const Color(0xFFFCFAF8),
       body: ListView(
         children: <Widget>[
-          SizedBox(height: 15.0),
+          const SizedBox(height: 15.0),
           Container(
-              padding: EdgeInsets.only(right: 15.0),
+              padding: const EdgeInsets.only(right: 15.0),
               width: MediaQuery.of(context).size.width - 30.0,
               height: MediaQuery.of(context).size.height - 30.0,
               child: GridView.count(
@@ -36,7 +33,7 @@ class ExplorePage2 extends StatelessWidget {
                       'img/explore_page/shiva_balaji.jpg', context),
                 ],
               )),
-          SizedBox(height: 3.0)
+          const SizedBox(height: 3.0)
         ],
       ),
     );
@@ -44,7 +41,7 @@ class ExplorePage2 extends StatelessWidget {
 
   Widget _buildCard(String name, String imgPath, context) {
     return Padding(
-      padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
+      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: () {
           Navigator.of(context).push(
@@ -89,7 +86,7 @@ class ExplorePage2 extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 3),
+              const SizedBox(height: 3),
 
               // this is for the price section
 
@@ -99,7 +96,7 @@ class ExplorePage2 extends StatelessWidget {
               //         fontFamily: 'Varela',
               //         fontSize: 14.0)),
               Text(name,
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Color(0xFF575E67),
                       fontFamily: 'Varela',
                       fontSize: 14.0)),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:int_appone/misc/colors.dart';
 import 'package:int_appone/widgets/app_buttons.dart';
 import 'package:int_appone/widgets/app_large_text.dart';
@@ -54,7 +53,7 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     // ignore: dead_code
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         width: double.maxFinite,
         height: double.maxFinite,
         child: Stack(
@@ -66,7 +65,7 @@ class _DetailPageState extends State<DetailPage> {
                 // width: double.maxFinite,
                 width: 350,
                 height: 350,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image:
                         AssetImage("img/details_page/july1/day1e5_detail.jpg"),
@@ -82,7 +81,7 @@ class _DetailPageState extends State<DetailPage> {
                 children: [
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.menu),
+                    icon: const Icon(Icons.menu),
                     //color : Colors.white, // to change the color of the menu app
                   )
                 ],
@@ -94,7 +93,7 @@ class _DetailPageState extends State<DetailPage> {
                 padding: const EdgeInsets.only(left: 20, right: 20, top: 30),
                 width: MediaQuery.of(context).size.width,
                 height: 500,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30),
@@ -117,16 +116,16 @@ class _DetailPageState extends State<DetailPage> {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.location_on,
                           color: AppColors.mainColor,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
                         AppText(
@@ -135,7 +134,7 @@ class _DetailPageState extends State<DetailPage> {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
 
@@ -153,7 +152,7 @@ class _DetailPageState extends State<DetailPage> {
                             );
                           }),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         AppText(
@@ -163,7 +162,7 @@ class _DetailPageState extends State<DetailPage> {
                       ],
                     ),
 
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
 
@@ -172,7 +171,7 @@ class _DetailPageState extends State<DetailPage> {
                       color: Colors.black.withOpacity(0.8),
                       size: 20,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     AppText(
@@ -180,7 +179,7 @@ class _DetailPageState extends State<DetailPage> {
                       color: AppColors.mainTextColor,
                     ),
 
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
 
@@ -214,7 +213,7 @@ class _DetailPageState extends State<DetailPage> {
                       }),
                     ),
 
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
 
@@ -224,7 +223,7 @@ class _DetailPageState extends State<DetailPage> {
                       size: 20,
                     ),
 
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
 
@@ -251,7 +250,7 @@ class _DetailPageState extends State<DetailPage> {
                     isIcon: true,
                     icon: Icons.favorite_border,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   ResponsiveButton(

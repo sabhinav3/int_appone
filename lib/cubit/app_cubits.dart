@@ -1,8 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:int_appone/cubit/app_cubit_states.dart';
 import 'package:int_appone/model/data_model.dart';
-import 'package:int_appone/pages/detail_page.dart';
-import 'package:int_appone/pages/welcome_page.dart';
 import 'package:int_appone/services/data_services.dart';
 
 class AppCubits extends Cubit<CubitStates> {

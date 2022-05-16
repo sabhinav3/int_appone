@@ -47,10 +47,10 @@ class _WelcomePageState extends State<WelcomePage> {
                           text: "Explore Events",
                           size: 25,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
-                        Container(
+                        SizedBox(
                           width: 250,
                           child: AppText(
                             text:
@@ -59,7 +59,7 @@ class _WelcomePageState extends State<WelcomePage> {
                             size: 14,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 40,
                         ),
 
@@ -69,7 +69,7 @@ class _WelcomePageState extends State<WelcomePage> {
                           onTap: () {
                             BlocProvider.of<AppCubits>(context).getData();
                           },
-                          child: Container(
+                          child: SizedBox(
                             width: 75,
                             child: Row(children: [
                               ResponsiveButton(

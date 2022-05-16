@@ -4,7 +4,7 @@ import 'package:int_appone/video/video_player_widget.dart';
 import 'package:video_player/video_player.dart';
 
 class AssetPlayerWidget extends StatefulWidget {
-  AssetPlayerWidget({Key? key}) : super(key: key);
+  const AssetPlayerWidget({Key? key}) : super(key: key);
 
   @override
   State<AssetPlayerWidget> createState() => _AssetPlayerWidgetState();

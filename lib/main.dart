@@ -2,21 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:int_appone/cubit/app_cubit_logics.dart';
 import 'package:int_appone/cubit/app_cubits.dart';
-import 'package:int_appone/pages/login/auth_controller.dart';
-import 'package:int_appone/pages/login/login_page.dart';
-import 'package:int_appone/pages/login/signup_page.dart';
-import 'package:int_appone/pages/detail_page.dart';
-import 'package:int_appone/pages/home_page.dart';
-import 'package:int_appone/pages/login/user_welcome.dart';
-import 'package:int_appone/pages/navpages/main_page.dart';
-import 'package:int_appone/pages/welcome_page.dart';
 import 'package:int_appone/services/data_services.dart';
-import 'package:int_appone/video/video_player.dart';
-import 'package:int_appone/video/video_player_widget.dart';
 import 'package:get/get.dart';
 
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
 
 void main() {
   runApp(const MyApp());
@@ -64,7 +52,7 @@ class MyApp extends StatelessWidget {
           create: (context) => AppCubits(
             data: DataServices(),
           ),
-          child: AppCubitLogics(),
+          child: const AppCubitLogics(),
         )
         // home: LoginPage(),
         );

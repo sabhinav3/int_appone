@@ -1,10 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/get.dart';
 import 'package:int_appone/pages/login/login_page.dart';
 import 'package:int_appone/pages/login/user_welcome.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 class AuthController extends GetxController {
   static AuthController instance = Get.find();
@@ -22,7 +20,7 @@ class AuthController extends GetxController {
   _initalScreen(User? user) {
     if (user == null) {
       print("Login Page");
-      Get.offAll(() => LoginPage());
+      Get.offAll(() => const LoginPage());
     } else {
       Get.offAll(() => UserWelcomePage(email: user.email!));
     }
@@ -38,7 +36,7 @@ class AuthController extends GetxController {
         "User Message",
         backgroundColor: Colors.redAccent,
         snackPosition: SnackPosition.BOTTOM,
-        titleText: Text(
+        titleText: const Text(
           "Account creation failed",
           style: TextStyle(
             color: Colors.white,
@@ -46,7 +44,7 @@ class AuthController extends GetxController {
         ),
         messageText: Text(
           e.toString(),
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
           ),
         ),
@@ -63,7 +61,7 @@ class AuthController extends GetxController {
         "Login Message",
         backgroundColor: Colors.redAccent,
         snackPosition: SnackPosition.BOTTOM,
-        titleText: Text(
+        titleText: const Text(
           "Login failed",
           style: TextStyle(
             color: Colors.white,
@@ -71,7 +69,7 @@ class AuthController extends GetxController {
         ),
         messageText: Text(
           e.toString(),
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
           ),
         ),

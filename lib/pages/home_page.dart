@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
-import 'package:flutter/cupertino.dart';
 import 'package:int_appone/misc/colors.dart';
-import 'package:int_appone/pages/navpages/home_cards/colour_cards.dart';
-import 'package:int_appone/video/video_player_widget.dart';
 import 'package:int_appone/widgets/app_large_text.dart';
 import 'package:int_appone/widgets/app_text.dart';
 
@@ -55,20 +52,20 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   };
 
   var items = [
-    PlaceInfo('Musical Night', Color(0xff6DC8F3), Color(0xff73A1F9), 'July 1',
+    PlaceInfo('Musical Night', const Color(0xff6DC8F3), const Color(0xff73A1F9), 'July 1',
         'Washington Convention Center', 'By - SS.Thaman'),
-    PlaceInfo('Live In Concert', Color(0xffFFB157), Color(0xffFFA057), 'July 1',
+    PlaceInfo('Live In Concert', const Color(0xffFFB157), const Color(0xffFFA057), 'July 1',
         'Washington Convention Center', 'By - Ram Miryala'),
-    PlaceInfo('Grand Musical Concert', Color(0xffFF5B95), Color(0xffF8556D),
+    PlaceInfo('Grand Musical Concert', const Color(0xffFF5B95), const Color(0xffF8556D),
         'July 1', 'Washington Convention Center', 'By - Maestro Ilayaraja'),
-    PlaceInfo('Keynote Speakers', Color(0xffD76EF5), Color(0xff8F7AFE),
+    PlaceInfo('Keynote Speakers', const Color(0xffD76EF5), const Color(0xff8F7AFE),
         'July 1', 'Washington Convention Center', 'Sadhguru · Kamlesh D Patel'),
-    PlaceInfo('Special Guests', Color(0xff42E695), Color(0xff3BB2B8), 'July 1',
+    PlaceInfo('Special Guests', const Color(0xff42E695), const Color(0xff3BB2B8), 'July 1',
         'Washington Convention Centers', 'KTR · Y.S.Jagan'),
     PlaceInfo(
         'Special Guests',
-        Color(0xffFFB157),
-        Color(0xffFFA057),
+        const Color(0xffFFB157),
+        const Color(0xffFFA057),
         'July 1',
         'Washington Convention Centers',
         'Rakul Preet Singh · Vijay Devarakonda'),
@@ -89,7 +86,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               padding: const EdgeInsets.only(top: 70, left: 20),
               child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.menu,
                     size: 30,
                     color: Colors.black,
@@ -109,7 +106,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             // Discover Events Text is labeled here.
@@ -117,7 +114,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               margin: const EdgeInsets.only(left: 20),
               child: AppLargeText(text: "Discover Events"),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
 
@@ -135,7 +132,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   indicatorSize: TabBarIndicatorSize.label,
                   indicator:
                       CircleTabIndicator(color: AppColors.redColor, radius: 4),
-                  tabs: [
+                  tabs: const [
                     Tab(text: "July 1"),
                     Tab(text: "July 2"),
                     Tab(text: "July 3"),
@@ -227,7 +224,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
 
@@ -248,7 +245,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
 
@@ -277,7 +274,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                   fit: BoxFit.cover),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Container(
@@ -294,7 +291,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
             // trial==========================================
             // repetetion of the same above icons==============
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
 
@@ -323,7 +320,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 fit: BoxFit.cover),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Container(
@@ -339,7 +336,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
 
@@ -352,8 +349,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     text: "Special Events",
                     size: 22,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 40),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 40),
                     child: Icon(
                       Icons.edit_calendar_outlined,
                       color: AppColors.textColor1,
@@ -366,7 +363,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
 
@@ -399,7 +396,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 BoxShadow(
                                   color: items[index].endColor,
                                   blurRadius: 12,
-                                  offset: Offset(0, 6),
+                                  offset: const Offset(0, 6),
                                 ),
                               ],
                             ),
@@ -409,7 +406,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                             bottom: 0,
                             top: 0,
                             child: CustomPaint(
-                              size: Size(100, 150),
+                              size: const Size(100, 150),
                               painter: CustomCardShapePainter(
                                   _borderRadius,
                                   items[index].startColor,
@@ -437,7 +434,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                     children: <Widget>[
                                       Text(
                                         items[index].name,
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           color: Colors.white,
                                           fontWeight: FontWeight.w900,
                                           fontSize: 16,
@@ -445,28 +442,28 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                       ),
                                       Text(
                                         items[index].category,
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           color: Colors.white,
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 16,
                                       ),
                                       Row(
                                         children: [
-                                          Icon(
+                                          const Icon(
                                             Icons.location_on,
                                             color: Colors.white,
                                             size: 16,
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 5,
                                           ),
                                           Flexible(
                                             child: Text(
                                               items[index].location,
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.w500,
                                               ),
@@ -484,14 +481,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                     children: <Widget>[
                                       Row(
                                         children: [
-                                          Icon(
+                                          const Icon(
                                             Icons.calendar_month_outlined,
                                             color: Colors.white,
                                             size: 19,
                                           ),
                                           Text(
                                             items[index].rating.toString(),
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               color: Colors.white,
                                               fontSize: 18,
                                               fontWeight: FontWeight.w700,
@@ -560,7 +557,7 @@ class CustomCardShapePainter extends CustomPainter {
 
     var paint = Paint();
     paint.shader = ui.Gradient.linear(
-        Offset(0, 0), Offset(size.width, size.height), [
+        const Offset(0, 0), Offset(size.width, size.height), [
       HSLColor.fromColor(startColor).withLightness(0.8).toColor(),
       endColor
     ]);

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:video_player/video_player.dart';
 
 class VideoPlayerWidget extends StatelessWidget {
@@ -10,12 +9,12 @@ class VideoPlayerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) =>
-      controller != null && controller.value.isInitialized
+      controller.value.isInitialized
           ? Container(
               alignment: Alignment.topCenter,
               child: buildVideo(),
             )
-          : Container(
+          : const SizedBox(
               height: 200,
               child: Center(child: CircularProgressIndicator()),
             );

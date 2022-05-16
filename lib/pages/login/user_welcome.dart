@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:int_appone/pages/login/auth_controller.dart';
 
@@ -18,7 +17,7 @@ class UserWelcomePage extends StatelessWidget {
             width: w, // put height & width as 400 ., then it's perfect
             height: h *
                 0.3, // here we're multiplying by 3 to get the 1/3rd height of the screen
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage("img/bg-3.png"), fit: BoxFit.cover),
               //remove fit property for perfect image
@@ -32,12 +31,12 @@ class UserWelcomePage extends StatelessWidget {
                   backgroundColor: Colors.yellowAccent
                       .withOpacity(0), // creating a transperant background
                   radius: 75,
-                  backgroundImage: AssetImage("img/logo_ata_nobg.png"),
+                  backgroundImage: const AssetImage("img/logo_ata_nobg.png"),
                 )
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
@@ -46,7 +45,7 @@ class UserWelcomePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Welcome",
                   style: TextStyle(
                     fontSize: 36,
@@ -64,7 +63,7 @@ class UserWelcomePage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 200,
           ),
           GestureDetector(
@@ -77,11 +76,11 @@ class UserWelcomePage extends StatelessWidget {
                   0.08, // here we're multiplying to get the dynamic height based on screen size
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
-                image: DecorationImage(
+                image: const DecorationImage(
                     image: AssetImage("img/bg-3.png"),
                     fit: BoxFit.cover), //remove fit property for perfect image
               ),
-              child: Center(
+              child: const Center(
                 child: Text(
                   "Sign Out",
                   style: TextStyle(

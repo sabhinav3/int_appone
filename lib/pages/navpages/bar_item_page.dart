@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:int_appone/pages/navpages/innerpages/explore1/explore1.dart';
 import 'package:int_appone/pages/navpages/innerpages/explore2/explore2.dart';
 import 'package:int_appone/pages/navpages/innerpages/explore3/explore3.dart';
 
-import 'package:int_appone/pages/navpages/innerpages/explore1/explore1_detail.dart';
-import 'package:int_appone/pages/navpages/innerpages/explore2/explore2_detail.dart';
-import 'package:int_appone/pages/navpages/innerpages/explore3/explore3_detail.dart';
 
 import 'innerpages/explore1/explore1.dart';
 
@@ -20,7 +16,7 @@ import 'innerpages/explore1/explore1.dart';
 // }
 
 class BarItemPage extends StatefulWidget {
-  BarItemPage({Key? key}) : super(key: key);
+  const BarItemPage({Key? key}) : super(key: key);
 
   @override
   State<BarItemPage> createState() => _BarItemPageState();
@@ -35,6 +31,7 @@ class _BarItemPageState extends State<BarItemPage>
     _tabController = TabController(length: 3, vsync: this);
   }
 
+  @override
   Widget build(BuildContext context) {
     // return Scaffold(
     //   appBar: AppBar(
@@ -56,40 +53,40 @@ class _BarItemPageState extends State<BarItemPage>
         elevation: 0.0,
         centerTitle: true,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Color(0xFF545D68)),
+          icon: const Icon(Icons.arrow_back, color: Color(0xFF545D68)),
           onPressed: () {},
         ),
-        title: Text('',
+        title: const Text('',
             style: TextStyle(
                 fontFamily: 'Varela',
                 fontSize: 20.0,
                 color: Color(0xFF545D68))),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.notifications_none, color: Color(0xFF545D68)),
+            icon: const Icon(Icons.notifications_none, color: Color(0xFF545D68)),
             onPressed: () {},
           ),
         ],
       ),
       body: ListView(
-        padding: EdgeInsets.only(left: 20.0),
+        padding: const EdgeInsets.only(left: 20.0),
         children: <Widget>[
-          SizedBox(height: 15.0),
-          Text('Explore',
+          const SizedBox(height: 15.0),
+          const Text('Explore',
               style: TextStyle(
                   fontFamily: 'Varela',
                   fontSize: 32.0,
                   fontWeight: FontWeight.bold)),
-          SizedBox(height: 15.0),
+          const SizedBox(height: 15.0),
           TabBar(
             controller: _tabController,
             indicatorColor: Colors.transparent,
             // labelColor: Color(0xFFC88D67),
-            labelColor: Color.fromARGB(255, 239, 53, 53),
+            labelColor: const Color.fromARGB(255, 239, 53, 53),
             isScrollable: true,
-            labelPadding: EdgeInsets.only(right: 45.0),
-            unselectedLabelColor: Color(0xFFCDCDCD),
-            tabs: [
+            labelPadding: const EdgeInsets.only(right: 45.0),
+            unselectedLabelColor: const Color(0xFFCDCDCD),
+            tabs: const [
               Tab(
                 child: Text('Invitees',
                     style: TextStyle(
@@ -113,7 +110,7 @@ class _BarItemPageState extends State<BarItemPage>
               )
             ],
           ),
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height - 50.0,
             width: double.infinity,
             child: TabBarView(
