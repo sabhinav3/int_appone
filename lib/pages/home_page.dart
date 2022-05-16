@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 import 'package:int_appone/misc/colors.dart';
 import 'package:int_appone/widgets/app_large_text.dart';
+import 'package:int_appone/widgets/app_med_text.dart';
 import 'package:int_appone/widgets/app_text.dart';
+
+import 'navpages/image_cards/carousel.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -52,16 +55,36 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   };
 
   var items = [
-    PlaceInfo('Musical Night', const Color(0xff6DC8F3), const Color(0xff73A1F9), 'July 1',
-        'Washington Convention Center', 'By - SS.Thaman'),
-    PlaceInfo('Live In Concert', const Color(0xffFFB157), const Color(0xffFFA057), 'July 1',
-        'Washington Convention Center', 'By - Ram Miryala'),
-    PlaceInfo('Grand Musical Concert', const Color(0xffFF5B95), const Color(0xffF8556D),
-        'July 1', 'Washington Convention Center', 'By - Maestro Ilayaraja'),
-    PlaceInfo('Keynote Speakers', const Color(0xffD76EF5), const Color(0xff8F7AFE),
-        'July 1', 'Washington Convention Center', 'Sadhguru · Kamlesh D Patel'),
-    PlaceInfo('Special Guests', const Color(0xff42E695), const Color(0xff3BB2B8), 'July 1',
-        'Washington Convention Centers', 'KTR · Y.S.Jagan'),
+    PlaceInfo('Musical Night', const Color(0xff6DC8F3), const Color(0xff73A1F9),
+        'July 1', 'Washington Convention Center', 'By - SS.Thaman'),
+    PlaceInfo(
+        'Live In Concert',
+        const Color(0xffFFB157),
+        const Color(0xffFFA057),
+        'July 1',
+        'Washington Convention Center',
+        'By - Ram Miryala'),
+    PlaceInfo(
+        'Grand Musical Concert',
+        const Color(0xffFF5B95),
+        const Color(0xffF8556D),
+        'July 1',
+        'Washington Convention Center',
+        'By - Maestro Ilayaraja'),
+    PlaceInfo(
+        'Keynote Speakers',
+        const Color(0xffD76EF5),
+        const Color(0xff8F7AFE),
+        'July 1',
+        'Washington Convention Center',
+        'Sadhguru · Kamlesh D Patel'),
+    PlaceInfo(
+        'Special Guests',
+        const Color(0xff42E695),
+        const Color(0xff3BB2B8),
+        'July 1',
+        'Washington Convention Centers',
+        'KTR · Y.S.Jagan'),
     PlaceInfo(
         'Special Guests',
         const Color(0xffFFB157),
@@ -254,39 +277,40 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               width: double.maxFinite,
               margin: const EdgeInsets.only(left: 20),
               child: ListView.builder(
-                  itemCount: 4,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (_, index) {
-                    return Container(
-                      margin: const EdgeInsets.only(right: 30),
-                      child: Column(
-                        children: [
-                          Container(
-                            // margin: const EdgeInsets.only(right: 50),
-                            width: 80,
-                            height: 80,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: Colors.white,
-                              image: DecorationImage(
-                                  image: AssetImage("img/icons/" +
-                                      images.keys.elementAt(index)),
-                                  fit: BoxFit.cover),
-                            ),
+                itemCount: 4,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (_, index) {
+                  return Container(
+                    margin: const EdgeInsets.only(right: 30),
+                    child: Column(
+                      children: [
+                        Container(
+                          // margin: const EdgeInsets.only(right: 50),
+                          width: 80,
+                          height: 80,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white,
+                            image: DecorationImage(
+                                image: AssetImage("img/icons/" +
+                                    images.keys.elementAt(index)),
+                                fit: BoxFit.cover),
                           ),
-                          const SizedBox(
-                            height: 10,
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          child: AppText(
+                            text: images.values.elementAt(index),
+                            color: AppColors.textColor2,
                           ),
-                          Container(
-                            child: AppText(
-                              text: images.values.elementAt(index),
-                              color: AppColors.textColor2,
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  }),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
             ),
 
             // trial==========================================
@@ -518,13 +542,41 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
 
-            AppLargeText(
-              text: "Abhinav Sam",
-              size: 22,
+            SizedBox(
+              height: 20,
             ),
 
-            // trial==========================================
-            // repetetion of the same above icons==============
+            Container(
+              margin: const EdgeInsets.only(left: 20, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AppLargeText(
+                    text: "ATA Sponsors",
+                    size: 22,
+                  ),
+                ],
+              ),
+            ),
+
+            Container(
+              margin: const EdgeInsets.only(left: 20, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AppText(
+                    text: "Platinum Sponsors",
+                    size: 22,
+                  ),
+                  AppText(
+                    text: "Swipe",
+                    color: AppColors.textColor1,
+                  )
+                ],
+              ),
+            ),
+
+            DestinationCarousel(),
           ],
         ),
       ),
