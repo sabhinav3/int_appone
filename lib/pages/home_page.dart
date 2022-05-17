@@ -102,37 +102,38 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     TabController _tabController = TabController(length: 3, vsync: this);
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // menu icon is represented here
-            Container(
-              padding: const EdgeInsets.only(top: 70, left: 20),
-              child: Row(
-                children: [
-                  const Icon(
-                    Icons.menu,
-                    size: 30,
-                    color: Colors.black,
-                  ),
-                  Expanded(
-                      child:
-                          Container()), //we are increasing the dist. b/w menu icon and small box
-                  Container(
-                    margin: const EdgeInsets.only(right: 20),
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.grey.withOpacity(0.5),
-                    ),
-                  )
-                ],
-              ),
-            ),
+            // Container(
+            //   padding: const EdgeInsets.only(top: 5, left: 20),
+            //   child: Row(
+            //     children: [
+            //       const Icon(
+            //         Icons.menu,
+            //         size: 30,
+            //         color: Colors.black,
+            //       ),
+            //       Expanded(
+            //           child:
+            //               Container()), //we are increasing the dist. b/w menu icon and small box
+            //       Container(
+            //         margin: const EdgeInsets.only(right: 20),
+            //         width: 50,
+            //         height: 50,
+            //         decoration: BoxDecoration(
+            //           borderRadius: BorderRadius.circular(10),
+            //           color: Colors.grey.withOpacity(0.5),
+            //         ),
+            //       )
+            //     ],
+            //   ),
+            // ),
             const SizedBox(
-              height: 30,
+              height: 10,
             ),
             // Discover Events Text is labeled here.
             Container(

@@ -3,7 +3,6 @@ import 'package:int_appone/pages/navpages/innerpages/explore1/explore1.dart';
 import 'package:int_appone/pages/navpages/innerpages/explore2/explore2.dart';
 import 'package:int_appone/pages/navpages/innerpages/explore3/explore3.dart';
 
-
 import 'innerpages/explore1/explore1.dart';
 
 // class BarItemPage extends StatelessWidget {
@@ -48,26 +47,27 @@ class _BarItemPageState extends State<BarItemPage>
     //   ),
     // );
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0.0,
-        centerTitle: true,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Color(0xFF545D68)),
-          onPressed: () {},
-        ),
-        title: const Text('',
-            style: TextStyle(
-                fontFamily: 'Varela',
-                fontSize: 20.0,
-                color: Color(0xFF545D68))),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.notifications_none, color: Color(0xFF545D68)),
-            onPressed: () {},
-          ),
-        ],
-      ),
+      backgroundColor: Colors.white,
+      // appBar: AppBar(
+      //   backgroundColor: Colors.white,
+      //   elevation: 0.0,
+      //   centerTitle: true,
+      //   leading: IconButton(
+      //     icon: const Icon(Icons.arrow_back, color: Color(0xFF545D68)),
+      //     onPressed: () {},
+      //   ),
+      //   title: const Text('',
+      //       style: TextStyle(
+      //           fontFamily: 'Varela',
+      //           fontSize: 20.0,
+      //           color: Color(0xFF545D68))),
+      //   actions: <Widget>[
+      //     IconButton(
+      //       icon: const Icon(Icons.notifications_none, color: Color(0xFF545D68)),
+      //       onPressed: () {},
+      //     ),
+      //   ],
+      // ),
       body: ListView(
         padding: const EdgeInsets.only(left: 20.0),
         children: <Widget>[
