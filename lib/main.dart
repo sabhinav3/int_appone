@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:int_appone/cubit/app_cubit_logics.dart';
 import 'package:int_appone/cubit/app_cubits.dart';
+import 'package:int_appone/pages/navpages/detail_page_two.dart';
 import 'package:int_appone/services/data_services.dart';
 import 'package:get/get.dart';
 
@@ -43,18 +44,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: BlocProvider<AppCubits>(
-          create: (context) => AppCubits(
-            data: DataServices(),
-          ),
-          child: const AppCubitLogics(),
-        )
-        // home: LoginPage(),
-        );
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      // home: BlocProvider<AppCubits>(
+      //   create: (context) => AppCubits(
+      //     data: DataServices(),
+      //   ),
+      //   child: const AppCubitLogics(),
+      // )
+      home: DetailPageTwo(),
+    );
   }
 
   // ==================== below one is the replica of the above code ====================
