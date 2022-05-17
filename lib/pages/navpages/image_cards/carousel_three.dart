@@ -44,7 +44,7 @@ class _CarouselThree extends State<CarouselThree> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      padding: const EdgeInsets.only(top: 20),
+      padding: const EdgeInsets.only(top: 0),
       child: Stack(
         children: [
           CarouselSlider(

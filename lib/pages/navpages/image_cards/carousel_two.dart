@@ -39,7 +39,7 @@ class _CarouselTwo extends State<CarouselTwo> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      padding: const EdgeInsets.only(top: 50),
+      padding: const EdgeInsets.only(top: 0),
       child: Stack(
         children: [
           CarouselSlider(
