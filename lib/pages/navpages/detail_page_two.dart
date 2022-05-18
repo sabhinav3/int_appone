@@ -9,38 +9,6 @@ import 'package:int_appone/widgets/responsive_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DetailPageTwo extends StatefulWidget {
-  // var detail1 = {
-  //   "day1e1_detail.jpg": "Day1event1",
-  //   "day1e2_detail.jpg": "Day1event2",
-  //   "day1e3_detail.jpg": "Day1event3",
-  //   "day1e4_detail.jpg": "Day1event4",
-  //   "day1e5_detail.jpg": "Day1event5",
-  //   "day1e6_detail.jpg": "Day1event6",
-  // };
-
-  // var detail2 = {
-  //   "day2e1_detail.jpg": "Day2event1",
-  //   "day2e2_detail.jpg": "Day2event2",
-  //   "day2e3_detail.jpg": "Day2event3",
-  //   "day2e4_detail.jpg": "Day2event4",
-  //   "day2e5_detail.jpg": "Day2event5",
-  //   "day2e6_detail.jpg": "Day2event6",
-  //   "day2e7_detail.jpg": "Day2event7",
-  //   "day2e8_detail.jpg": "Day2event8",
-  //   "day2e9_detail.jpg": "Day2event9",
-  // };
-
-  // var detail3 = {
-  //   "day3e1_detail.jpg": "Day3event1",
-  //   "day3e2_detail.jpg": "Day3event2",
-  //   "day3e3_detail.jpg": "Day3event3",
-  //   "day3e4_detail.jpg": "Day3event4",
-  //   "day3e5_detail.jpg": "Day3event5",
-  //   "day3e6_detail.jpg": "Day3event6",
-  //   "day3e7_detail.jpg": "Day3event6",
-  //   "day3e8_detail.jpg": "Day3event6",
-  // };
-
   const DetailPageTwo({Key? key}) : super(key: key);
 
   @override
@@ -82,7 +50,9 @@ class _DetailPageTwoState extends State<DetailPageTwo> {
               child: Row(
                 children: [
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
                     icon: const Icon(Icons.menu),
                     //color : Colors.white, // to change the color of the menu app
                   )

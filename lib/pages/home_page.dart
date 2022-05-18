@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 import 'package:int_appone/misc/colors.dart';
+// import 'package:int_appone/pages/photo_cards/home_page.dart';
 import 'package:int_appone/widgets/app_large_text.dart';
 import 'package:int_appone/widgets/app_med_text.dart';
 import 'package:int_appone/widgets/app_text.dart';
@@ -636,6 +637,31 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
 
             CarouselThree(),
+
+            Container(
+              margin: const EdgeInsets.only(left: 20, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AppText(
+                    text: "Photo Gallery",
+                    size: 22,
+                  ),
+                  Row(
+                    children: [
+                      AppText(
+                        text: "Swipe",
+                        color: AppColors.textColor1,
+                      ),
+                      Icon(Icons.double_arrow_rounded,
+                          color: AppColors.textColor1),
+                    ],
+                  )
+                ],
+              ),
+            ),
+
+            // CardsHomePage(),
           ],
         ),
       ),

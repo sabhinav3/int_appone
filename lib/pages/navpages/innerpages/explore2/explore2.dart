@@ -5,7 +5,8 @@ class ExplorePage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFCFAF8),
+      backgroundColor: Colors.white,
+      // backgroundColor: const Color(0xFFFCFAF8),
       body: ListView(
         children: <Widget>[
           const SizedBox(height: 15.0),
@@ -41,7 +42,8 @@ class ExplorePage2 extends StatelessWidget {
 
   Widget _buildCard(String name, String imgPath, context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
+      padding:
+          const EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: () {
           Navigator.of(context).push(

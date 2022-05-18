@@ -44,18 +44,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      // home: BlocProvider<AppCubits>(
-      //   create: (context) => AppCubits(
-      //     data: DataServices(),
-      //   ),
-      //   child: const AppCubitLogics(),
-      // )
-      home: DetailPageTwo(),
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: BlocProvider<AppCubits>(
+          create: (context) => AppCubits(
+            data: DataServices(),
+          ),
+          child: const AppCubitLogics(),
+        )
+        // home: DetailPageTwo(),
+        );
   }
 
   // ==================== below one is the replica of the above code ====================

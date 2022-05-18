@@ -8,6 +8,7 @@ class ExploreDetail1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
@@ -25,7 +26,8 @@ class ExploreDetail1 extends StatelessWidget {
                 color: Color(0xFF545D68))),
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.notifications_none, color: Color(0xFF545D68)),
+            icon:
+                const Icon(Icons.notifications_none, color: Color(0xFF545D68)),
             onPressed: () {},
           ),
         ],
