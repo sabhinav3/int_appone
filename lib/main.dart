@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:int_appone/cubit/app_cubit_logics.dart';
 import 'package:int_appone/cubit/app_cubits.dart';
+import 'package:int_appone/pages/login/login_page.dart';
 import 'package:int_appone/pages/navpages/detail_page_two.dart';
 import 'package:int_appone/services/data_services.dart';
 import 'package:get/get.dart';
@@ -54,7 +55,7 @@ class MyApp extends StatelessWidget {
           ),
           child: const AppCubitLogics(),
         )
-        // home: DetailPageTwo(),
+        // home: LoginPage(),
         );
   }
 

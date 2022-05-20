@@ -34,7 +34,7 @@
         android:label="ATA Events"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
-        android:usesClearTextTraffic='true'> <!-- the beside line is added -->
+        android:usesCleartextTraffic='true'> <!-- the beside line is added -->
         <!-- end of the added code -->
         <activity
             android:name=".MainActivity"

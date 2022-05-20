@@ -29,8 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  video_player:
-  url_launcher : ^6.0.12
+  url_launcher : ^6.1.2
   # flutter_swiper: ^1.1.6
 
   # The following adds the Cupertino Icons font to your application.
@@ -43,7 +42,7 @@ dependencies:
   flutter_bloc:
   equatable:
   http:
-  # cloud_firestore: ^3.1.14
+  cloud_firestore: ^3.1.14
   firebase_auth: ^3.3.18
   firebase_core: ^1.17.0
 
@@ -83,6 +82,7 @@ flutter:
     - img/yellow-arrow.png
     - img/logo_ata.png
     - img/logo_ata_nobg.png
+    - img/ata_about.jpeg
     - img/home_page/july1/day1e1_home.jpg
     - img/home_page/july1/day1e2_home.jpg
     - img/home_page/july1/day1e3_home.jpg

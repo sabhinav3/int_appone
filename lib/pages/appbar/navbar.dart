@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:int_appone/pages/detail_page.dart';
+import 'package:int_appone/pages/detail_page/about.dart';
+import 'package:int_appone/pages/navpages/detail_page_two.dart';
 import 'package:int_appone/pages/navpages/innerpages/explore1/explore1.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
@@ -48,8 +50,8 @@ class NavigationDrawerWidget extends StatelessWidget {
                     height: 16,
                   ),
                   buildMenuItem(
-                    text: 'Favourites',
-                    icon: Icons.favorite_outlined,
+                    text: 'About',
+                    icon: Icons.workspaces_outline,
                     onClicked: () => selectedItem(context, 1),
                   ),
                   // 3
@@ -57,8 +59,8 @@ class NavigationDrawerWidget extends StatelessWidget {
                     height: 16,
                   ),
                   buildMenuItem(
-                    text: 'About',
-                    icon: Icons.workspaces_outline,
+                    text: 'Rate the Event',
+                    icon: Icons.favorite_outlined,
                     onClicked: () => selectedItem(context, 2),
                   ),
                   // 4
@@ -197,7 +199,14 @@ class NavigationDrawerWidget extends StatelessWidget {
 
       case 1:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => DetailPage(),
+          builder: (context) => AboutPage(),
+        ));
+
+        break;
+
+      case 2:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => DetailPageTwo(),
         ));
 
         break;

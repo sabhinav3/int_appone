@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:int_appone/cubit/app_cubit_states.dart';
+import 'package:int_appone/cubit/app_cubits.dart';
 import 'dart:ui' as ui;
 import 'package:int_appone/misc/colors.dart';
-// import 'package:int_appone/pages/photo_cards/home_page.dart';
 import 'package:int_appone/widgets/app_large_text.dart';
 import 'package:int_appone/widgets/app_med_text.dart';
 import 'package:int_appone/widgets/app_text.dart';
@@ -105,564 +107,557 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // menu icon is represented here
-            // Container(
-            //   padding: const EdgeInsets.only(top: 5, left: 20),
-            //   child: Row(
-            //     children: [
-            //       const Icon(
-            //         Icons.menu,
-            //         size: 30,
-            //         color: Colors.black,
-            //       ),
-            //       Expanded(
-            //           child:
-            //               Container()), //we are increasing the dist. b/w menu icon and small box
-            //       Container(
-            //         margin: const EdgeInsets.only(right: 20),
-            //         width: 50,
-            //         height: 50,
-            //         decoration: BoxDecoration(
-            //           borderRadius: BorderRadius.circular(10),
-            //           color: Colors.grey.withOpacity(0.5),
-            //         ),
-            //       )
-            //     ],
-            //   ),
-            // ),
-            const SizedBox(
-              height: 10,
-            ),
-            // Discover Events Text is labeled here.
-            Container(
-              margin: const EdgeInsets.only(left: 20),
-              child: AppLargeText(text: "Discover Events"),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-
-            // Tab Bar of event date list -TABBAR
-
-            Container(
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: TabBar(
-                  labelPadding: const EdgeInsets.only(left: 20, right: 20),
-                  controller: _tabController,
-                  labelColor: Colors.black,
-                  unselectedLabelColor: Colors.grey,
-                  isScrollable: true,
-                  indicatorSize: TabBarIndicatorSize.label,
-                  indicator:
-                      CircleTabIndicator(color: AppColors.redColor, radius: 4),
-                  tabs: const [
-                    Tab(text: "July 1"),
-                    Tab(text: "July 2"),
-                    Tab(text: "July 3"),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.only(left: 20),
-              height: 300,
-              width: double.maxFinite,
-              child: TabBarView(
-                controller: _tabController,
+        child: BlocBuilder<AppCubits, CubitStates>(
+          builder: (context, state) {
+            if (state is LoadedState) {
+              var info = state.places;
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // this is for the JULY 1st
-
-                  ListView.builder(
-                    itemCount:
-                        6, //this is the no.of items of the scrolling cards
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        margin: const EdgeInsets.only(right: 15, top: 10),
-                        width: 200,
-                        height: 300,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white,
-                          image: DecorationImage(
-                            image: AssetImage(
-                              "img/home_page/july1/" +
-                                  cards1.keys.elementAt(index),
-                            ),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      );
-                    },
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  // Discover Events Text is labeled here.
+                  Container(
+                    margin: const EdgeInsets.only(left: 20),
+                    child: AppLargeText(text: "Discover Events"),
+                  ),
+                  const SizedBox(
+                    height: 20,
                   ),
 
-                  // this is for the JULY 2nd
+                  // Tab Bar of event date list -TABBAR
 
-                  ListView.builder(
-                    itemCount:
-                        9, //this is the no.of items of the scrolling cards
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        margin: const EdgeInsets.only(right: 15, top: 10),
-                        width: 200,
-                        height: 300,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white,
-                          image: DecorationImage(
-                            image: AssetImage("img/home_page/july2/" +
-                                cards2.keys.elementAt(index)),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      );
-                    },
+                  Container(
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: TabBar(
+                        labelPadding:
+                            const EdgeInsets.only(left: 20, right: 20),
+                        controller: _tabController,
+                        labelColor: Colors.black,
+                        unselectedLabelColor: Colors.grey,
+                        isScrollable: true,
+                        indicatorSize: TabBarIndicatorSize.label,
+                        indicator: CircleTabIndicator(
+                            color: AppColors.redColor, radius: 4),
+                        tabs: const [
+                          Tab(text: "July 1"),
+                          Tab(text: "July 2"),
+                          Tab(text: "July 3"),
+                        ],
+                      ),
+                    ),
                   ),
-
-                  // This is for the JULY 3rd =========================
-
-                  ListView.builder(
-                    itemCount:
-                        6, //this is the no.of items of the scrolling cards
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        margin: const EdgeInsets.only(right: 15, top: 10),
-                        width: 200,
-                        height: 300,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white,
-                          image: DecorationImage(
-                            image: AssetImage("img/home_page/july3/" +
-                                cards3.keys.elementAt(index)),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(
-              height: 30,
-            ),
-
-            Container(
-              margin: const EdgeInsets.only(left: 20, right: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  AppLargeText(
-                    text: "Explore more",
-                    size: 22,
-                  ),
-                  AppText(
-                    text: "See all",
-                    color: AppColors.textColor1,
-                  )
-                ],
-              ),
-            ),
-
-            const SizedBox(
-              height: 10,
-            ),
-
-            Container(
-              height: 120,
-              width: double.maxFinite,
-              margin: const EdgeInsets.only(left: 20),
-              child: ListView.builder(
-                itemCount: 4,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (_, index) {
-                  return Container(
-                    margin: const EdgeInsets.only(right: 30),
-                    child: Column(
+                  Container(
+                    padding: const EdgeInsets.only(left: 20),
+                    height: 300,
+                    width: double.maxFinite,
+                    child: TabBarView(
+                      controller: _tabController,
                       children: [
-                        Container(
-                          // margin: const EdgeInsets.only(right: 50),
-                          width: 80,
-                          height: 80,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.white,
-                            image: DecorationImage(
-                                image: AssetImage("img/icons/" +
-                                    images.keys.elementAt(index)),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Container(
-                          child: AppText(
-                            text: images.values.elementAt(index),
-                            color: AppColors.textColor2,
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              ),
-            ),
+                        // this is for the JULY 1st
 
-            // trial==========================================
-            // repetetion of the same above icons==============
-            const SizedBox(
-              height: 10,
-            ),
-
-            Container(
-              height: 120,
-              width: double.maxFinite,
-              margin: const EdgeInsets.only(left: 20),
-              child: ListView.builder(
-                itemCount: 4,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (_, index) {
-                  return Container(
-                    margin: const EdgeInsets.only(right: 30),
-                    child: Column(
-                      children: [
-                        Container(
-                          // margin: const EdgeInsets.only(right: 50),
-                          width: 80,
-                          height: 80,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.white,
-                            image: DecorationImage(
-                                image: AssetImage("img/icons/" +
-                                    images.keys.elementAt(index)),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Container(
-                          child: AppText(
-                            text: images.values.elementAt(index),
-                            color: AppColors.textColor2,
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              ),
-            ),
-
-            const SizedBox(
-              height: 20,
-            ),
-
-            Container(
-              margin: const EdgeInsets.only(left: 20, right: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  AppLargeText(
-                    text: "Special Events",
-                    size: 22,
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 40),
-                    child: Icon(
-                      Icons.edit_calendar_outlined,
-                      color: AppColors.textColor1,
-                    ),
-                  ),
-                  AppText(
-                    text: "Save the Date",
-                    color: AppColors.textColor1,
-                  )
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-
-            Container(
-              padding: const EdgeInsets.only(left: 5),
-              height: 400,
-              width: double.maxFinite,
-              child: ListView.builder(
-                itemCount: items.length,
-                itemBuilder: (context, index) {
-                  return Center(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Stack(
-                        children: <Widget>[
-                          Container(
-                            height: 150,
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.circular(_borderRadius),
-                              gradient: LinearGradient(
-                                colors: [
-                                  items[index].startColor,
-                                  items[index].endColor,
-                                ],
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                              ),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: items[index].endColor,
-                                  blurRadius: 12,
-                                  offset: const Offset(0, 6),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Positioned(
-                            right: 0,
-                            bottom: 0,
-                            top: 0,
-                            child: CustomPaint(
-                              size: const Size(100, 150),
-                              painter: CustomCardShapePainter(
-                                  _borderRadius,
-                                  items[index].startColor,
-                                  items[index].endColor),
-                            ),
-                          ),
-                          Positioned.fill(
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                  child: Image.asset(
-                                    "img/home_page/july1/" + // here change images
+                        ListView.builder(
+                          //this is the no.of items of the scrolling cards
+                          itemCount: 6,
+                          // itemCount: info.length,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Container(
+                              margin: const EdgeInsets.only(right: 15, top: 10),
+                              width: 200,
+                              height: 300,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.white,
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                    "img/home_page/july1/" +
                                         cards1.keys.elementAt(index),
-                                    height: 64,
-                                    width: 64,
                                   ),
-                                  flex: 2,
+                                  // image: NetworkImage(
+                                  //   "http://mark.bslmeiyu.com/uploads/" +
+                                  //       info[index].img,
+                                  // ),
+                                  fit: BoxFit.cover,
                                 ),
-                                Expanded(
-                                  flex: 4,
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                              ),
+                            );
+                          },
+                        ),
+
+                        // this is for the JULY 2nd
+
+                        ListView.builder(
+                          itemCount:
+                              9, //this is the no.of items of the scrolling cards
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Container(
+                              margin: const EdgeInsets.only(right: 15, top: 10),
+                              width: 200,
+                              height: 300,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.white,
+                                image: DecorationImage(
+                                  image: AssetImage("img/home_page/july2/" +
+                                      cards2.keys.elementAt(index)),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+
+                        // This is for the JULY 3rd =========================
+
+                        ListView.builder(
+                          itemCount:
+                              6, //this is the no.of items of the scrolling cards
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Container(
+                              margin: const EdgeInsets.only(right: 15, top: 10),
+                              width: 200,
+                              height: 300,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.white,
+                                image: DecorationImage(
+                                  image: AssetImage("img/home_page/july3/" +
+                                      cards3.keys.elementAt(index)),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  const SizedBox(
+                    height: 30,
+                  ),
+
+                  Container(
+                    margin: const EdgeInsets.only(left: 20, right: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        AppLargeText(
+                          text: "Explore more",
+                          size: 22,
+                        ),
+                        AppText(
+                          text: "See all",
+                          color: AppColors.textColor1,
+                        )
+                      ],
+                    ),
+                  ),
+
+                  const SizedBox(
+                    height: 10,
+                  ),
+
+                  Container(
+                    height: 120,
+                    width: double.maxFinite,
+                    margin: const EdgeInsets.only(left: 20),
+                    child: ListView.builder(
+                      itemCount: 4,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (_, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(right: 30),
+                          child: Column(
+                            children: [
+                              Container(
+                                // margin: const EdgeInsets.only(right: 50),
+                                width: 80,
+                                height: 80,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                      image: AssetImage("img/icons/" +
+                                          images.keys.elementAt(index)),
+                                      fit: BoxFit.cover),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Container(
+                                child: AppText(
+                                  text: images.values.elementAt(index),
+                                  color: AppColors.textColor2,
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+
+                  // trial==========================================
+                  // repetetion of the same above icons==============
+                  const SizedBox(
+                    height: 10,
+                  ),
+
+                  Container(
+                    height: 120,
+                    width: double.maxFinite,
+                    margin: const EdgeInsets.only(left: 20),
+                    child: ListView.builder(
+                      itemCount: 4,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (_, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(right: 30),
+                          child: Column(
+                            children: [
+                              Container(
+                                // margin: const EdgeInsets.only(right: 50),
+                                width: 80,
+                                height: 80,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                      image: AssetImage("img/icons/" +
+                                          images.keys.elementAt(index)),
+                                      fit: BoxFit.cover),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Container(
+                                child: AppText(
+                                  text: images.values.elementAt(index),
+                                  color: AppColors.textColor2,
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+
+                  const SizedBox(
+                    height: 20,
+                  ),
+
+                  Container(
+                    margin: const EdgeInsets.only(left: 20, right: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        AppLargeText(
+                          text: "Special Events",
+                          size: 22,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 40),
+                          child: Icon(
+                            Icons.edit_calendar_outlined,
+                            color: AppColors.textColor1,
+                          ),
+                        ),
+                        AppText(
+                          text: "Save the Date",
+                          color: AppColors.textColor1,
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+
+                  Container(
+                    padding: const EdgeInsets.only(left: 5),
+                    height: 400,
+                    width: double.maxFinite,
+                    child: ListView.builder(
+                      itemCount: items.length,
+                      itemBuilder: (context, index) {
+                        return Center(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Stack(
+                              children: <Widget>[
+                                Container(
+                                  height: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius:
+                                        BorderRadius.circular(_borderRadius),
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        items[index].startColor,
+                                        items[index].endColor,
+                                      ],
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                    ),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: items[index].endColor,
+                                        blurRadius: 12,
+                                        offset: const Offset(0, 6),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  right: 0,
+                                  bottom: 0,
+                                  top: 0,
+                                  child: CustomPaint(
+                                    size: const Size(100, 150),
+                                    painter: CustomCardShapePainter(
+                                        _borderRadius,
+                                        items[index].startColor,
+                                        items[index].endColor),
+                                  ),
+                                ),
+                                Positioned.fill(
+                                  child: Row(
                                     children: <Widget>[
-                                      Text(
-                                        items[index].name,
-                                        style: const TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w900,
-                                          fontSize: 16,
+                                      Expanded(
+                                        child: Image.asset(
+                                          "img/home_page/july1/" + // here change images
+                                              cards1.keys.elementAt(index),
+                                          height: 64,
+                                          width: 64,
                                         ),
+                                        flex: 2,
                                       ),
-                                      Text(
-                                        items[index].category,
-                                        style: const TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 16,
-                                      ),
-                                      Row(
-                                        children: [
-                                          const Icon(
-                                            Icons.location_on,
-                                            color: Colors.white,
-                                            size: 16,
-                                          ),
-                                          const SizedBox(
-                                            width: 5,
-                                          ),
-                                          Flexible(
-                                            child: Text(
-                                              items[index].location,
+                                      Expanded(
+                                        flex: 4,
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text(
+                                              items[index].name,
+                                              style: const TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w900,
+                                                fontSize: 16,
+                                              ),
+                                            ),
+                                            Text(
+                                              items[index].category,
                                               style: const TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Expanded(
-                                  flex: 2,
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: <Widget>[
-                                      Row(
-                                        children: [
-                                          const Icon(
-                                            Icons.calendar_month_outlined,
-                                            color: Colors.white,
-                                            size: 19,
-                                          ),
-                                          Text(
-                                            items[index].rating.toString(),
-                                            style: const TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 18,
-                                              fontWeight: FontWeight.w700,
+                                            const SizedBox(
+                                              height: 16,
                                             ),
-                                          ),
-                                        ],
+                                            Row(
+                                              children: [
+                                                const Icon(
+                                                  Icons.location_on,
+                                                  color: Colors.white,
+                                                  size: 16,
+                                                ),
+                                                const SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Flexible(
+                                                  child: Text(
+                                                    items[index].location,
+                                                    style: const TextStyle(
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
                                       ),
+                                      Expanded(
+                                        flex: 2,
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: <Widget>[
+                                            Row(
+                                              children: [
+                                                const Icon(
+                                                  Icons.calendar_month_outlined,
+                                                  color: Colors.white,
+                                                  size: 19,
+                                                ),
+                                                Text(
+                                                  items[index]
+                                                      .rating
+                                                      .toString(),
+                                                  style: const TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w700,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
 
-                                      // CardBar(
-                                      //   time: items[index].rating,
-                                      // ),
-                                      // Icon(
-                                      //   Icons.star,
-                                      //   color: Colors.white,
-                                      // ),
+                                            // CardBar(
+                                            //   time: items[index].rating,
+                                            // ),
+                                            // Icon(
+                                            //   Icons.star,
+                                            //   color: Colors.white,
+                                            // ),
+                                          ],
+                                        ),
+                                      ),
                                     ],
                                   ),
-                                ),
+                                )
                               ],
                             ),
-                          )
-                        ],
-                      ),
+                          ),
+                        );
+                      },
                     ),
-                  );
-                },
-              ),
-            ),
-
-            SizedBox(
-              height: 20,
-            ),
-
-            Container(
-              margin: const EdgeInsets.only(left: 20, right: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  AppLargeText(
-                    text: "ATA Sponsors",
-                    size: 25,
                   ),
-                ],
-              ),
-            ),
 
-            Container(
-              margin: const EdgeInsets.only(left: 20, right: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  AppText(
-                    text: "Diamond Sponsors",
-                    size: 22,
+                  SizedBox(
+                    height: 20,
                   ),
-                  Row(
-                    children: [
-                      AppText(
-                        text: "Swipe",
-                        color: AppColors.textColor1,
-                      ),
-                      Icon(Icons.double_arrow_rounded,
-                          color: AppColors.textColor1),
-                    ],
-                  )
-                ],
-              ),
-            ),
 
-            CarouselOne(),
-
-            Container(
-              margin: const EdgeInsets.only(left: 20, right: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  AppText(
-                    text: "Platinum Sponsors",
-                    size: 22,
+                  Container(
+                    margin: const EdgeInsets.only(left: 20, right: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        AppLargeText(
+                          text: "ATA Sponsors",
+                          size: 25,
+                        ),
+                      ],
+                    ),
                   ),
-                  Row(
-                    children: [
-                      AppText(
-                        text: "Swipe",
-                        color: AppColors.textColor1,
-                      ),
-                      Icon(Icons.double_arrow_rounded,
-                          color: AppColors.textColor1),
-                    ],
-                  )
-                ],
-              ),
-            ),
 
-            CarouselTwo(),
-
-            Container(
-              margin: const EdgeInsets.only(left: 20, right: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  AppText(
-                    text: "Gold Sponsors",
-                    size: 22,
+                  Container(
+                    margin: const EdgeInsets.only(left: 20, right: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        AppText(
+                          text: "Diamond Sponsors",
+                          size: 22,
+                        ),
+                        Row(
+                          children: [
+                            AppText(
+                              text: "Swipe",
+                              color: AppColors.textColor1,
+                            ),
+                            Icon(Icons.double_arrow_rounded,
+                                color: AppColors.textColor1),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
-                  Row(
-                    children: [
-                      AppText(
-                        text: "Swipe",
-                        color: AppColors.textColor1,
-                      ),
-                      Icon(Icons.double_arrow_rounded,
-                          color: AppColors.textColor1),
-                    ],
-                  )
-                ],
-              ),
-            ),
 
-            CarouselThree(),
+                  CarouselOne(),
 
-            Container(
-              margin: const EdgeInsets.only(left: 20, right: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  AppText(
-                    text: "Photo Gallery",
-                    size: 22,
+                  Container(
+                    margin: const EdgeInsets.only(left: 20, right: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        AppText(
+                          text: "Platinum Sponsors",
+                          size: 22,
+                        ),
+                        Row(
+                          children: [
+                            AppText(
+                              text: "Swipe",
+                              color: AppColors.textColor1,
+                            ),
+                            Icon(Icons.double_arrow_rounded,
+                                color: AppColors.textColor1),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
-                  Row(
-                    children: [
-                      AppText(
-                        text: "Swipe",
-                        color: AppColors.textColor1,
-                      ),
-                      Icon(Icons.double_arrow_rounded,
-                          color: AppColors.textColor1),
-                    ],
-                  )
-                ],
-              ),
-            ),
 
-            // CardsHomePage(),
-          ],
+                  CarouselTwo(),
+
+                  Container(
+                    margin: const EdgeInsets.only(left: 20, right: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        AppText(
+                          text: "Gold Sponsors",
+                          size: 22,
+                        ),
+                        Row(
+                          children: [
+                            AppText(
+                              text: "Swipe",
+                              color: AppColors.textColor1,
+                            ),
+                            Icon(Icons.double_arrow_rounded,
+                                color: AppColors.textColor1),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+
+                  CarouselThree(),
+
+                  Container(
+                    margin: const EdgeInsets.only(left: 20, right: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        AppText(
+                          text: "Photo Gallery",
+                          size: 22,
+                        ),
+                        Row(
+                          children: [
+                            AppText(
+                              text: "Swipe",
+                              color: AppColors.textColor1,
+                            ),
+                            Icon(Icons.double_arrow_rounded,
+                                color: AppColors.textColor1),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+
+                  // CardsHomePage(),
+                ],
+              );
+            } else {
+              return Container();
+            }
+          },
         ),
       ),
     );
