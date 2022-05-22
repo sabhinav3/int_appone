@@ -102,7 +102,7 @@ class _BarItemPageState extends State<BarItemPage>
                     )),
               ),
               Tab(
-                child: Text('Sponsers',
+                child: Text('Golf Cup',
                     style: TextStyle(
                       fontFamily: 'Varela',
                       fontSize: 21.0,

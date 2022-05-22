@@ -9,29 +9,17 @@ class ExplorePage3 extends StatelessWidget {
       // backgroundColor: const Color(0xFFFCFAF8),
       body: ListView(
         children: <Widget>[
-          const SizedBox(height: 15.0),
+          const SizedBox(height: 3.0),
           Container(
-              padding: const EdgeInsets.only(right: 15.0),
-              width: MediaQuery.of(context).size.width - 30.0,
-              height: MediaQuery.of(context).size.height - 30.0,
+              padding: const EdgeInsets.only(),
+              width: 500,
+              height: 700,
               child: GridView.count(
-                crossAxisCount: 2,
+                crossAxisCount: 1,
                 primary: false,
-                crossAxisSpacing: 10.0,
-                mainAxisSpacing: 15.0,
                 childAspectRatio: 0.8,
                 children: <Widget>[
-                  _buildCard(
-                      'Ilayaraja', 'img/explore_page/ilayaraja.jpg', context),
-                  _buildCard('Balakrishna', 'img/explore_page/balakrishna.jpg',
-                      context),
-                  _buildCard('Naresh', 'img/explore_page/naresh.jpg', context),
-                  _buildCard('Ram Miriyala',
-                      'img/explore_page/ram-miriyala.jpg', context),
-                  _buildCard(
-                      'Sai Kumar', 'img/explore_page/saikumar.jpg', context),
-                  _buildCard('Shiva Balaji',
-                      'img/explore_page/shiva_balaji.jpg', context),
+                  _buildCard('Dream Valley Golf Cup', 'img/golf.jpg', context),
                 ],
               )),
           const SizedBox(height: 3.0)
@@ -43,7 +31,7 @@ class ExplorePage3 extends StatelessWidget {
   Widget _buildCard(String name, String imgPath, context) {
     return Padding(
       padding:
-          const EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
+          const EdgeInsets.only(top: 0.1, bottom: 0.1, left: 0.3, right: 0.1),
       child: InkWell(
         onTap: () {
           Navigator.of(context).push(
@@ -80,8 +68,8 @@ class ExplorePage3 extends StatelessWidget {
               Hero(
                 tag: imgPath,
                 child: Container(
-                  height: 150,
-                  width: 100,
+                  height: 250,
+                  width: 350,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage(imgPath), fit: BoxFit.contain),
