@@ -1,53 +1,125 @@
+import 'dart:ffi';
+import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:int_appone/misc/colors.dart';
+import 'package:int_appone/pages/home_page.dart';
 import 'package:int_appone/widgets/app_buttons.dart';
 import 'package:int_appone/widgets/app_large_text.dart';
 import 'package:int_appone/widgets/app_med_text.dart';
 import 'package:int_appone/widgets/app_text.dart';
 import 'package:int_appone/widgets/responsive_button.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class DetailPage extends StatefulWidget {
-  // var detail1 = {
-  //   "day1e1_detail.jpg": "Day1event1",
-  //   "day1e2_detail.jpg": "Day1event2",
-  //   "day1e3_detail.jpg": "Day1event3",
-  //   "day1e4_detail.jpg": "Day1event4",
-  //   "day1e5_detail.jpg": "Day1event5",
-  //   "day1e6_detail.jpg": "Day1event6",
-  // };
-
-  // var detail2 = {
-  //   "day2e1_detail.jpg": "Day2event1",
-  //   "day2e2_detail.jpg": "Day2event2",
-  //   "day2e3_detail.jpg": "Day2event3",
-  //   "day2e4_detail.jpg": "Day2event4",
-  //   "day2e5_detail.jpg": "Day2event5",
-  //   "day2e6_detail.jpg": "Day2event6",
-  //   "day2e7_detail.jpg": "Day2event7",
-  //   "day2e8_detail.jpg": "Day2event8",
-  //   "day2e9_detail.jpg": "Day2event9",
-  // };
-
-  // var detail3 = {
-  //   "day3e1_detail.jpg": "Day3event1",
-  //   "day3e2_detail.jpg": "Day3event2",
-  //   "day3e3_detail.jpg": "Day3event3",
-  //   "day3e4_detail.jpg": "Day3event4",
-  //   "day3e5_detail.jpg": "Day3event5",
-  //   "day3e6_detail.jpg": "Day3event6",
-  //   "day3e7_detail.jpg": "Day3event6",
-  //   "day3e8_detail.jpg": "Day3event6",
-  // };
-
-  const DetailPage({Key? key}) : super(key: key);
+  String name;
+  String detImage;
+  String time;
+  String description;
+  String location;
+  DetailPage({
+    Key? key,
+    required this.name,
+    required this.detImage,
+    required this.time,
+    required this.description,
+    required this.location,
+  }) : super(key: key);
 
   @override
-  State<DetailPage> createState() => _DetailPageState();
+  State<DetailPage> createState() =>
+      // ignore: no_logic_in_create_state
+      _DetailPageState(name, detImage, time, description, location);
 }
 
 class _DetailPageState extends State<DetailPage> {
   int gottenStars = 3;
+  int numberOfRatings = 0;
   int selectedIndex = -1;
+  bool submitted = false;
+  String name;
+  String detImage;
+  String time;
+  String description;
+  String location;
+  FirebaseFirestore firestore = FirebaseFirestore.instance;
+  FirebaseAuth auth = FirebaseAuth.instance;
+
+  _DetailPageState(
+      this.name, this.detImage, this.time, this.description, this.location) {
+    getRatings();
+    getRatingOfUser();
+  }
+
+  void getRatings() {
+    final docRef = firestore.collection("eventsRatings").doc("id");
+    docRef.get().then(
+      (DocumentSnapshot doc) {
+        final data = doc.data() as Map<String, dynamic>;
+        setState(() {
+          print(data['rating']);
+          gottenStars = data['rating'].round();
+          numberOfRatings = data['numberOfRatings'];
+        });
+      },
+      onError: (e) => print("Error getting document: $e"),
+    );
+  }
+
+  void getRatingOfUser() {
+    if (auth.currentUser?.uid != null) {
+      print(auth.currentUser!.uid);
+      final docRef = firestore
+          .collection("users")
+          .doc(auth.currentUser!.uid)
+          .collection("eventsRating")
+          .doc("id");
+      docRef.get().then(
+        (DocumentSnapshot doc) {
+          final data = doc.data() as Map<String, dynamic>;
+          setState(() {
+            print(data['rating']);
+            selectedIndex = data['rating'] - 1;
+            submitted = true;
+          });
+        },
+        onError: (e) => print("Error getting document: $e"),
+      );
+    }
+  }
+
+  void setRatingforEvent() {
+    if (auth.currentUser?.uid != null) {
+      print(auth.currentUser!.uid);
+      final rating = <String, int>{
+        "rating": selectedIndex + 1,
+      };
+
+      firestore
+          .collection("users")
+          .doc(auth.currentUser!.uid)
+          .collection("eventsRating")
+          .doc("id")
+          .set(rating)
+          .onError((e, _) => print("Error writing document: $e"));
+    }
+    var ratings = firestore.collection("eventsRatings").doc("id");
+
+// Atomically increment the population of the city by 50.
+    ratings.update(
+      {
+        "numberOfRatings": FieldValue.increment(1),
+        "rating": (gottenStars + selectedIndex + 1) / (numberOfRatings + 1)
+      },
+    );
+
+    setState(() {
+      gottenStars =
+          ((gottenStars + selectedIndex + 1) / (numberOfRatings + 1)).round();
+      submitted = true;
+      numberOfRatings = numberOfRatings + 1;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -58,17 +130,15 @@ class _DetailPageState extends State<DetailPage> {
         height: double.maxFinite,
         child: Stack(
           children: [
-            Positioned(
-              left: 0,
-              right: 0,
+            Hero(
+              tag: detImage,
               child: Container(
                 // width: double.maxFinite,
                 width: 350,
                 height: 350,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image:
-                        AssetImage("img/details_page/july1/day1e5_detail.jpg"),
+                    image: AssetImage('detImage'),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -112,11 +182,11 @@ class _DetailPageState extends State<DetailPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         AppLargeText(
-                          text: "Music Concert",
+                          text: name,
                           color: Colors.black87,
                         ),
                         AppMedText(
-                          text: "6:30 - 7:30 p.m",
+                          text: time,
                           color: AppColors.mainColor,
                         ),
                       ],
@@ -134,7 +204,7 @@ class _DetailPageState extends State<DetailPage> {
                           width: 5,
                         ),
                         AppText(
-                          text: "USA, California",
+                          text: location,
                           color: AppColors.textColor1,
                         )
                       ],
@@ -161,7 +231,7 @@ class _DetailPageState extends State<DetailPage> {
                           width: 10,
                         ),
                         AppText(
-                          text: "(4.0)",
+                          text: gottenStars.toString(),
                           color: AppColors.textColor2,
                         )
                       ],
@@ -192,9 +262,11 @@ class _DetailPageState extends State<DetailPage> {
                       children: List.generate(5, (index) {
                         return InkWell(
                           onTap: () {
-                            setState(() {
-                              selectedIndex = index;
-                            });
+                            !submitted
+                                ? setState(() {
+                                    selectedIndex = index;
+                                  })
+                                : "";
                           },
                           child: Container(
                             margin: const EdgeInsets.only(right: 10),
@@ -233,8 +305,7 @@ class _DetailPageState extends State<DetailPage> {
                     ),
 
                     AppText(
-                      text:
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
+                      text: description,
                       color: AppColors.mainTextColor,
                     )
                   ],
@@ -258,9 +329,55 @@ class _DetailPageState extends State<DetailPage> {
                   const SizedBox(
                     width: 20,
                   ),
-                  ResponsiveButton(
-                    isResponsive: true,
-                  )
+
+                  // the below is the button for " Rate the Event "
+                  // ResponsiveButton(
+                  //   isResponsive: true,
+                  // ),
+
+                  !submitted
+                      ? Container(
+                          alignment: Alignment.center,
+                          padding: EdgeInsets.all(2),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              alignment: Alignment.centerLeft,
+                              minimumSize: ui.Size(250, 60),
+                              primary: Colors.red,
+                              onPrimary: Colors.white,
+                              textStyle: TextStyle(
+                                fontSize: 20,
+                              ),
+                              shape: const BeveledRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(7))),
+                            ),
+                            // child: ResponsiveButton(
+                            //   isResponsive: true,
+                            // ),
+
+                            child: Wrap(
+                              children: [
+                                Text(
+                                  'Rate the Event',
+                                  textAlign: TextAlign.center,
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Icon(
+                                  Icons.double_arrow_rounded,
+                                  color: Colors.white,
+                                  size: 30,
+                                ),
+                              ],
+                            ),
+                            onPressed: () {
+                              setRatingforEvent();
+                            },
+                          ),
+                        )
+                      : Container(),
                 ],
               ),
             )
