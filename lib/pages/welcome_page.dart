@@ -40,7 +40,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         AppLargeText(
-                          text: "Welcome..!",
+                          text: "Welcome to the \nworld of ATA",
                           color: Colors.red,
                         ),
                         AppText(

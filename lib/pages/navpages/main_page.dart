@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:int_appone/pages/login/user_welcome.dart';
 import 'package:int_appone/pages/navpages/bar_item_page.dart';
 import 'package:int_appone/pages/home_page.dart';
 import 'package:int_appone/pages/navpages/my_page.dart';
@@ -18,7 +19,7 @@ class _MainPageState extends State<MainPage> {
     const HomePage(),
     const BarItemPage(),
     const SearchPage(),
-    const MyPage()
+    UserWelcomePage(email: "abc@gmail.com"),
   ];
 
   int currentIndex = 0;
@@ -103,8 +104,9 @@ class _MainPageState extends State<MainPage> {
               icon: Icon(Icons
                   .apps)), // replaced title by label : (actual :: title:("home") )
           BottomNavigationBarItem(
-              label: "Bar", icon: Icon(Icons.bar_chart_sharp)),
-          BottomNavigationBarItem(label: "Search", icon: Icon(Icons.search)),
+              label: "Bar", icon: Icon(Icons.explore_rounded)),
+          BottomNavigationBarItem(
+              label: "Search", icon: Icon(Icons.favorite_rounded)),
           BottomNavigationBarItem(label: "My", icon: Icon(Icons.person)),
         ],
       ),

@@ -53,7 +53,10 @@ class _DetailPageTwoState extends State<DetailPageTwo> {
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
-                    icon: const Icon(Icons.menu),
+                    icon: const Icon(
+                      Icons.arrow_back_rounded,
+                      size: 35,
+                    ),
                     //color : Colors.white, // to change the color of the menu app
                   )
                 ],
