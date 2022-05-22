@@ -1,8 +1,12 @@
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:int_appone/pages/login/auth_controller.dart';
 import 'package:int_appone/pages/login/signup_page.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:int_appone/cubit/app_cubit_logics.dart';
+import 'package:int_appone/cubit/app_cubits.dart';
+import 'package:int_appone/services/data_services.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -16,6 +20,20 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
+    var emailController = TextEditingController();
+    var passwordController = TextEditingController();
+    AuthController auth = AuthController();
+    // void login() {
+    //   AuthController auth = AuthController();
+    //   auth.login(emailController.text, passwordController.text);
+    //   if (auth.auth.currentUser?.email != null) {
+    //     Navigator.push(
+    //       context,
+    //       MaterialPageRoute(builder: (context) => const HomePage()),
+    //     );
+    //   }
+    // }
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -67,6 +85,7 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                   ),
                   child: TextField(
+                    controller: emailController,
                     decoration: InputDecoration(
                       hintText: "Email",
                       prefixIcon: const Icon(
@@ -109,6 +128,7 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                   ),
                   child: TextField(
+                    controller: passwordController,
                     decoration: InputDecoration(
                       hintText: "Password",
                       prefixIcon: const Icon(
@@ -167,15 +187,48 @@ class _LoginPageState extends State<LoginPage> {
                   image: AssetImage("img/bg-3.png"),
                   fit: BoxFit.cover), //remove fit property for perfect image
             ),
-            child: const Center(
-              child: Text(
-                "Sign In",
-                style: TextStyle(
-                  fontSize: 29,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                alignment: Alignment.center,
+                minimumSize: Size(250, 60),
+                primary: Colors.red,
+                onPrimary: Colors.white,
+                textStyle: TextStyle(
+                  fontSize: 20,
                 ),
+                shape: const BeveledRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(7))),
               ),
+              child: Wrap(
+                children: [
+                  Text(
+                    'Login',
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Icon(
+                    Icons.login,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                ],
+              ),
+              onPressed: () => {
+                {
+                  auth.login(emailController.text, passwordController.text),
+                  if (auth.auth.currentUser?.email != null)
+                    {
+                      Get.to(() => BlocProvider<AppCubits>(
+                            create: (context) => AppCubits(
+                              data: DataServices(),
+                            ),
+                            child: const AppCubitLogics(),
+                          ))
+                    }
+                }
+              },
             ),
           ),
           SizedBox(

@@ -1,7 +1,12 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:int_appone/pages/login/auth_controller.dart';
+
+import '../../cubit/app_cubit_logics.dart';
+import '../../cubit/app_cubits.dart';
+import '../../services/data_services.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -10,6 +15,7 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var emailController = TextEditingController();
     var passwordController = TextEditingController();
+    AuthController auth = AuthController();
     List images = [
       "facebook.jpeg",
       "google.png",
@@ -175,15 +181,51 @@ class SignUpPage extends StatelessWidget {
                     image: AssetImage("img/bg-3.png"),
                     fit: BoxFit.cover), //remove fit property for perfect image
               ),
-              child: const Center(
-                child: Text(
-                  "Sign Up",
-                  style: TextStyle(
-                    fontSize: 29,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  alignment: Alignment.center,
+                  minimumSize: Size(250, 60),
+                  primary: Colors.red,
+                  onPrimary: Colors.white,
+                  textStyle: TextStyle(
+                    fontSize: 20,
                   ),
+                  shape: const BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(7))),
                 ),
+                child: Wrap(
+                  children: [
+                    Text(
+                      'Sign Up',
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Icon(
+                      Icons.login,
+                      color: Colors.white,
+                      size: 30,
+                    ),
+                  ],
+                ),
+                // onPressed: () => AuthController()
+                //     .register(emailController.text, passwordController.text),
+                onPressed: () => {
+                  {
+                    auth.register(
+                        emailController.text, passwordController.text),
+                    if (auth.auth.currentUser?.email != null)
+                      {
+                        Get.to(() => BlocProvider<AppCubits>(
+                              create: (context) => AppCubits(
+                                data: DataServices(),
+                              ),
+                              child: const AppCubitLogics(),
+                            ))
+                      }
+                  }
+                },
               ),
             ),
           ),
