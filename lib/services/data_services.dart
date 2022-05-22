@@ -4,9 +4,9 @@ import 'package:http/http.dart' as http;
 import 'package:int_appone/model/data_model.dart';
 
 class DataServices {
-  String baseUrl = "http://mark.bslmeiyu.com/api";
+  String baseUrl = "https://sabhinav3.github.io/ata_data";
   Future<List<DataModel>> getInfo() async {
-    var apiUrl = '/getPlaces';
+    var apiUrl = '/ata_data.json';
     http.Response res = await http.get(Uri.parse(baseUrl + apiUrl));
 
     try {
