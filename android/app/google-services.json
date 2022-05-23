@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:817140080703:android:e858894060ae54fa9bd88a",
+        "mobilesdk_app_id": "1:817140080703:android:570ff08e82bee57a9bd88a",
         "android_client_info": {
-          "package_name": "com.ataevents.intAppone"
+          "package_name": "com.ataevents.int_appone"
         }
       },
       "oauth_client": [
@@ -29,13 +29,6 @@
             {
               "client_id": "817140080703-al7674050tfucjovckuosn1c7nfcgr4n.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "817140080703-lqae5qrdbq4u67ll7p5uc2dvjd9b2v78.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.ataevents.intAppone"
-              }
             }
           ]
         }
