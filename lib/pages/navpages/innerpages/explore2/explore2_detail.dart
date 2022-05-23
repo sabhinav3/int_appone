@@ -41,25 +41,30 @@ class ExploreDetail2 extends StatelessWidget {
                   fontFamily: 'Varela',
                   fontSize: 42.0,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFFF17532))),
+                  color: Colors.red)),
         ),
         const SizedBox(height: 15.0),
         Hero(
             tag: assetPath,
-            child: Image.asset(assetPath,
-                height: 150.0, width: 100.0, fit: BoxFit.contain)),
+            child: Image.asset(
+              assetPath,
+              height: 150.0,
+              width: 100.0,
+              fit: BoxFit.contain,
+              alignment: Alignment.center,
+            )),
         const SizedBox(height: 20.0),
-        const Center(
-            // child: Text(
-            //   cookieprice,
-            //   style: TextStyle(
-            //     fontFamily: 'Varela',
-            //     fontSize: 22.0,
-            //     fontWeight: FontWeight.bold,
-            //     color: Color(0xFFF17532),
-            //   ),
-            // ),
-            ),
+        // const Center(
+        //     // child: Text(
+        //     //   cookieprice,
+        //     //   style: TextStyle(
+        //     //     fontFamily: 'Varela',
+        //     //     fontSize: 22.0,
+        //     //     fontWeight: FontWeight.bold,
+        //     //     color: Color(0xFFF17532),
+        //     //   ),
+        //     // ),
+        //     ),
         const SizedBox(height: 10.0),
         Center(
           child: Text(cookiename,

@@ -184,6 +184,32 @@ flutter:
     - img/explore_page/explore1/sunny.jpg
     - img/explore_page/explore1/vishnu.jpg
 
+    - img/explore_page/explore2/adhoc/anil-boddireddy.png
+    - img/explore_page/explore2/adhoc/bhuvanesh-boojala.png
+    - img/explore_page/explore2/adhoc/goutham.png
+    - img/explore_page/explore2/adhoc/hari_prasad.png
+    - img/explore_page/explore2/adhoc/jayanth.png
+    - img/explore_page/explore2/adhoc/karunakar.png
+    - img/explore_page/explore2/adhoc/kiran.png
+    - img/explore_page/explore2/adhoc/krishna.png
+    - img/explore_page/explore2/adhoc/madhu.png
+    - img/explore_page/explore2/adhoc/mahendar.png
+    - img/explore_page/explore2/adhoc/meher.png
+    - img/explore_page/explore2/adhoc/parashuram.png
+    - img/explore_page/explore2/adhoc/parmesh.png
+    - img/explore_page/explore2/adhoc/raghuveer.png
+    - img/explore_page/explore2/adhoc/ravi.png
+    - img/explore_page/explore2/adhoc/ravinder.png
+    - img/explore_page/explore2/adhoc/rinda.png
+    - img/explore_page/explore2/adhoc/sai.png
+    - img/explore_page/explore2/adhoc/sainath.png
+    - img/explore_page/explore2/adhoc/sudha.png
+    - img/explore_page/explore2/adhoc/sudheer.png
+    - img/explore_page/explore2/adhoc/sharath.png
+    - img/explore_page/explore2/adhoc/sravan.png
+    - img/explore_page/explore2/adhoc/sunny.png
+    - img/explore_page/explore2/adhoc/vinod.png
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

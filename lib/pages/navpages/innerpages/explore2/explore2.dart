@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:int_appone/pages/navpages/innerpages/explore1/explore1_detail.dart';
 import 'package:int_appone/pages/navpages/innerpages/explore2/explore2_detail.dart';
+import 'package:int_appone/widgets/app_large_text.dart';
+import 'package:int_appone/widgets/app_med_text.dart';
+import 'package:int_appone/widgets/app_noramal_text.dart';
+import 'package:int_appone/widgets/app_text.dart';
 
 class ExplorePage2 extends StatelessWidget {
   @override
@@ -16,30 +20,185 @@ class ExplorePage2 extends StatelessWidget {
               width: MediaQuery.of(context).size.width - 30.0,
               height: MediaQuery.of(context).size.height - 30.0,
               child: GridView.count(
-                crossAxisCount: 2,
+                crossAxisCount: 1,
                 primary: false,
                 crossAxisSpacing: 10.0,
                 mainAxisSpacing: 15.0,
-                childAspectRatio: 0.8,
+                childAspectRatio: 4,
                 children: <Widget>[
-                  _buildCard('Ilayaraja', 'img/explore_page/ilayaraja.jpg',
-                      context, "this is Ilayaraja"),
-                  _buildCard('Balakrishna', 'img/explore_page/balakrishna.jpg',
-                      context, "jai ballaya"),
-                  _buildCard('Naresh', 'img/explore_page/naresh.jpg', context,
-                      "aaatttt naresh"),
+                  AppLargeText(text: "Conference Ad-hoc Committee"),
                   _buildCard(
-                      'Ram Miriyala',
-                      'img/explore_page/ram-miriyala.jpg',
-                      context,
-                      "eechi paaddd"),
-                  _buildCard('Sai Kumar', 'img/explore_page/saikumar.jpg',
-                      context, "his is the description"),
+                    'Bhuvanesh Boojala \n- Chair',
+                    'img/explore_page/explore2/adhoc/bhuvanesh-boojala.png',
+                    context,
+                    "Chairperson",
+                  ),
                   _buildCard(
-                      'Shiva Balaji',
-                      'img/explore_page/shiva_balaji.jpg',
-                      context,
-                      "Balaji bhaii bholthey"),
+                    'Madhu Bommineni \n- Vice Chair',
+                    'img/explore_page/explore2/adhoc/madhu.png',
+                    context,
+                    "jai ballaya",
+                  ),
+                  _buildCard(
+                    'Sudheer Bandaru \n- Convener',
+                    'img/explore_page/explore2/adhoc/sudheer.png',
+                    context,
+                    "Random description",
+                  ),
+                  _buildCard(
+                    'Kiran Pasham \n- Coordinaor ',
+                    'img/explore_page/explore2/adhoc/kiran.png',
+                    context,
+                    "nice",
+                  ),
+                  _buildCard(
+                    'Parmesh Bheemreddy \n- Member',
+                    'img/explore_page/explore2/adhoc/parmesh.png',
+                    context,
+                    "thamannn",
+                  ),
+                  _buildCard(
+                    'Dr.Parashuram Pinnapureddy \n- Member',
+                    'img/explore_page/explore2/adhoc/parashuram.png',
+                    context,
+                    "nice",
+                  ),
+                  _buildCard(
+                    'Sharath Vemula \n- Member',
+                    'img/explore_page/explore2/adhoc/sharath.png',
+                    context,
+                    "his is the description",
+                  ),
+                  _buildCard(
+                    'Anil Boddireddy \n- Member',
+                    'img/explore_page/explore2/adhoc/anil-boddireddy.png',
+                    context,
+                    "Balaji ",
+                  ),
+                  _buildCard(
+                    'Raghuveer Bhandaru \n- Member',
+                    'img/explore_page/explore2/adhoc/raghuveer.png',
+                    context,
+                    "this is Ilayaraja",
+                  ),
+                  _buildCard(
+                    'Rinda Reddy \n- Member',
+                    'img/explore_page/explore2/adhoc/rinda.png',
+                    context,
+                    "this is Ilayaraja",
+                  ),
+                  _buildCard(
+                    'Dr. Meher Medavaram \n- Member',
+                    'img/explore_page/explore2/adhoc/meher.png',
+                    context,
+                    "this is Ilayaraja",
+                  ),
+                  _buildCard(
+                    'Sunny Reddy \n- Member',
+                    'img/explore_page/explore2/adhoc/sunny.png',
+                    context,
+                    "this is sunny",
+                  ),
+                  _buildCard(
+                    'Sudha Rani Kondapu \n- Member',
+                    'img/explore_page/explore2/adhoc/sudha.png',
+                    context,
+                    "this is Ilayaraja",
+                  ),
+                  _buildCard(
+                    'Sainath Boyapalli \n- Member',
+                    'img/explore_page/explore2/adhoc/sainath.png',
+                    context,
+                    "this is Ilayaraja",
+                  ),
+                  _buildCard(
+                    'Hari Prasad Reddy Lingala \n- Member',
+                    'img/explore_page/explore2/adhoc/hari_prasad.png',
+                    context,
+                    "this is Ilayaraja",
+                  ),
+
+                  // another committee
+
+                  AppLargeText(text: "Core Committee"),
+                  _buildCard(
+                    'Sudheer Bandaru \n- Convener',
+                    'img/explore_page/explore2/adhoc/sudheer.png',
+                    context,
+                    "Random description",
+                  ),
+                  _buildCard(
+                    'Kiran Pasham \n- Coordinator ',
+                    'img/explore_page/explore2/adhoc/kiran.png',
+                    context,
+                    "nice",
+                  ),
+                  _buildCard(
+                    'Krishna K.Reddy \n- Director',
+                    'img/explore_page/explore2/adhoc/sudheer.png',
+                    context,
+                    "Random description",
+                  ),
+                  _buildCard(
+                    'Sai Sudini \n- Co-Convener',
+                    'img/explore_page/explore2/adhoc/sudheer.png',
+                    context,
+                    "Random description",
+                  ),
+                  _buildCard(
+                    'Ravi Challa \n- Co-Coordinator',
+                    'img/explore_page/explore2/adhoc/sudheer.png',
+                    context,
+                    "Random description",
+                  ),
+                  _buildCard(
+                    'Ravinder Bojja \n- Director',
+                    'img/explore_page/explore2/adhoc/sudheer.png',
+                    context,
+                    "Random description",
+                  ),
+                  _buildCard(
+                    'Sravan Paduru \n- Local Coordinator',
+                    'img/explore_page/explore2/adhoc/sudheer.png',
+                    context,
+                    "Random description",
+                  ),
+
+                  AppLargeText(text: "Conference Advisory Committee"),
+                  _buildCard(
+                    'Jayanth Challa \n- Chair',
+                    'img/explore_page/explore2/adhoc/sudheer.png',
+                    context,
+                    "Random description",
+                  ),
+                  _buildCard(
+                    'Vinod Koduru \n- Co-Chair',
+                    'img/explore_page/explore2/adhoc/kiran.png',
+                    context,
+                    "nice",
+                  ),
+                  _buildCard(
+                    'Karunakar Asireddy \n- Member',
+                    'img/explore_page/explore2/adhoc/sudheer.png',
+                    context,
+                    "Random description",
+                  ),
+                  _buildCard(
+                    'Mahendar Musku \n- Member',
+                    'img/explore_page/explore2/adhoc/sudheer.png',
+                    context,
+                    "Random description",
+                  ),
+                  _buildCard(
+                    'Goutham Goli \n- Member',
+                    'img/explore_page/explore2/adhoc/sudheer.png',
+                    context,
+                    "Random description",
+                  ),
+                  AppLargeText(text: "Co-Host Committee"),
+                  SizedBox(
+                    height: 100,
+                  ),
                 ],
               )),
           const SizedBox(height: 3.0)
@@ -51,7 +210,7 @@ class ExplorePage2 extends StatelessWidget {
   Widget _buildCard(String name, String imgPath, context, String description) {
     return Padding(
       padding:
-          const EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
+          const EdgeInsets.only(top: 1.0, bottom: 1.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: () {
           Navigator.of(context).push(
@@ -74,7 +233,7 @@ class ExplorePage2 extends StatelessWidget {
                     blurRadius: 5.0)
               ],
               color: Colors.white),
-          child: Column(
+          child: Row(
             children: [
               //this is for the favourites icon
 
@@ -88,18 +247,29 @@ class ExplorePage2 extends StatelessWidget {
               //               : Icon(Icons.favorite_border,
               //                   color: Color(0xFFEF7532))
               //         ])),
+
+              SizedBox(
+                width: 20,
+              ),
               Hero(
                 tag: imgPath,
                 child: Container(
-                  height: 150,
-                  width: 100,
+                  // padding: const EdgeInsets.only(left: 250),
+                  height: 60,
+                  width: 60,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage(imgPath), fit: BoxFit.contain),
+                      alignment: Alignment.bottomLeft,
+                      image: AssetImage(imgPath),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),
               const SizedBox(height: 3),
+              SizedBox(
+                width: 20,
+              ),
 
               // this is for the price section
 

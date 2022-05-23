@@ -5,15 +5,6 @@ import 'package:int_appone/pages/navpages/innerpages/explore3/explore3.dart';
 
 import 'innerpages/explore1/explore1.dart';
 
-// class BarItemPage extends StatelessWidget {
-//   const BarItemPage({Key? key}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(child: Center(child: Text("Bar Items Page")));
-//   }
-// }
-
 class BarItemPage extends StatefulWidget {
   const BarItemPage({Key? key}) : super(key: key);
 
