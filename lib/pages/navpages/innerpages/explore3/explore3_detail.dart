@@ -41,7 +41,7 @@ class ExploreDetail3 extends StatelessWidget {
                   fontFamily: 'Varela',
                   fontSize: 42.0,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFFF17532))),
+                  color: Colors.redAccent)),
         ),
         const SizedBox(height: 15.0),
         Hero(
@@ -87,7 +87,7 @@ class ExploreDetail3 extends StatelessWidget {
         //     height: 50.0,
         //     decoration: BoxDecoration(
         //         borderRadius: BorderRadius.circular(25.0),
-        //         color: Color(0xFFF17532)),
+        //         color: Colors.redAccent),
         //     child: Center(
         //       child: Text(
         //         'Add to cart',
@@ -103,7 +103,7 @@ class ExploreDetail3 extends StatelessWidget {
       ]),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: const Color(0xFFF17532),
+        backgroundColor: Colors.redAccent,
         child: const Icon(Icons.favorite),
       ),
       // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

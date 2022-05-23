@@ -144,12 +144,7 @@ flutter:
     - img/details_page/july3/day3e7_detail.jpg
     - img/details_page/july3/day3e8_detail.jpg
     - assets/video/sozo_logo.mp4
-    - img/explore_page/ilayaraja.jpg
-    - img/explore_page/balakrishna.jpg
-    - img/explore_page/naresh.jpg
-    - img/explore_page/ram-miriyala.jpg
-    - img/explore_page/saikumar.jpg
-    - img/explore_page/shiva_balaji.jpg
+  
     - img/sponsors/diamond_sponsors/ais.jpg
     - img/sponsors/diamond_sponsors/dreamvalley.jpg
     - img/sponsors/diamond_sponsors/heartfulness.jpg
@@ -168,6 +163,26 @@ flutter:
     - img/sponsors/gold_sponsors/somireddy.jpg
     - img/sponsors/gold_sponsors/tripura.jpg
     - img/sponsors/gold_sponsors/vbj.jpg
+
+    - img/explore_page/explore1/aadi.jpg
+    - img/explore_page/explore1/ananya.jpg
+    - img/explore_page/explore1/balakrishna.jpg
+    - img/explore_page/explore1/balu.jpg
+    - img/explore_page/explore1/bhanu.jpg
+    - img/explore_page/explore1/thaman.jpg
+    - img/explore_page/explore1/divi.jpg
+    - img/explore_page/explore1/ilayaraja.jpg
+    - img/explore_page/explore1/jyotsna.jpg
+    - img/explore_page/explore1/krishna_veni.jpg
+    - img/explore_page/explore1/mangli.jpg
+    - img/explore_page/explore1/nagaraju.jpg
+    - img/explore_page/explore1/naresh.jpg
+    - img/explore_page/explore1/ram-miriyala.jpg
+    - img/explore_page/explore1/ravi.jpg
+    - img/explore_page/explore1/saikumar.jpg
+    - img/explore_page/explore1/shiva_balaji.jpg
+    - img/explore_page/explore1/sunny.jpg
+    - img/explore_page/explore1/vishnu.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
