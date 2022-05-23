@@ -12,7 +12,7 @@ class HotelPage extends StatefulWidget {
   String icon_image;
   String icon_description;
   String icon_location;
-  String url;
+  String icon_url;
   String icon_text;
   HotelPage({
     Key? key,
@@ -21,14 +21,14 @@ class HotelPage extends StatefulWidget {
     required this.icon_description,
     required this.icon_text,
     required this.icon_location,
-    required this.url,
+    required this.icon_url,
   }) : super(key: key);
 
   @override
   State<HotelPage> createState() =>
       // ignore: no_logic_in_create_state
       _HotelPageState(icon_name, icon_image, icon_description, icon_text,
-          icon_location, url);
+          icon_location, icon_url);
 }
 
 class _HotelPageState extends State<HotelPage> {
@@ -37,10 +37,10 @@ class _HotelPageState extends State<HotelPage> {
   String icon_description;
   String icon_text;
   String icon_location;
-  String url;
+  String icon_url;
 
   _HotelPageState(this.icon_name, this.icon_image, this.icon_description,
-      this.icon_text, this.icon_location, this.url);
+      this.icon_text, this.icon_location, this.icon_url);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,9 +56,9 @@ class _HotelPageState extends State<HotelPage> {
                 // width: double.maxFinite,
                 width: 350,
                 height: 350,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('icon_image'),
+                    image: AssetImage(icon_image),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -196,8 +196,8 @@ class _HotelPageState extends State<HotelPage> {
                         ],
                       ),
                       onPressed: () async {
-                        final url =
-                            'https://www.google.com/maps/dir/?api=1&destination=801%20Mt%20Vernon%20Pl%20NW,%20Washington,%20DC%2020001,%20USA';
+                        final url = icon_url;
+
                         // ignore: deprecated_member_use
                         if (await canLaunch(url)) {
                           // ignore: deprecated_member_use

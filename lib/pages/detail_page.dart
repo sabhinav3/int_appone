@@ -136,9 +136,9 @@ class _DetailPageState extends State<DetailPage> {
                 // width: double.maxFinite,
                 width: 350,
                 height: 350,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('detImage'),
+                    image: AssetImage(detImage),
                     fit: BoxFit.cover,
                   ),
                 ),

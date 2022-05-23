@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           "The cornerstone of downtown DC’s renaissance, the Walter E. Washington Convention Center is as functional as it is artistically impressive. The 2.3-million-square-foot space hosts meetings, conventions, and events of every kind, from medical industry annual meetings to comic book-inspired expos and board retreats and are equipped to handle events of all sizes, from small groups and break-out meetings to events for 500 to 42,000 attendees. One of the most energy-efficient.",
       "icon_location": "Washington DC",
       "icon_text": "Hotel",
-      "url": "https://www.ataconference.org/venue",
+      "icon_url": "https://www.ataconference.org/venue",
     },
     {
       "id": "2",
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           "Public Parking Garages and Lots Near the Washington Convention Center. Center City Parking - 9th Street between New York Ave. and H Street NW Washington, D.C. (202) 265-0010.Valet Parking Near DC Convention Follow this Link https://www.parkingpanda.com/washington-dc-convention-center-parkingInterarm - Renaissance Hotel, 999 Ninth Street NW Washington, D.C. (202) 898-9000.PMI Parking - 915 Massachusetts Ave. NWublic Parking Garages and Lots Near the Washington Convention Center. Center City Parking - 9th Street between New York Ave. and H Street NW Washington, D.C. (202) 265-0010.Valet Parking Near DC Convention Follow this Link https://www.parkingpanda.com/washington-dc-convention-center-parkingInterarm - Renaissance Hotel, 999 Ninth Street NW Washington, D.C. (202) 898-9000.PMI Parking - 915 Massachusetts Ave. NW Washington, D.C. (202) 785 Washington, D.C. (202) 785-9191.",
       "icon_location": "Washington DC",
       "icon_text": "Parking",
-      "url": "https://www.ataconference.org/venue",
+      "icon_url": "https://www.ataconference.org/venue",
     },
     {
       "id": "3",
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           "The cornerstone of downtown DC’s renaissance, the Walter E. Washington Convention Center is as functional as it is artistically impressive. The 2.3-million-square-foot space hosts meetings, conventions, and events of every kind, from medical industry annual meetings to comic book-inspired expos and board retreats and are equipped to handle events of all sizes, from small groups and break-out meetings to events for 500 to 42,000 attendees. One of the most energy-efficient.",
       "icon_location": "Washington DC",
       "icon_text": "Directions",
-      "url":
+      "icon_url":
           "https://www.google.com/maps/dir/?api=1&destination=801%20Mt%20Vernon%20Pl%20NW,%20Washington,%20DC%2020001,%20USA",
     },
     {
@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           "Ronald Reagan Washington National Airport (DCA), ATA Provides Shuttle Service for Every 1 HR on July 1st, 2022 from 9:00 am to 7:00 pm, Please look for ATA Transport desk in Lower-Level Baggage claim area in all terminals Return transportation will be provided from hotel to Airport on July 4th, 2022, from 8:00 am to 2:00 pm Washington Dulles International Airport (IAD) ATA Provides Shuttle Service for Every 1HR on July 1st, 2022 from 9:00 am to 7:00 pm, Please look for ATA Transport desk near Baggage claim area. Return transportation will be provided from hotel to Airport on July 4th, 2022 from 8:00 am to 2:00 pm Ashburn/Herndon Shuttle Service to Convention Center. ATA Provides Shuttle Services on 2nd July & 3rd July from 8AM - 4 PM. Ashburn Pick up and Drop off location ,Loudoun Station, 43751 Central Station Dr, VA 20147,Herndon Pickup and Drop off location. Herndon-Monroe Park and Ride 12530 Sunrise Valley Dr, Herndon VA 20221",
       "icon_location": "Washington DC",
       "icon_text": "Transit",
-      "url": "https://www.ataconference.org/venue",
+      "icon_url": "https://www.ataconference.org/venue",
     }
   ];
 
@@ -420,7 +420,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                           MaterialPageRoute(
                                             builder: (BuildContext context) =>
                                                 HotelPage(
-                                              url: icons[index]['url']!,
+                                              icon_url: icons[index]
+                                                  ['icon_url']!,
                                               icon_location: icons[index]
                                                   ['icon_location']!,
                                               icon_name: icons[index]

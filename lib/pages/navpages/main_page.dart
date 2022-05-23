@@ -1,15 +1,18 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:int_appone/pages/login/user_welcome.dart';
 import 'package:int_appone/pages/navpages/bar_item_page.dart';
 import 'package:int_appone/pages/home_page.dart';
 import 'package:int_appone/pages/navpages/my_page.dart';
 import 'package:int_appone/pages/navpages/search_page.dart';
+import 'package:int_appone/main.dart';
 
 import '../appbar/navbar.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
-
   @override
   State<MainPage> createState() => _MainPageState();
 }
@@ -72,16 +75,6 @@ class _MainPageState extends State<MainPage> {
           ],
         ),
       ),
-
-      // body: NestedScrollView(
-      //   headerSliverBuilder: ((context, innerBoxIsScrolled) => [
-      //     SliverAppBar(
-      //       title: Text(""),
-      //       centerTitle: true,
-      //     )
-      //   ],),
-      // ),
-      // changes are being made here ( end )
 
       backgroundColor: Colors.white,
       body: pages[currentIndex],
