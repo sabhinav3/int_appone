@@ -10,37 +10,129 @@ class ExplorePage1 extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           const SizedBox(height: 15.0),
-          Container(
-              padding: const EdgeInsets.only(right: 15.0),
-              width: MediaQuery.of(context).size.width - 30.0,
-              height: MediaQuery.of(context).size.height - 30.0,
-              child: GridView.count(
-                crossAxisCount: 2,
-                primary: false,
-                crossAxisSpacing: 10.0,
-                mainAxisSpacing: 15.0,
-                childAspectRatio: 0.8,
-                children: <Widget>[
-                  _buildCard('Ilayaraja', 'img/explore_page/ilayaraja.jpg',
-                      context, "this is Ilayaraja"),
-                  _buildCard('Balakrishna', 'img/explore_page/balakrishna.jpg',
-                      context, "jai ballaya"),
-                  _buildCard('Naresh', 'img/explore_page/naresh.jpg', context,
-                      "aaatttt naresh"),
-                  _buildCard(
+          SingleChildScrollView(
+            child: Container(
+                padding: const EdgeInsets.only(right: 15.0),
+                width: MediaQuery.of(context).size.width - 30.0,
+                height: MediaQuery.of(context).size.height - 30.0,
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  primary: false,
+                  crossAxisSpacing: 10.0,
+                  mainAxisSpacing: 15.0,
+                  childAspectRatio: 0.8,
+                  children: <Widget>[
+                    _buildCard(
+                      'Ilayaraja',
+                      'img/explore_page/explore1/ilayaraja.jpg',
+                      context,
+                      "this is Ilayaraja",
+                    ),
+                    _buildCard(
+                      'Balakrishna',
+                      'img/explore_page/explore1/balakrishna.jpg',
+                      context,
+                      "jai ballaya",
+                    ),
+                    _buildCard(
                       'Ram Miriyala',
-                      'img/explore_page/ram-miriyala.jpg',
+                      'img/explore_page/explore1/ram-miriyala.jpg',
                       context,
-                      "eechi paaddd"),
-                  _buildCard('Sai Kumar', 'img/explore_page/saikumar.jpg',
-                      context, "his is the description"),
-                  _buildCard(
-                      'Shiva Balaji',
-                      'img/explore_page/shiva_balaji.jpg',
+                      "Random description",
+                    ),
+                    _buildCard(
+                      'S.S.Thaman',
+                      'img/explore_page/explore1/thaman.jpg',
                       context,
-                      "Balaji bhaii bholthey"),
-                ],
-              )),
+                      "thamannn",
+                    ),
+                    _buildCard(
+                      'Sai Kumar',
+                      'img/explore_page/explore1/saikumar.jpg',
+                      context,
+                      "nice",
+                    ),
+                    _buildCard(
+                      'Ravi Madala',
+                      'img/explore_page/explore1/ravi.jpg',
+                      context,
+                      "his is the description",
+                    ),
+                    _buildCard(
+                      'Naresh',
+                      'img/explore_page/explore1/naresh.jpg',
+                      context,
+                      "Balaji ",
+                    ),
+                    _buildCard(
+                      'Manchu Vishnu',
+                      'img/explore_page/explore1/vishnu.jpg',
+                      context,
+                      "this is Ilayaraja",
+                    ),
+                    _buildCard(
+                      'Aadi Sai Kumar',
+                      'img/explore_page/explore1/aadi.jpg',
+                      context,
+                      "this is Ilayaraja",
+                    ),
+                    _buildCard(
+                      'VJ Sunny',
+                      'img/explore_page/explore1/sunny.jpg',
+                      context,
+                      "this is Ilayaraja",
+                    ),
+                    _buildCard(
+                      'Mangli',
+                      'img/explore_page/explore1/mangli.jpg',
+                      context,
+                      "this is Ilayaraja",
+                    ),
+                    _buildCard(
+                      'Divi Vadthya',
+                      'img/explore_page/explore1/divi.jpg',
+                      context,
+                      "this is Ilayaraja",
+                    ),
+                    _buildCard(
+                      'Bhanu Sri',
+                      'img/explore_page/explore1/bhanu.jpg',
+                      context,
+                      "this is Ilayaraja",
+                    ),
+                    _buildCard(
+                      'Ananya Nagalla',
+                      'img/explore_page/explore1/ananya.jpg',
+                      context,
+                      "this is Ilayaraja",
+                    ),
+                    _buildCard(
+                      'Krishna Veni',
+                      'img/explore_page/explore1/krishna_veni.jpg',
+                      context,
+                      "this is Ilayaraja",
+                    ),
+                    _buildCard(
+                      'Flute Nagaraju',
+                      'img/explore_page/explore1/nagaraju.jpg',
+                      context,
+                      "this is Ilayaraja",
+                    ),
+                    _buildCard(
+                      'Jyotsna',
+                      'img/explore_page/explore1/jyotsna.jpg',
+                      context,
+                      "this is Ilayaraja",
+                    ),
+                    _buildCard(
+                      'Balu Munnangi',
+                      'img/explore_page/explore1/balu.jpg',
+                      context,
+                      "this is Ilayaraja",
+                    ),
+                  ],
+                )),
+          ),
           const SizedBox(height: 3.0)
         ],
       ),
@@ -90,8 +182,8 @@ class ExplorePage1 extends StatelessWidget {
               Hero(
                 tag: imgPath,
                 child: Container(
-                  height: 150,
-                  width: 100,
+                  height: 140,
+                  width: 140,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage(imgPath), fit: BoxFit.contain),

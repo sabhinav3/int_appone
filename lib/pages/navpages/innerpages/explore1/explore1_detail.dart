@@ -41,7 +41,7 @@ class ExploreDetail1 extends StatelessWidget {
                   fontFamily: 'Varela',
                   fontSize: 42.0,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFFF17532))),
+                  color: Colors.redAccent)),
         ),
         const SizedBox(height: 15.0),
         Hero(
@@ -103,7 +103,7 @@ class ExploreDetail1 extends StatelessWidget {
       ]),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: const Color(0xFFF17532),
+        backgroundColor: Colors.redAccent,
         child: const Icon(Icons.favorite),
       ),
       // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
