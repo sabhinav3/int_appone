@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ExploreDetail2 extends StatelessWidget {
-  final assetPath, cookiename;
+  final assetPath, cookiename, description;
 
-  const ExploreDetail2({this.assetPath, this.cookiename});
+  const ExploreDetail2({this.assetPath, this.cookiename, this.description});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
@@ -25,7 +26,8 @@ class ExploreDetail2 extends StatelessWidget {
                 color: Color(0xFF545D68))),
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.notifications_none, color: Color(0xFF545D68)),
+            icon:
+                const Icon(Icons.notifications_none, color: Color(0xFF545D68)),
             onPressed: () {},
           ),
         ],
@@ -70,8 +72,7 @@ class ExploreDetail2 extends StatelessWidget {
         Center(
           child: SizedBox(
             width: MediaQuery.of(context).size.width - 50.0,
-            child: const Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            child: Text(description,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontFamily: 'Varela',

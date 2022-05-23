@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ExploreDetail3 extends StatelessWidget {
-  final assetPath, cookiename;
+  final assetPath, cookiename, description;
 
-  const ExploreDetail3({this.assetPath, this.cookiename});
+  const ExploreDetail3({this.assetPath, this.cookiename, this.description});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
@@ -46,7 +47,7 @@ class ExploreDetail3 extends StatelessWidget {
         Hero(
             tag: assetPath,
             child: Image.asset(assetPath,
-                height: 500.0, width: 400.0, fit: BoxFit.contain)),
+                height: 150.0, width: 100.0, fit: BoxFit.contain)),
         const SizedBox(height: 20.0),
         const Center(
             // child: Text(
@@ -71,8 +72,7 @@ class ExploreDetail3 extends StatelessWidget {
         Center(
           child: SizedBox(
             width: MediaQuery.of(context).size.width - 50.0,
-            child: const Text(
-                'Players include,\nKapil Dev\nRakul Preet Singh\nChris Gale, Sunil Gavaskar, Sahith Teegala(PGA Golfer)\nAnd players from Virginia, Maryland, NJ, Raleigh, Detroit, Atlanta and other areas.\nAwards presentation on July 1st evening in the Banquet Night with Kapil Dev, Rakul Preet Singh and other celebrities.',
+            child: Text(description,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontFamily: 'Varela',

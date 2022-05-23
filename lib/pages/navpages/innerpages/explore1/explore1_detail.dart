@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ExploreDetail1 extends StatelessWidget {
-  final assetPath, cookiename;
+  final assetPath, cookiename, description;
 
-  const ExploreDetail1({this.assetPath, this.cookiename});
+  const ExploreDetail1({this.assetPath, this.cookiename, this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -72,8 +72,7 @@ class ExploreDetail1 extends StatelessWidget {
         Center(
           child: SizedBox(
             width: MediaQuery.of(context).size.width - 50.0,
-            child: const Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            child: Text(description,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontFamily: 'Varela',

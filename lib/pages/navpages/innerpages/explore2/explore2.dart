@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:int_appone/pages/navpages/innerpages/explore1/explore1_detail.dart';
+import 'package:int_appone/pages/navpages/innerpages/explore2/explore2_detail.dart';
 
 class ExplorePage2 extends StatelessWidget {
   @override
@@ -21,17 +22,24 @@ class ExplorePage2 extends StatelessWidget {
                 mainAxisSpacing: 15.0,
                 childAspectRatio: 0.8,
                 children: <Widget>[
-                  _buildCard('Ilayaraja',
-                      'img/details_page/july1/day1e1_detail.jpg', context),
+                  _buildCard('Ilayaraja', 'img/explore_page/ilayaraja.jpg',
+                      context, "this is Ilayaraja"),
                   _buildCard('Balakrishna', 'img/explore_page/balakrishna.jpg',
-                      context),
-                  _buildCard('Naresh', 'img/explore_page/naresh.jpg', context),
-                  _buildCard('Ram Miriyala',
-                      'img/explore_page/ram-miriyala.jpg', context),
+                      context, "jai ballaya"),
+                  _buildCard('Naresh', 'img/explore_page/naresh.jpg', context,
+                      "aaatttt naresh"),
                   _buildCard(
-                      'Sai Kumar', 'img/explore_page/saikumar.jpg', context),
-                  _buildCard('Shiva Balaji',
-                      'img/explore_page/shiva_balaji.jpg', context),
+                      'Ram Miriyala',
+                      'img/explore_page/ram-miriyala.jpg',
+                      context,
+                      "eechi paaddd"),
+                  _buildCard('Sai Kumar', 'img/explore_page/saikumar.jpg',
+                      context, "his is the description"),
+                  _buildCard(
+                      'Shiva Balaji',
+                      'img/explore_page/shiva_balaji.jpg',
+                      context,
+                      "Balaji bhaii bholthey"),
                 ],
               )),
           const SizedBox(height: 3.0)
@@ -40,7 +48,7 @@ class ExplorePage2 extends StatelessWidget {
     );
   }
 
-  Widget _buildCard(String name, String imgPath, context) {
+  Widget _buildCard(String name, String imgPath, context, String description) {
     return Padding(
       padding:
           const EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
@@ -48,8 +56,11 @@ class ExplorePage2 extends StatelessWidget {
         onTap: () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) =>
-                  ExploreDetail1(assetPath: imgPath, cookiename: name),
+              builder: (context) => ExploreDetail2(
+                assetPath: imgPath,
+                cookiename: name,
+                description: description,
+              ),
             ),
           );
         },
@@ -97,11 +108,14 @@ class ExplorePage2 extends StatelessWidget {
               //         color: Color(0xFFCC8053),
               //         fontFamily: 'Varela',
               //         fontSize: 14.0)),
-              Text(name,
-                  style: const TextStyle(
-                      color: Color(0xFF575E67),
-                      fontFamily: 'Varela',
-                      fontSize: 14.0)),
+              Text(
+                name,
+                style: const TextStyle(
+                    color: Color(0xFF575E67),
+                    fontFamily: 'Varela',
+                    fontSize: 17.0),
+              ),
+
               // Padding(
               //   padding: EdgeInsets.all(8.0),
               //   child: Container(color: Color(0xFFEBEBEB), height: 1.0),
