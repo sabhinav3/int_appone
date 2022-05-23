@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:int_appone/cubit/app_cubits.dart';
 import 'package:int_appone/widgets/app_large_text.dart';
@@ -15,7 +16,29 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _WelcomePageState extends State<WelcomePage> {
-  List images = ["bg-3.png", "bg-3.png", "bg-3.png"];
+  List images = ["ata_bg.png", "bg2.png", "bg-3.png"];
+
+  var info = [
+    {
+      "id": "1",
+      "text1": "Welcome to the \nworld of ATA",
+      "text2": "Explore Events",
+      "text3": "ATA conference gives you a great ",
+    },
+    {
+      "id": "2",
+      "text1": "Chief Guests of ATA",
+      "text2": "These are the invitees",
+      "text3": "ATA conference",
+    },
+    {
+      "id": "3",
+      "text1": "Chief Guests of ATA-3",
+      "text2": "Invitees",
+      "text3": "ATA conference",
+    },
+  ];
+
   // List text = [""]; // if we want to add seperate text items for each slider., then follow syntax like images.
   @override
   Widget build(BuildContext context) {
@@ -40,11 +63,11 @@ class _WelcomePageState extends State<WelcomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         AppLargeText(
-                          text: "Welcome to the \nworld of ATA",
+                          text: info[index]['text1']!,
                           color: Colors.red,
                         ),
                         AppText(
-                          text: "Explore Events",
+                          text: info[index]['text2']!,
                           size: 25,
                         ),
                         const SizedBox(
@@ -53,8 +76,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         SizedBox(
                           width: 250,
                           child: AppText(
-                            text:
-                                "ATA Conference gives you an incredible experience of Indian culture and Tradition.",
+                            text: info[index]['text3']!,
                             color: AppColors.textColor3,
                             size: 14,
                           ),
