@@ -45,6 +45,9 @@ dependencies:
   cloud_firestore: ^3.1.14
   firebase_auth: ^3.3.18
   firebase_core: ^1.17.0
+  firebase_messaging: ^11.4.0
+  flutter_local_notifications: ^9.5.3+1
+  overlay_support: ^2.0.0
 
   # firebase_core: ^0.5.3
   # firebase_auth: ^0.18.4+1
@@ -79,6 +82,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - img/bg-3.png
+    - img/bg2.png
+    - img/ata_bg.png
     - img/yellow-arrow.png
     - img/logo_ata.png
     - img/logo_ata_nobg.png
