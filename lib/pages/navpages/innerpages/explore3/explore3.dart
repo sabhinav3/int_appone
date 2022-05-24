@@ -16,30 +16,14 @@ class ExplorePage3 extends StatelessWidget {
               width: MediaQuery.of(context).size.width - 30.0,
               height: MediaQuery.of(context).size.height - 30.0,
               child: GridView.count(
-                crossAxisCount: 2,
+                crossAxisCount: 1,
                 primary: false,
                 crossAxisSpacing: 10.0,
                 mainAxisSpacing: 15.0,
                 childAspectRatio: 0.8,
                 children: <Widget>[
-                  _buildCard('Ilayaraja', 'img/explore_page/ilayaraja.jpg',
-                      context, "this is Ilayaraja"),
-                  _buildCard('Balakrishna', 'img/explore_page/balakrishna.jpg',
-                      context, "mowa mowa mowa mia"),
-                  _buildCard('Naresh', 'img/explore_page/naresh.jpg', context,
-                      "aaatttt naresh"),
-                  _buildCard(
-                      'Ram Miriyala',
-                      'img/explore_page/ram-miriyala.jpg',
-                      context,
-                      "eechi paaddd"),
-                  _buildCard('Sai Kumar', 'img/explore_page/saikumar.jpg',
-                      context, "his is the description"),
-                  _buildCard(
-                      'Shiva Balaji',
-                      'img/explore_page/shiva_balaji.jpg',
-                      context,
-                      "Balaji bhaii bholthey"),
+                  _buildCard('Dream Valley Golf Cup', 'img/golf.jpg', context,
+                      "ATA Dream Valley Celebrity GOLF Tournament"),
                 ],
               )),
           const SizedBox(height: 3.0)
@@ -88,18 +72,20 @@ class ExplorePage3 extends StatelessWidget {
               //               : Icon(Icons.favorite_border,
               //                   color: Color(0xFFEF7532))
               //         ])),
+
+              const SizedBox(height: 20),
               Hero(
                 tag: imgPath,
                 child: Container(
-                  height: 150,
-                  width: 100,
+                  height: 370,
+                  width: 300,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage(imgPath), fit: BoxFit.contain),
+                        image: AssetImage(imgPath), fit: BoxFit.fill),
                   ),
                 ),
               ),
-              const SizedBox(height: 3),
+              const SizedBox(height: 10),
 
               // this is for the price section
 
@@ -111,9 +97,11 @@ class ExplorePage3 extends StatelessWidget {
               Text(
                 name,
                 style: const TextStyle(
-                    color: Color(0xFF575E67),
-                    fontFamily: 'Varela',
-                    fontSize: 17.0),
+                  color: Color(0xFF575E67),
+                  fontFamily: 'Varela',
+                  fontSize: 17.0,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
 
               // Padding(
