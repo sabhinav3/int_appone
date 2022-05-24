@@ -130,8 +130,9 @@ class _DetailPageState extends State<DetailPage> {
         height: double.maxFinite,
         child: Stack(
           children: [
-            Hero(
-              tag: detImage,
+            Positioned(
+              left: 0,
+              right: 0,
               child: Container(
                 // width: double.maxFinite,
                 width: 350,

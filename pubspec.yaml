@@ -83,6 +83,7 @@ flutter:
   assets:
     - img/bg-3.png
     - img/bg2.png
+    - img/bg.png
     - img/ata_bg.png
     - img/yellow-arrow.png
     - img/logo_ata.png
