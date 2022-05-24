@@ -28,13 +28,13 @@ class UserWelcomePage extends StatelessWidget {
                 0.3, // here we're multiplying by 3 to get the 1/3rd height of the screen
             decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("img/bg-3.png"), fit: BoxFit.cover),
+                  image: AssetImage("img/bg.png"), fit: BoxFit.cover),
               //remove fit property for perfect image
             ),
             child: Column(
               children: [
                 SizedBox(
-                  height: h * 0.1,
+                  height: h * 0.08,
                 ),
                 CircleAvatar(
                   backgroundColor: Colors.yellowAccent
