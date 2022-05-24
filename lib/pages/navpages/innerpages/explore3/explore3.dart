@@ -29,6 +29,13 @@ class ExplorePage3 extends StatelessWidget {
           const SizedBox(height: 3.0)
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+        backgroundColor: Colors.redAccent,
+        child: const Icon(Icons.arrow_back_rounded),
+      ),
     );
   }
 
