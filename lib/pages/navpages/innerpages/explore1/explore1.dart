@@ -186,18 +186,20 @@ class ExplorePage1 extends StatelessWidget {
               //               : Icon(Icons.favorite_border,
               //                   color: Color(0xFFEF7532))
               //         ])),
+
+              const SizedBox(height: 20),
               Hero(
                 tag: imgPath,
                 child: Container(
-                  height: 140,
-                  width: 140,
+                  height: 120,
+                  width: 120,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage(imgPath), fit: BoxFit.contain),
                   ),
                 ),
               ),
-              const SizedBox(height: 3),
+              const SizedBox(height: 15),
 
               // this is for the price section
 

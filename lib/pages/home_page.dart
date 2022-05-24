@@ -76,6 +76,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   ];
 
   var cards1 = [
+    // this is for the july 1st event
     {
       "id": "1",
       "image": "day1e1_home.jpg",
@@ -133,7 +134,152 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     },
   ];
 
-  var cards2 = {
+  var cards2 = [
+    // this is for the july 2st event
+    {
+      "id": "1",
+      "image": "day2e1_home.jpg",
+      "detImage": 'day2e1_detail.jpg',
+      "name": "Registrations",
+      "time": "9:00 a.m - 6:00 p.m",
+      "description": "Dear Guests, Welcome to ATA Conference.",
+      "location": "Washington DC"
+    },
+    {
+      "id": "2",
+      "image": "day2e2_home.jpg",
+      "detImage": "day2e2_detail.jpg",
+      "name": "ATA Parade",
+      "time": "9:00 - 10:00 a.m",
+      "description": "Level 3 Ballroom (Hall A,B,C)",
+      "location": "Washington DC"
+    },
+    {
+      "id": "3",
+      "image": "day2e3_home.jpg",
+      "detImage": "day2e3_detail.jpg",
+      "name": "Inaugural",
+      "time": "10:00 a.m - 12:00 p.m",
+      "description": "Level 3 Ballroom (Hall A,B,C)",
+      "location": "Washington DC"
+    },
+    {
+      "id": "4",
+      "image": "day2e4_home.jpg",
+      "detImage": "day2e4_detail.jpg",
+      "name": "Exhibits",
+      "time": "10:00 a.m - 9:00 p.m",
+      "description": "(AGE - 21+) - Youth Forum - Potomac River",
+      "location": "Potomac River"
+    },
+    {
+      "id": "5",
+      "image": "day2e5_home.jpg",
+      "detImage": "day2e5_detail.jpg",
+      "name": "Lunch",
+      "time": "Starts 12:00 p.m",
+      "description":
+          "ATA Awards, Cultural Programs, Guest Performances, Musical Night at Level 3 Ballroom (Hall A,B,C)",
+      "location": "Washington DC"
+    },
+    {
+      "id": "6",
+      "image": "day2e6_home.jpg",
+      "detImage": "day2e6_detail.jpg",
+      "name": "Program-2",
+      "time": "1:00 - 5:00 p.m",
+      "description": "Level 3 Ballroom (Hall A,B,C)",
+      "location": "Level-3 Ballroom (Hall A,B,C)"
+    },
+    {
+      "id": "7",
+      "image": "day2e7_home.jpg",
+      "detImage": "day2e7_detail.jpg",
+      "name": "Program - 3",
+      "time": "6:00 p.m - Midnight",
+      "description": "Level 3 Ballroom (Hall A,B,C)",
+      "location": "Level-3 Ballroom (Hall A,B,C)"
+    },
+    {
+      "id": "8",
+      "image": "day2e8_home.jpg",
+      "detImage": "day2e8_detail.jpg",
+      "name": "Dinner",
+      "time": "5:30 - 7:00 p.m",
+      "description": "Level 3 Ballroom (Hall A,B,C)",
+      "location": "Level-3 Ballroom (Hall A,B,C)"
+    },
+    {
+      "id": "9",
+      "image": "day2e8_home.jpg",
+      "detImage": "day2e8_detail.jpg",
+      "name": "Food Court",
+      "time": "9:00 a.m - 9:00 p.m",
+      "description": "Level 3 Ballroom (Hall A,B,C)",
+      "location": "Level-3 Ballroom (Hall A,B,C)"
+    },
+  ];
+
+  var cards3 = [
+    // this is for the july 3st event
+    {
+      "id": "1",
+      "image": "day3e1_home.jpg",
+      "detImage": 'day3e1_detail.jpg',
+      "name": "ATA Conference\nRegistrations",
+      "time": "9:00 a.m -\n6:00 p.m",
+      "description": "Dear Guests, Welcome to ATA Conference.",
+      "location": "Washington DC"
+    },
+    {
+      "id": "2",
+      "image": "day3e2_home.jpg",
+      "detImage": "day3e2_detail.jpg",
+      "name": "TTD Srinivasa\nKalyanam",
+      "time": "7:00 - 9:00 a.m",
+      "description": "Level 3 Ballroom (Hall A,B,C)",
+      "location": "Washington DC"
+    },
+    {
+      "id": "3",
+      "image": "day3e3_home.jpg",
+      "detImage": "day3e3_detail.jpg",
+      "name": "Program - 4",
+      "time": "9:00 a.m - 12:00 p.m",
+      "description": "Level 3 Ballroom (Hall A,B,C)",
+      "location": "Washington DC"
+    },
+    {
+      "id": "4",
+      "image": "day3e4_home.jpg",
+      "detImage": "day3e4_detail.jpg",
+      "name": "Exhibits",
+      "time": "10:00 a.m - 9:00 p.m",
+      "description": "(AGE - 21+) - Youth Forum - Potomac River",
+      "location": "Potomac River"
+    },
+    {
+      "id": "5",
+      "image": "day3e5_home.jpg",
+      "detImage": "day3e5_detail.jpg",
+      "name": "Lunch",
+      "time": "Starts 12:00 p.m",
+      "description":
+          "ATA Awards, Cultural Programs, Guest Performances, Musical Night at Level 3 Ballroom (Hall A,B,C)",
+      "location": "Washington DC"
+    },
+    {
+      "id": "6",
+      "image": "day3e6_home.jpg",
+      "detImage": "day3e6_detail.jpg",
+      "name": "Cultural Progam",
+      "time": "1:00 - 5:00 p.m",
+      "description": "Level 3 Ballroom (Hall A,B,C)",
+      "location": "Level-3 Ballroom (Hall A,B,C)"
+    },
+  ];
+
+  var special = {
     "day2e1_home.jpg": "Day2event1",
     "day2e2_home.jpg": "Day2event2",
     "day2e3_home.jpg": "Day2event3",
@@ -143,17 +289,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     "day2e7_home.jpg": "Day2event7",
     "day2e8_home.jpg": "Day2event8",
     "day2e9_home.jpg": "Day2event9",
-  };
-
-  var cards3 = {
-    "day3e1_home.jpg": "Day3event1",
-    "day3e2_home.jpg": "Day3event2",
-    "day3e3_home.jpg": "Day3event3",
-    "day3e4_home.jpg": "Day3event4",
-    "day3e5_home.jpg": "Day3event5",
-    "day3e6_home.jpg": "Day3event6",
-    "day3e7_home.jpg": "Day3event6",
-    "day3e8_home.jpg": "Day3event6",
   };
 
   var items = [
@@ -316,18 +451,47 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 9, //this is the no.of items of the scrolling cards
                             scrollDirection: Axis.horizontal,
                             itemBuilder: (BuildContext context, int index) {
-                              return Container(
-                                margin:
-                                    const EdgeInsets.only(right: 15, top: 10),
-                                width: 200,
-                                height: 300,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: Colors.white,
-                                  image: DecorationImage(
-                                    image: AssetImage("img/home_page/july2/" +
-                                        cards2.keys.elementAt(index)),
-                                    fit: BoxFit.cover,
+                              return GestureDetector(
+                                child: Container(
+                                  margin:
+                                      const EdgeInsets.only(right: 15, top: 10),
+                                  width: 200,
+                                  height: 300,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: Colors.white,
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        "img/home_page/july2/" +
+                                            cards2[index]['image']!,
+                                      ),
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20),
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (BuildContext context) =>
+                                                DetailPage(
+                                              name: cards2[index]['name']!,
+                                              detImage:
+                                                  "img/details_page/july2/" +
+                                                      cards2[index]
+                                                          ['detImage']!,
+                                              time: cards2[index]['time']!,
+                                              description: cards2[index]
+                                                  ['description']!,
+                                              location: cards2[index]
+                                                  ['location']!,
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ),
                                   ),
                                 ),
                               );
@@ -341,18 +505,47 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 6, //this is the no.of items of the scrolling cards
                             scrollDirection: Axis.horizontal,
                             itemBuilder: (BuildContext context, int index) {
-                              return Container(
-                                margin:
-                                    const EdgeInsets.only(right: 15, top: 10),
-                                width: 200,
-                                height: 300,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: Colors.white,
-                                  image: DecorationImage(
-                                    image: AssetImage("img/home_page/july3/" +
-                                        cards3.keys.elementAt(index)),
-                                    fit: BoxFit.cover,
+                              return GestureDetector(
+                                child: Container(
+                                  margin:
+                                      const EdgeInsets.only(right: 15, top: 10),
+                                  width: 200,
+                                  height: 300,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: Colors.white,
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        "img/home_page/july3/" +
+                                            cards3[index]['image']!,
+                                      ),
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20),
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (BuildContext context) =>
+                                                DetailPage(
+                                              name: cards3[index]['name']!,
+                                              detImage:
+                                                  "img/details_page/july3/" +
+                                                      cards3[index]
+                                                          ['detImage']!,
+                                              time: cards3[index]['time']!,
+                                              description: cards3[index]
+                                                  ['description']!,
+                                              location: cards3[index]
+                                                  ['location']!,
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ),
                                   ),
                                 ),
                               );
@@ -396,15 +589,17 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (_, index) {
                           return Container(
-                            margin: const EdgeInsets.only(right: 30),
+                            margin: const EdgeInsets.only(
+                              right: 26,
+                            ),
                             child: Column(
                               children: [
                                 Container(
                                   // margin: const EdgeInsets.only(right: 50),
-                                  width: 60,
-                                  height: 60,
+                                  width: 65,
+                                  height: 65,
                                   decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(15),
                                     color: Colors.white,
                                     image: DecorationImage(
                                         image: AssetImage("img/icons/" +
@@ -516,16 +711,16 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                             size: 22,
                           ),
                           const Padding(
-                            padding: EdgeInsets.only(left: 40),
+                            padding: EdgeInsets.only(left: 55),
                             child: Icon(
-                              Icons.edit_calendar_outlined,
+                              Icons.swipe_down_rounded,
                               color: AppColors.textColor1,
                             ),
                           ),
-                          // AppText(
-                          //   text: "Save the Date",
-                          //   color: AppColors.textColor1,
-                          // )
+                          AppText(
+                            text: "Scroll Down",
+                            color: AppColors.textColor1,
+                          )
                         ],
                       ),
                     ),
@@ -585,7 +780,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                         Expanded(
                                           child: Image.asset(
                                             "img/home_page/july2/" + // here change images
-                                                cards2.keys.elementAt(index),
+                                                special.keys.elementAt(index),
                                             height: 64,
                                             width: 64,
                                           ),

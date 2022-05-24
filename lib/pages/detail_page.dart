@@ -139,6 +139,7 @@ class _DetailPageState extends State<DetailPage> {
                 height: 350,
                 decoration: BoxDecoration(
                   image: DecorationImage(
+                    // image: AssetImage(detImage),
                     image: AssetImage(detImage),
                     fit: BoxFit.cover,
                   ),
@@ -151,15 +152,16 @@ class _DetailPageState extends State<DetailPage> {
               child: Row(
                 children: [
                   IconButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                      icon: const Icon(
-                        Icons.arrow_back_rounded,
-                        size: 35,
-                      )
-                      //color : Colors.white, // to change the color of the menu app
-                      )
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    icon: const Icon(
+                      Icons.arrow_back_rounded,
+                      size: 35,
+                      color: Colors.red,
+                    ),
+                    //color : Colors.white, // to change the color of the menu app
+                  ),
                 ],
               ),
             ),
