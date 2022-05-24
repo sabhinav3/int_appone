@@ -26,8 +26,7 @@ class ExploreDetail2 extends StatelessWidget {
                 color: Color(0xFF545D68))),
         actions: <Widget>[
           IconButton(
-            icon:
-                const Icon(Icons.notifications_none, color: Color(0xFF545D68)),
+            icon: const Icon(Icons.person_rounded, color: Color(0xFF545D68)),
             onPressed: () {},
           ),
         ],
@@ -108,11 +107,11 @@ class ExploreDetail2 extends StatelessWidget {
           // )
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: const Color(0xFFF17532),
-        child: const Icon(Icons.favorite),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {},
+      //   backgroundColor: const Color(0xFFF17532),
+      //   child: const Icon(Icons.favorite),
+      // ),
       // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       // bottomNavigationBar: BottomBar(),
     );
