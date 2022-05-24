@@ -6,6 +6,9 @@ import 'package:int_appone/pages/detail_page.dart';
 import 'package:int_appone/pages/detail_page/about.dart';
 import 'package:int_appone/pages/navpages/detail_page_two.dart';
 import 'package:int_appone/pages/navpages/innerpages/explore1/explore1.dart';
+import 'package:int_appone/pages/navpages/innerpages/explore2/explore2.dart';
+import 'package:int_appone/pages/navpages/innerpages/explore3/explore3.dart';
+import 'package:int_appone/pages/navpages/innerpages/explore3/explore3_detail.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
@@ -41,8 +44,8 @@ class NavigationDrawerWidget extends StatelessWidget {
                     height: 30,
                   ),
                   buildMenuItem(
-                    text: 'People',
-                    icon: Icons.people_alt_rounded,
+                    text: 'About',
+                    icon: Icons.info_rounded,
                     onClicked: () => selectedItem(context, 0),
                   ),
                   // 2
@@ -50,8 +53,8 @@ class NavigationDrawerWidget extends StatelessWidget {
                     height: 16,
                   ),
                   buildMenuItem(
-                    text: 'About',
-                    icon: Icons.workspaces_outline,
+                    text: 'Golf',
+                    icon: Icons.golf_course_rounded,
                     onClicked: () => selectedItem(context, 1),
                   ),
                   // 3
@@ -59,8 +62,8 @@ class NavigationDrawerWidget extends StatelessWidget {
                     height: 16,
                   ),
                   buildMenuItem(
-                    text: 'Rate the Event',
-                    icon: Icons.favorite_outlined,
+                    text: 'CME',
+                    icon: Icons.medical_services_rounded,
                     onClicked: () => selectedItem(context, 2),
                   ),
                   // 4
@@ -192,14 +195,14 @@ class NavigationDrawerWidget extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => ExplorePage1(),
+          builder: (context) => AboutPage(),
         ));
 
         break;
 
       case 1:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => AboutPage(),
+          builder: (context) => ExplorePage3(),
         ));
 
         break;
