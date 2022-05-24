@@ -84,7 +84,7 @@ class _AboutPageState extends State<AboutPage> {
                           color: Colors.black87,
                         ),
                         AppMedText(
-                          text: "Since 2002",
+                          text: "Since 2005",
                           color: AppColors.mainColor,
                         ),
                       ],
@@ -102,7 +102,7 @@ class _AboutPageState extends State<AboutPage> {
                           width: 5,
                         ),
                         AppText(
-                          text: "Washington DC",
+                          text: "P O Box 4496\nNaperville, IL 60567",
                           color: AppColors.textColor1,
                         )
                       ],

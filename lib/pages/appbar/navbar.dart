@@ -4,9 +4,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:int_appone/pages/detail_page.dart';
 import 'package:int_appone/pages/detail_page/about.dart';
+import 'package:int_appone/pages/detail_page/cme.dart';
+import 'package:int_appone/pages/detail_page/contact.dart';
 import 'package:int_appone/pages/navpages/detail_page_two.dart';
 import 'package:int_appone/pages/navpages/innerpages/explore1/explore1.dart';
 import 'package:int_appone/pages/navpages/innerpages/explore2/explore2.dart';
+import 'package:int_appone/pages/navpages/innerpages/explore2/explore2_detail.dart';
 import 'package:int_appone/pages/navpages/innerpages/explore3/explore3.dart';
 import 'package:int_appone/pages/navpages/innerpages/explore3/explore3_detail.dart';
 
@@ -16,9 +19,8 @@ class NavigationDrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final name = "ATA Conference";
-    final email = "ataconforance@org";
-    final image =
-        'https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.wixstatic.com%2Fmedia%2F0b9d0b_58e08d4c411448a4aab16ce42c0311a9~mv2.png%2Fv1%2Ffill%2Fw_640%2Ch_440%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_auto%2F0b9d0b_58e08d4c411448a4aab16ce42c0311a9~mv2.png&imgrefurl=https%3A%2F%2Fwww.ataconference.org%2F&tbnid=CyAE-pb8p9E_9M&vet=12ahUKEwjX07ub9-X3AhW6i9gFHRMnDIAQMygEegUIARDBAQ..i&docid=MQp63c2zKiGtRM&w=640&h=440&q=ata%20conference&client=safari&ved=2ahUKEwjX07ub9-X3AhW6i9gFHRMnDIAQMygEegUIARDBAQ';
+    final email = "info@ataworld.org";
+    final image = 'img/logo_ata_nobg.png';
 
     return Drawer(
       child: Material(
@@ -71,9 +73,18 @@ class NavigationDrawerWidget extends StatelessWidget {
                     height: 16,
                   ),
                   buildMenuItem(
-                    text: 'Updates',
-                    icon: Icons.update_rounded,
+                    text: 'ATA Committee',
+                    icon: Icons.group_rounded,
                     onClicked: () => selectedItem(context, 3),
+                  ),
+
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  buildMenuItem(
+                    text: 'Contact',
+                    icon: Icons.quick_contacts_mail_rounded,
+                    onClicked: () => selectedItem(context, 4),
                   ),
 
                   // divider
@@ -82,34 +93,34 @@ class NavigationDrawerWidget extends StatelessWidget {
                     height: 24,
                   ),
 
-                  Divider(
-                    color: Colors.red,
-                  ),
+                  // Divider(
+                  //   color: Colors.red,
+                  // ),
 
-                  const SizedBox(
-                    height: 24,
-                  ),
+                  // const SizedBox(
+                  //   height: 24,
+                  // ),
 
                   // end of divider
 
                   // 5
 
-                  buildMenuItem(
-                    text: 'Notifications',
-                    icon: Icons.notifications_active_rounded,
-                    onClicked: () => selectedItem(context, 4),
-                  ),
-                  const SizedBox(
-                    height: 16,
-                  ),
+                  // buildMenuItem(
+                  //   text: 'Notifications',
+                  //   icon: Icons.notifications_active_rounded,
+                  //   onClicked: () => selectedItem(context, 4),
+                  // ),
+                  // const SizedBox(
+                  //   height: 16,
+                  // ),
 
-                  // 6
+                  // // 6
 
-                  buildMenuItem(
-                    text: 'Notifications',
-                    icon: Icons.notifications_active_rounded,
-                    onClicked: () => selectedItem(context, 5),
-                  ),
+                  // buildMenuItem(
+                  //   text: 'Notifications',
+                  //   icon: Icons.notifications_active_rounded,
+                  //   onClicked: () => selectedItem(context, 5),
+                  // ),
                 ],
               ),
             ),
@@ -132,8 +143,9 @@ class NavigationDrawerWidget extends StatelessWidget {
           child: Row(
             children: [
               CircleAvatar(
-                radius: 30,
-                backgroundImage: NetworkImage(image),
+                radius: 40,
+                backgroundImage: AssetImage(image),
+                backgroundColor: Colors.red.withOpacity(0),
               ),
               SizedBox(
                 width: 20,
@@ -209,7 +221,21 @@ class NavigationDrawerWidget extends StatelessWidget {
 
       case 2:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => DetailPageTwo(),
+          builder: (context) => CmePage(),
+        ));
+
+        break;
+
+      case 3:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => ExplorePage2(),
+        ));
+
+        break;
+
+      case 4:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => ContactPage(),
         ));
 
         break;
