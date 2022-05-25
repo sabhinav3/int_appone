@@ -16,12 +16,12 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _WelcomePageState extends State<WelcomePage> {
-  List images = ["ata_bg.png", "bg2.png", "bg-3.png"];
+  List images = ["ata_bg_2.png", "bg2.png", "bg-3.png"];
 
   var info = [
     {
       "id": "1",
-      "text1": "Welcome to the \nworld of ATA",
+      "text1": "\n \nWelcome to the \nworld of ATA",
       "text2": "Explore Events",
       "text3": "ATA conference gives you a great ",
     },

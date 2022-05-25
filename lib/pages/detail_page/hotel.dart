@@ -87,7 +87,7 @@ class _HotelPageState extends State<HotelPage> {
               child: Container(
                 padding: const EdgeInsets.only(left: 20, right: 20, top: 30),
                 width: MediaQuery.of(context).size.width,
-                height: 500,
+                height: 420,
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -150,6 +150,9 @@ class _HotelPageState extends State<HotelPage> {
                 ),
               ),
             ),
+            SizedBox(
+              height: 80,
+            ),
             Positioned(
               bottom: 20,
               left: 20,
@@ -210,6 +213,10 @@ class _HotelPageState extends State<HotelPage> {
                         }
                       },
                     ),
+                  ),
+
+                  SizedBox(
+                    height: 80,
                   ),
                 ],
               ),

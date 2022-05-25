@@ -256,7 +256,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     SizedBox(
-                      height: w * 0.2, // dynamic height according to width
+                      height: 10, // dynamic height according to width
                     ),
                     RichText(
                       text: TextSpan(

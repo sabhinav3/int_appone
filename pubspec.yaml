@@ -82,6 +82,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - img/bg-3.png
+    - img/ata_bg_2.png
     - img/bg2.png
     - img/bg.png
     - img/ata_bg.png
@@ -101,10 +102,10 @@ flutter:
     - img/home_page/july1/day1e4_home.jpg
     - img/home_page/july1/day1e5_home.jpg
     - img/home_page/july1/day1e6_home.jpg
-    - img/icons/direction_icon.png
-    - img/icons/hotel_icon.png
-    - img/icons/parking_icon.png
-    - img/icons/transport_icon.png
+    - img/icons/direction_icon.jpg
+    - img/icons/hotel_icon.jpg
+    - img/icons/parking_icon.jpg
+    - img/icons/transport_icon.jpg
     - img/icons/facebook.jpeg
     - img/icons/google.png
     - img/icons/twitter.png

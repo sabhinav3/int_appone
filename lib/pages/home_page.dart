@@ -25,10 +25,10 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   var images = {
-    "hotel_icon.png": "Hotel",
-    "parking_icon.png": "Parking",
-    "direction_icon.png": "Directions",
-    "transport_icon.png": "Transit",
+    "hotel_icon.jpg": "Hotel",
+    "parking_icon.jpg": "Parking",
+    "direction_icon.jpg": "Directions",
+    "transport_icon.jpg": "Transit",
   };
 
   var icons = [
@@ -211,8 +211,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     },
     {
       "id": "9",
-      "image": "day2e8_home.jpg",
-      "detImage": "day2e8_detail.jpg",
+      "image": "day2e9_home.jpg",
+      "detImage": "day2e9_detail.jpg",
       "name": "Food Court",
       "time": "9:00 a.m - 9:00 p.m",
       "description": "Level 3 Ballroom (Hall A,B,C)",
