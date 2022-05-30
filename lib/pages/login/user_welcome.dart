@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -12,6 +14,7 @@ import '../../services/data_services.dart';
 class UserWelcomePage extends StatelessWidget {
   String email;
   AuthController auth = AuthController();
+  FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   UserWelcomePage({Key? key, required this.email}) : super(key: key);
 
   @override
@@ -63,7 +66,7 @@ class UserWelcomePage extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  email,
+                  firebaseAuth.currentUser?.email ?? "",
                   style: TextStyle(
                     fontSize: 18,
                     color: Colors.grey[500],

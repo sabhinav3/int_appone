@@ -27,11 +27,13 @@ class AuthController extends GetxController {
     }
   }
 
-  void register(String email, password) async {
+  Future<String> register(String email, password) async {
     try {
       await auth.createUserWithEmailAndPassword(
           email: email, password: password);
+      return "Success";
     } catch (e) {
+      // print(e);
       Get.snackbar(
         "About User",
         "User Message",
@@ -50,12 +52,14 @@ class AuthController extends GetxController {
           ),
         ),
       );
+      return "Failure";
     }
   }
 
-  void login(String email, password) async {
+  Future<String> login(String email, password) async {
     try {
       await auth.signInWithEmailAndPassword(email: email, password: password);
+      return "Success";
     } catch (e) {
       Get.snackbar(
         "About Login",
@@ -75,6 +79,7 @@ class AuthController extends GetxController {
           ),
         ),
       );
+      return "Failure";
     }
   }
 

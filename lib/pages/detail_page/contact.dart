@@ -53,6 +53,7 @@ class _ContactPageState extends State<ContactPage> {
                       icon: const Icon(
                         Icons.arrow_back_rounded,
                         size: 35,
+                        color: Colors.red,
                       )
                       //color : Colors.white, // to change the color of the menu app
                       )

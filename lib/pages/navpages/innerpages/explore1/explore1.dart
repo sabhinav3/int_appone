@@ -151,17 +151,17 @@ class ExplorePage1 extends StatelessWidget {
       padding:
           const EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
-        onTap: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => ExploreDetail1(
-                assetPath: imgPath,
-                cookiename: name,
-                description: description,
-              ),
-            ),
-          );
-        },
+        // onTap: () {
+        //   Navigator.of(context).push(
+        //     MaterialPageRoute(
+        //       builder: (context) => ExploreDetail1(
+        //         assetPath: imgPath,
+        //         cookiename: name,
+        //         description: description,
+        //       ),
+        //     ),
+        //   );
+        // },
         child: Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15.0),

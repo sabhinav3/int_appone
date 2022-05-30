@@ -298,7 +298,7 @@ class _DetailPageState extends State<DetailPage> {
                     ),
 
                     AppLargeText(
-                      text: "Description",
+                      text: "",
                       color: Colors.black.withOpacity(0.8),
                       size: 20,
                     ),

@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     {
       "id": "2",
       "icon_name": "Parking",
-      "icon_image": "img/hotel.jpg",
+      "icon_image": "img/parking.jpg",
       "icon_description":
           "Public Parking Garages and Lots Near the Washington Convention Center. Center City Parking - 9th Street between New York Ave. and H Street NW Washington, D.C. (202) 265-0010.Valet Parking Near DC Convention Follow this Link https://www.parkingpanda.com/washington-dc-convention-center-parkingInterarm - Renaissance Hotel, 999 Ninth Street NW Washington, D.C. (202) 898-9000.PMI Parking - 915 Massachusetts Ave. NWublic Parking Garages and Lots Near the Washington Convention Center. Center City Parking - 9th Street between New York Ave. and H Street NW Washington, D.C. (202) 265-0010.Valet Parking Near DC Convention Follow this Link https://www.parkingpanda.com/washington-dc-convention-center-parkingInterarm - Renaissance Hotel, 999 Ninth Street NW Washington, D.C. (202) 898-9000.PMI Parking - 915 Massachusetts Ave. NW Washington, D.C. (202) 785 Washington, D.C. (202) 785-9191.",
       "icon_location": "Washington DC",
@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     {
       "id": "3",
       "icon_name": "Directions",
-      "icon_image": "img/hotel.jpg",
+      "icon_image": "img/navigation.jpg",
       "icon_description":
           "The cornerstone of downtown DC’s renaissance, the Walter E. Washington Convention Center is as functional as it is artistically impressive. The 2.3-million-square-foot space hosts meetings, conventions, and events of every kind, from medical industry annual meetings to comic book-inspired expos and board retreats and are equipped to handle events of all sizes, from small groups and break-out meetings to events for 500 to 42,000 attendees. One of the most energy-efficient.",
       "icon_location": "Washington DC",
@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     {
       "id": "4",
       "icon_name": "Transit",
-      "icon_image": "img/hotel.jpg",
+      "icon_image": "img/transit.jpg",
       "icon_description":
           "Ronald Reagan Washington National Airport (DCA), ATA Provides Shuttle Service for Every 1 HR on July 1st, 2022 from 9:00 am to 7:00 pm, Please look for ATA Transport desk in Lower-Level Baggage claim area in all terminals Return transportation will be provided from hotel to Airport on July 4th, 2022, from 8:00 am to 2:00 pm Washington Dulles International Airport (IAD) ATA Provides Shuttle Service for Every 1HR on July 1st, 2022 from 9:00 am to 7:00 pm, Please look for ATA Transport desk near Baggage claim area. Return transportation will be provided from hotel to Airport on July 4th, 2022 from 8:00 am to 2:00 pm Ashburn/Herndon Shuttle Service to Convention Center. ATA Provides Shuttle Services on 2nd July & 3rd July from 8AM - 4 PM. Ashburn Pick up and Drop off location ,Loudoun Station, 43751 Central Station Dr, VA 20147,Herndon Pickup and Drop off location. Herndon-Monroe Park and Ride 12530 Sunrise Valley Dr, Herndon VA 20221",
       "icon_location": "Washington DC",
@@ -82,8 +82,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       "image": "day1e1_home.jpg",
       "detImage": 'day1e1_detail.jpg',
       "name": "Registrations",
-      "time": "9:00 a.m - 6:00 p.m",
-      "description": "Dear Guests, Welcome to ATA Conference.",
+      "time": "9:00 a.m - \n6:00 p.m",
+      "description": "",
       "location": "Washington DC"
     },
     {
@@ -91,26 +91,26 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       "image": "day1e2_home.jpg",
       "detImage": "day1e2_detail.jpg",
       "name": "Networking",
-      "time": "5:00 - 7:00 p.m",
-      "description": "Level 3 Ballroom (Hall A,B,C)",
-      "location": "Washington DC"
+      "time": "5:00 p.m - \n7:00 p.m",
+      "description": "",
+      "location": "Level 3 Ballroom (Hall A,B,C)"
     },
     {
       "id": "3",
       "image": "day1e3_home.jpg",
       "detImage": "day1e3_detail.jpg",
       "name": "Banquet",
-      "time": "6:30 - 7:30 p.m",
-      "description": "Level 3 Ballroom (Hall A,B,C)",
-      "location": "Washington DC"
+      "time": "6:30 p.m - \n7:30 p.m",
+      "description": "",
+      "location": "Level 3 Ballroom (Hall A,B,C)"
     },
     {
       "id": "4",
       "image": "day1e4_home.jpg",
       "detImage": "day1e4_detail.jpg",
       "name": "Boat Cruise",
-      "time": "7:30 - 10:00 p.m",
-      "description": "(AGE - 21+) - Youth Forum - Potomac River",
+      "time": "7:30 p.m - \n10:00 p.m",
+      "description": "",
       "location": "Potomac River"
     },
     {
@@ -118,18 +118,17 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       "image": "day1e5_home.jpg",
       "detImage": "day1e5_detail.jpg",
       "name": "Celebrations",
-      "time": "7:30 - 11:30 p.m",
-      "description":
-          "ATA Awards, Cultural Programs, Guest Performances, Musical Night at Level 3 Ballroom (Hall A,B,C)",
-      "location": "Washington DC"
+      "time": "7:30 p.m - \n11:30 p.m",
+      "description": "",
+      "location": "Level 3 Ballroom (Hall A,B,C)"
     },
     {
       "id": "6",
       "image": "day1e6_home.jpg",
       "detImage": "day1e6_detail.jpg",
       "name": "Dinner Buffet",
-      "time": "6:00 - 7:00",
-      "description": "Level 3 Ballroom (Hall A,B,C)",
+      "time": "9:00 p.m \nOnwards",
+      "description": "",
       "location": "Level-3 Ballroom (Hall A,B,C)"
     },
   ];
@@ -141,82 +140,81 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       "image": "day2e1_home.jpg",
       "detImage": 'day2e1_detail.jpg',
       "name": "Registrations",
-      "time": "9:00 a.m - 6:00 p.m",
-      "description": "Dear Guests, Welcome to ATA Conference.",
-      "location": "Washington DC"
+      "time": "9:00 a.m - \n6:00 p.m",
+      "description": "",
+      "location": "West Salon Area"
     },
     {
       "id": "2",
       "image": "day2e2_home.jpg",
       "detImage": "day2e2_detail.jpg",
       "name": "ATA Parade",
-      "time": "9:00 - 10:00 a.m",
-      "description": "Level 3 Ballroom (Hall A,B,C)",
-      "location": "Washington DC"
+      "time": "9:00 a.m - \n10:00 a.m",
+      "description": "",
+      "location": "Hall D, E (Level - 2)"
     },
     {
       "id": "3",
       "image": "day2e3_home.jpg",
       "detImage": "day2e3_detail.jpg",
-      "name": "Inaugural",
-      "time": "10:00 a.m - 12:00 p.m",
-      "description": "Level 3 Ballroom (Hall A,B,C)",
-      "location": "Washington DC"
+      "name": "Inaugural \nProgram",
+      "time": "10:00 a.m - \n12:00 p.m",
+      "description": "",
+      "location": "Hall D, E (Level - 2)"
     },
     {
       "id": "4",
       "image": "day2e4_home.jpg",
       "detImage": "day2e4_detail.jpg",
-      "name": "Exhibits",
-      "time": "10:00 a.m - 9:00 p.m",
-      "description": "(AGE - 21+) - Youth Forum - Potomac River",
-      "location": "Potomac River"
+      "name": "Vendor \nExhibits",
+      "time": "10:00 a.m - \n9:00 p.m",
+      "description": "",
+      "location": "Lower Level - Hall B"
     },
     {
       "id": "5",
       "image": "day2e5_home.jpg",
       "detImage": "day2e5_detail.jpg",
-      "name": "Lunch",
-      "time": "Starts 12:00 p.m",
-      "description":
-          "ATA Awards, Cultural Programs, Guest Performances, Musical Night at Level 3 Ballroom (Hall A,B,C)",
-      "location": "Washington DC"
+      "name": "Lunch \n(Donor & Guests)",
+      "time": "Starts at\n12:00 noon",
+      "description": "",
+      "location": "Lower Level - Hall C"
     },
     {
       "id": "6",
       "image": "day2e6_home.jpg",
       "detImage": "day2e6_detail.jpg",
-      "name": "Program-2",
-      "time": "1:00 - 5:00 p.m",
-      "description": "Level 3 Ballroom (Hall A,B,C)",
-      "location": "Level-3 Ballroom (Hall A,B,C)"
+      "name": "Cultural \nPrograms\nSession - 2",
+      "time": "1:00 p.m - \n5:00 p.m",
+      "description": "",
+      "location": "Hall D, E"
     },
     {
       "id": "7",
       "image": "day2e7_home.jpg",
       "detImage": "day2e7_detail.jpg",
-      "name": "Program - 3",
-      "time": "6:00 p.m - Midnight",
-      "description": "Level 3 Ballroom (Hall A,B,C)",
-      "location": "Level-3 Ballroom (Hall A,B,C)"
+      "name": "Cultural \nPrograms\nSession - 2",
+      "time": "6:00 p.m - \nMidnight",
+      "description": "",
+      "location": "Hall D, E"
     },
     {
       "id": "8",
       "image": "day2e8_home.jpg",
       "detImage": "day2e8_detail.jpg",
       "name": "Dinner",
-      "time": "5:30 - 7:00 p.m",
-      "description": "Level 3 Ballroom (Hall A,B,C)",
-      "location": "Level-3 Ballroom (Hall A,B,C)"
+      "time": "5:30 p.m - \n7:00 p.m",
+      "description": "",
+      "location": "Lower Level - Hall C"
     },
     {
       "id": "9",
       "image": "day2e9_home.jpg",
       "detImage": "day2e9_detail.jpg",
       "name": "Food Court",
-      "time": "9:00 a.m - 9:00 p.m",
-      "description": "Level 3 Ballroom (Hall A,B,C)",
-      "location": "Level-3 Ballroom (Hall A,B,C)"
+      "time": "9:00 a.m - \n9:00 p.m",
+      "description": "",
+      "location": "Lower Level - Hall B"
     },
   ];
 
@@ -228,54 +226,71 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       "detImage": 'day3e1_detail.jpg',
       "name": "ATA Conference\nRegistrations",
       "time": "9:00 a.m -\n6:00 p.m",
-      "description": "Dear Guests, Welcome to ATA Conference.",
-      "location": "Washington DC"
+      "description": "",
+      "location": "Concourse A"
     },
     {
       "id": "2",
       "image": "day3e2_home.jpg",
       "detImage": "day3e2_detail.jpg",
       "name": "TTD Srinivasa\nKalyanam",
-      "time": "7:00 - 9:00 a.m",
-      "description": "Level 3 Ballroom (Hall A,B,C)",
-      "location": "Washington DC"
+      "time": "7:00 a.m - \n9:00 a.m",
+      "description": "",
+      "location": "HALL - TBD "
     },
     {
       "id": "3",
       "image": "day3e3_home.jpg",
       "detImage": "day3e3_detail.jpg",
-      "name": "Program - 4",
-      "time": "9:00 a.m - 12:00 p.m",
-      "description": "Level 3 Ballroom (Hall A,B,C)",
-      "location": "Washington DC"
+      "name": "Cultural \nProgram \nSession - 4",
+      "time": "9:00 a.m - \n12:00 p.m",
+      "description": "",
+      "location": "Hall D, E (Level-2)"
     },
     {
       "id": "4",
       "image": "day3e4_home.jpg",
       "detImage": "day3e4_detail.jpg",
-      "name": "Exhibits",
-      "time": "10:00 a.m - 9:00 p.m",
-      "description": "(AGE - 21+) - Youth Forum - Potomac River",
-      "location": "Potomac River"
+      "name": "Vendor \nExhibits",
+      "time": "10:00 a.m - \n9:00 p.m",
+      "description": "",
+      "location": "Lower Level - Hall B"
     },
     {
       "id": "5",
       "image": "day3e5_home.jpg",
       "detImage": "day3e5_detail.jpg",
       "name": "Lunch",
-      "time": "Starts 12:00 p.m",
-      "description":
-          "ATA Awards, Cultural Programs, Guest Performances, Musical Night at Level 3 Ballroom (Hall A,B,C)",
-      "location": "Washington DC"
+      "time": "Starts at\n12:00 p.m",
+      "description": "",
+      "location": "Lower Level - Hall C"
     },
     {
       "id": "6",
       "image": "day3e6_home.jpg",
       "detImage": "day3e6_detail.jpg",
-      "name": "Cultural Progam",
-      "time": "1:00 - 5:00 p.m",
-      "description": "Level 3 Ballroom (Hall A,B,C)",
-      "location": "Level-3 Ballroom (Hall A,B,C)"
+      "name": "Cultural \nProgram \nSession - 5",
+      "time": "1:00 p.m - \n5:00 p.m",
+      "description": "",
+      "location": "Hall D,E"
+    },
+    {
+      "id": "7",
+      "image": "day3e6_home.jpg",
+      "detImage": "day3e6_detail.jpg",
+      "name": "Cultural \nProgram \nSession - 6",
+      "time": "6:00 p.m - midnight",
+      "description": "",
+      "location": "Hall D,E"
+    },
+    {
+      "id": "8",
+      "image": "day3e6_home.jpg",
+      "detImage": "day3e6_detail.jpg",
+      "name": "Dinner",
+      "time": "5:00 p.m \nOnwards",
+      "description": "",
+      "location": "Lower Level - Hall C"
     },
   ];
 
@@ -502,7 +517,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
                           ListView.builder(
                             itemCount:
-                                6, //this is the no.of items of the scrolling cards
+                                8, //this is the no.of items of the scrolling cards
                             scrollDirection: Axis.horizontal,
                             itemBuilder: (BuildContext context, int index) {
                               return GestureDetector(
@@ -557,6 +572,26 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
                     const SizedBox(
                       height: 30,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 20, right: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          AppMedText(
+                            text: "Explore more",
+                            size: 22,
+                          ),
+                          // AppText(
+                          //   text: "See all",
+                          //   color: AppColors.textColor1,
+                          // )
+                        ],
+                      ),
+                    ),
+
+                    const SizedBox(
+                      height: 10,
                     ),
 
                     Container(
@@ -976,28 +1011,28 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
                     CarouselThree(),
 
-                    Container(
-                      margin: const EdgeInsets.only(left: 20, right: 20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          AppText(
-                            text: "Photo Gallery",
-                            size: 22,
-                          ),
-                          Row(
-                            children: [
-                              AppText(
-                                text: "Swipe",
-                                color: AppColors.textColor1,
-                              ),
-                              Icon(Icons.double_arrow_rounded,
-                                  color: AppColors.textColor1),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
+                    // Container(
+                    //   margin: const EdgeInsets.only(left: 20, right: 20),
+                    //   child: Row(
+                    //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //     children: [
+                    //       AppText(
+                    //         text: "Photo Gallery",
+                    //         size: 22,
+                    //       ),
+                    //       Row(
+                    //         children: [
+                    //           AppText(
+                    //             text: "Swipe",
+                    //             color: AppColors.textColor1,
+                    //           ),
+                    //           Icon(Icons.double_arrow_rounded,
+                    //               color: AppColors.textColor1),
+                    //         ],
+                    //       )
+                    //     ],
+                    //   ),
+                    // ),
 
                     // CardsHomePage(),
                   ],

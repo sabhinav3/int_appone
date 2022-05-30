@@ -23,16 +23,19 @@ class _LoginPageState extends State<LoginPage> {
     var emailController = TextEditingController();
     var passwordController = TextEditingController();
     AuthController auth = AuthController();
-    // void login() {
-    //   AuthController auth = AuthController();
-    //   auth.login(emailController.text, passwordController.text);
-    //   if (auth.auth.currentUser?.email != null) {
-    //     Navigator.push(
-    //       context,
-    //       MaterialPageRoute(builder: (context) => const HomePage()),
-    //     );
-    //   }
-    // }
+    void login() async {
+      await auth.login(emailController.text, passwordController.text);
+      if (auth.auth.currentUser?.email != null) {
+        Get.to(
+          () => BlocProvider<AppCubits>(
+            create: (context) => AppCubits(
+              data: DataServices(),
+            ),
+            child: const AppCubitLogics(),
+          ),
+        );
+      }
+    }
 
     // return Scaffold(body: SafeArea(
     // child: LayoutBuilder(
@@ -238,21 +241,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ],
                         ),
-                        onPressed: () => {
-                          {
-                            auth.login(
-                                emailController.text, passwordController.text),
-                            if (auth.auth.currentUser?.email != null)
-                              {
-                                Get.to(() => BlocProvider<AppCubits>(
-                                      create: (context) => AppCubits(
-                                        data: DataServices(),
-                                      ),
-                                      child: const AppCubitLogics(),
-                                    ))
-                              }
-                          }
-                        },
+                        onPressed: () => {login()},
                       ),
                     ),
                     SizedBox(

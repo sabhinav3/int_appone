@@ -16,6 +16,20 @@ class SignUpPage extends StatelessWidget {
     var emailController = TextEditingController();
     var passwordController = TextEditingController();
     AuthController auth = AuthController();
+    void signup() async {
+      await auth.register(emailController.text, passwordController.text);
+      if (auth.auth.currentUser?.email != null) {
+        Get.to(
+          () => BlocProvider<AppCubits>(
+            create: (context) => AppCubits(
+              data: DataServices(),
+            ),
+            child: const AppCubitLogics(),
+          ),
+        );
+      }
+    }
+
     List images = [
       "facebook.jpeg",
       "google.png",
@@ -39,7 +53,7 @@ class SignUpPage extends StatelessWidget {
                       width:
                           w, // put height & width as 400 ., then it's perfect
                       height: h *
-                          0.25, // here we're multiplying by 3 to get the 1/3rd height of the screen
+                          0.3, // here we're multiplying by 3 to get the 1/3rd height of the screen
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage("img/bg.png"),
@@ -228,17 +242,7 @@ class SignUpPage extends StatelessWidget {
                           //     .register(emailController.text, passwordController.text),
                           onPressed: () => {
                             {
-                              auth.register(emailController.text,
-                                  passwordController.text),
-                              if (auth.auth.currentUser?.email != null)
-                                {
-                                  Get.to(() => BlocProvider<AppCubits>(
-                                        create: (context) => AppCubits(
-                                          data: DataServices(),
-                                        ),
-                                        child: const AppCubitLogics(),
-                                      ))
-                                }
+                              signup(),
                             }
                           },
                         ),
